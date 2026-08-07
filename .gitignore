@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Internal Agent & IDE metadata
+.agent/
+PROJECT_MEMORY.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
