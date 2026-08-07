@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    letter-spacing: 0.015em;
+    background-color: #FFF8F5;
+    color: #0F172A;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+    color: #0F172A;
+  }
+}
+
+/* Light Theme Glassmorphism & Visual Styles */
+.glass-navbar {
+  background: rgba(255, 248, 245, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(232, 65, 37, 0.12);
+  box-shadow: 0 4px 20px rgba(232, 65, 37, 0.04);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(254, 215, 200, 0.8);
+  box-shadow: 0 10px 30px rgba(232, 65, 37, 0.06);
+  border-radius: 24px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(232, 65, 37, 0.15);
+  border-color: rgba(232, 65, 37, 0.4);
+}
+
+.glass-dark-card {
+  background: rgba(255, 244, 238, 0.95);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(232, 65, 37, 0.2);
+  border-radius: 24px;
+}
+
+/* 4K Ultra-Sharp Image Rendering */
+.image-4k-crisp {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.glass-input {
+  background: #FFFFFF;
+  border: 1.5px solid #FED7C8;
+  color: #0F172A;
+  transition: all 0.25s ease;
+}
+
+.glass-input:focus {
+  border-color: #E84125;
+  box-shadow: 0 0 18px rgba(232, 65, 37, 0.25);
+  outline: none;
+}
+
+/* Bright Radiant Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #0284C7 0%, #E84125 50%, #0D9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0F172A 0%, #0284C7 60%, #E84125 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, #0F172A 0%, #334155 60%, #64748B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Lights & Effects */
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(2, 132, 199, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+}
+
+.hero-gradient-bg {
+  background: radial-gradient(circle at 50% 20%, rgba(232, 65, 37, 0.12) 0%, rgba(254, 243, 236, 0.8) 50%, rgba(255, 248, 245, 1) 100%);
+}
+
+/* Custom Animations & Shimmers */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.08); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FED7C8;
+  border-radius: 4px;
+  border: 1px solid rgba(232, 65, 37, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E84125;
+}
+
+/* Accessibility: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print CSS for Offer Letter & Certificates */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-document, .printable-document * {
+    visibility: visible;
+  }
+  .printable-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
