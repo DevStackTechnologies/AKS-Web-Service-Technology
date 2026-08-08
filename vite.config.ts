@@ -11,7 +11,14 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
+    host: true, // Listen on all IP addresses (0.0.0.0, localhost, 127.0.0.1)
+    port: 5173, // Vite default port
+    strictPort: false, // Automatically fallback to 3000 or next available port if 5173 is occupied
     open: true,
   },
+  preview: {
+    port: 5173,
+    host: true,
+  }
 });
+
