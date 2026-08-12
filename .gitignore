@@ -14,7 +14,11 @@ dist-ssr
 
 # Internal Agent & IDE metadata
 .agent/
+.agents/
+.gemini/
 PROJECT_MEMORY.md
+*memory*.md
+*.timestamp-*.mjs
 
 # Editor directories and files
 .vscode/*
