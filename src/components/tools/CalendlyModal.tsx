@@ -7,7 +7,7 @@ interface CalendlyModalProps {
 }
 
 export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose }) => {
-  const [selectedDate, setSelectedDate] = useState('2026-08-10');
+  const [selectedDate, setSelectedDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [selectedTime, setSelectedTime] = useState('10:00 AM IST');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -57,7 +57,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Amit Singh"
+                    placeholder="Enter your name"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
                   />
                 </div>
@@ -68,7 +68,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="amit@company.com"
+                    placeholder="Enter your email"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
                   />
                 </div>
@@ -79,6 +79,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                 <input
                   type="date"
                   value={selectedDate}
+                  min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setSelectedDate(e.target.value)}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
                 />

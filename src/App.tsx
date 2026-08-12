@@ -129,7 +129,7 @@ const MainLayout: React.FC = () => {
       <OfferLetterModal
         isOpen={offerModalOpen}
         onClose={() => setOfferModalOpen(false)}
-        candidateName={selectedOfferApp?.candidateName || 'Amit Kumar'}
+        candidateName={selectedOfferApp?.candidateName || 'Akash Kumar'}
         designation={selectedOfferApp?.offerDetails?.designation || selectedOfferApp?.jobTitle || 'AI Systems Engineer'}
         ctc={selectedOfferApp?.offerDetails?.ctc || '₹14,50,000 PA'}
         joiningDate={selectedOfferApp?.offerDetails?.joiningDate || '2026-08-16'}

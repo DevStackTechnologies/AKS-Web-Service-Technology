@@ -391,7 +391,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                           <input
                             type="email"
                             required
-                            placeholder="your.name@company.com"
+                            placeholder="Enter your work email address"
                             value={brochureEmail}
                             onChange={(e) => setBrochureEmail(e.target.value)}
                             className="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:border-sky-500 outline-none"
