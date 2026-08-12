@@ -20,6 +20,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
   const [activeTechCategory, setActiveTechCategory] = useState<'frontend' | 'backend' | 'database' | 'cloud' | 'ai'>('frontend');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [selectedProjectModal, setSelectedProjectModal] = useState<any | null>(null);
+  const [isTestimonialsHovered, setIsTestimonialsHovered] = useState<boolean>(false);
 
   // Before vs After Showcase Presets
   const beforeAfterPresets = [
