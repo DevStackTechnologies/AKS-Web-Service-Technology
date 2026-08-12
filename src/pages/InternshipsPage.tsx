@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useApp } from '../context/AppContext';
-import { GraduationCap, Clock, Award, CheckCircle2, ArrowRight, Sparkles, Mail, Phone, UserCheck } from 'lucide-react';
+import { GraduationCap, Award, Mail } from 'lucide-react';
 
 interface InternshipsPageProps {
   onNavigate: (tab: string) => void;
@@ -8,7 +7,6 @@ interface InternshipsPageProps {
 }
 
 export const InternshipsPage: React.FC<InternshipsPageProps> = ({ onNavigate, onOpenCertificateModal }) => {
-  const { internships } = useApp();
   const [notifyEmail, setNotifyEmail] = useState('');
   const [notifySubmitted, setNotifySubmitted] = useState(false);
 
@@ -98,75 +96,9 @@ export const InternshipsPage: React.FC<InternshipsPageProps> = ({ onNavigate, on
         </div>
 
         <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500">
-          <span>Official Inquiries: <a href="mailto:info@tecvor.com" className="font-bold text-sky-600 hover:underline">info@tecvor.com</a></span>
+          <span>Official Inquiries: <a href="mailto:ownsources001@gmail.com" className="font-bold text-sky-600 hover:underline">ownsources001@gmail.com</a></span>
           <span>•</span>
           <span>WhatsApp Hotline: <a href="tel:+917739339852" className="font-bold text-sky-600 hover:underline">+91 7739339852</a></span>
-        </div>
-      </div>
-
-      {/* Curriculum & Technology Learning Tracks (Informational Overview) */}
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
-            Curriculum Overview
-          </span>
-          <h2 className="text-2xl font-black text-slate-900">Internship Domains & Learning Tracks</h2>
-          <p className="text-xs text-slate-500">Overview of practical modules taught in TecVor engineering cohorts</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {internships.map((track) => (
-            <div key={track.id} className="glass-card bg-white p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4 shadow-sm hover:border-sky-300 transition-all">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-full bg-[#0A4EDB]/10 text-[#0A4EDB] text-[10px] font-bold">
-                    {track.department}
-                  </span>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
-                    Cohort Closed
-                  </span>
-                </div>
-                <h3 className="text-base font-black text-slate-900">{track.title}</h3>
-                
-                <div className="space-y-1.5 text-xs text-slate-500">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-[#139EF8]" />
-                    <span>Duration: {track.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-3.5 h-3.5 text-[#22C55E]" />
-                    <span>Stipend: <strong className="text-[#0A4EDB]">{track.stipend}</strong></span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <UserCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
-                    <span>Mentor: {track.mentor}</span>
-                  </div>
-                </div>
-
-                <div className="pt-2 border-t border-slate-100 space-y-1">
-                  <span className="text-[11px] font-bold text-slate-800 block">Core Syllabus & Modules:</span>
-                  <ul className="text-[11px] text-slate-600 space-y-0.5">
-                    {track.learningPath.map((item, i) => (
-                      <li key={i} className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#139EF8]"></span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={onOpenCertificateModal}
-                  className="w-full py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all flex items-center justify-center gap-2"
-                >
-                  <Award className="w-3.5 h-3.5 text-amber-500" />
-                  <span>View Sample Certificate</span>
-                </button>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
