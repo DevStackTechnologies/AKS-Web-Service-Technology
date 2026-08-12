@@ -71,7 +71,7 @@ export const InternshipCertificateModal: React.FC<InternshipCertificateModalProp
 
             <p className="text-xs text-[#1A2031] max-w-xl mx-auto leading-relaxed">
               has successfully completed a comprehensive technology internship in{' '}
-              <strong className="text-[#0A4EDB]">{domain}</strong> at AKS Web Service Technologies for the duration of{' '}
+              <strong className="text-[#0A4EDB]">{domain}</strong> at TecVor Technologies for the duration of{' '}
               <strong>{duration}</strong>.
             </p>
 
@@ -83,7 +83,7 @@ export const InternshipCertificateModal: React.FC<InternshipCertificateModalProp
             <div className="pt-10 grid grid-cols-3 gap-6 items-end border-t border-[#CDD2DA]">
               <div className="text-left">
                 <p className="text-[10px] font-bold text-[#8590A6]">CERTIFICATE ID</p>
-                <p className="text-xs font-mono font-bold text-[#0A4EDB]">AKS-CERT-2026-8819</p>
+                <p className="text-xs font-mono font-bold text-[#0A4EDB]">TECVOR-CERT-2026-8819</p>
               </div>
 
               <div className="flex flex-col items-center">
@@ -96,7 +96,7 @@ export const InternshipCertificateModal: React.FC<InternshipCertificateModalProp
               <div className="text-right">
                 <div className="h-8 border-b border-[#1A2031] mb-1"></div>
                 <p className="font-bold text-xs text-[#1A2031]">Managing Director</p>
-                <p className="text-[10px] text-[#8590A6]">AKS Web Service Technologies</p>
+                <p className="text-[10px] text-[#8590A6]">TecVor Technologies</p>
               </div>
             </div>
 

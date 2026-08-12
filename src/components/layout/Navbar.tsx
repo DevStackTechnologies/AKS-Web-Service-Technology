@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
               onClick={() => setActiveTab('home')}
               className="flex items-center text-left focus:outline-none py-1 group"
             >
-              <AksLogo height={62} />
+              <AksLogo height={50} />
             </motion.button>
 
             {/* Public Navigation Links with LayoutId Indicator */}

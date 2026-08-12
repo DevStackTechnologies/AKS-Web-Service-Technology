@@ -328,9 +328,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         blogs: [
           {
             id: 'blog-1',
-            title: 'Cracking Engineering Interviews at AKS Web Service Technologies',
+            title: 'Cracking Engineering Interviews at TecVor Technologies',
             category: 'Career Tips',
-            author: 'AKS HR Team',
+            author: 'TecVor HR Team',
             date: 'July 28, 2026',
             readTime: '5 min read',
             summary: 'Preparation roadmap for coding rounds and system architecture interviews.',

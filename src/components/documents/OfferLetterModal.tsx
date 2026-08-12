@@ -95,7 +95,7 @@ export const OfferLetterModal: React.FC<OfferLetterModalProps> = ({
               </p>
 
               <p>
-                On behalf of <strong>AKS Web Service Technologies</strong>, we are pleased to offer you the position of{' '}
+                On behalf of <strong>TecVor Technologies</strong>, we are pleased to offer you the position of{' '}
                 <strong className="text-[#0A4EDB]">{designation}</strong>. We were thoroughly impressed by your technical skills, experience, and alignment with our core engineering values.
               </p>
 
@@ -136,7 +136,7 @@ export const OfferLetterModal: React.FC<OfferLetterModalProps> = ({
                     <span className="text-[10px] font-serif italic text-[#0A4EDB]">Official HR Seal</span>
                   </div>
                   <p className="font-bold text-xs text-[#1A2031]">Head of Human Resources</p>
-                  <p className="text-[10px] text-[#8590A6]">AKS Web Service Technologies</p>
+                  <p className="text-[10px] text-[#8590A6]">TecVor Technologies</p>
                 </div>
                 <div className="text-right">
                   <div className="h-10 w-32 border-b border-[#CDD2DA] mb-1"></div>
@@ -147,7 +147,7 @@ export const OfferLetterModal: React.FC<OfferLetterModalProps> = ({
 
               {/* Document Footer */}
               <div className="text-center pt-4 text-[9px] text-[#8590A6] border-t border-[#EEF2F7]">
-                AKS Web Service Technologies • www.akswebservice.com • Private & Confidential
+                TecVor Technologies • www.tecvor.com • Private & Confidential
               </div>
 
             </div>

@@ -15,11 +15,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="inline-block">
-              <AksLogo variant="dark" height={62} />
+              <AksLogo variant="dark" height={50} />
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              AKS Web Service Technologies is a modern enterprise software solutions & talent hub. Building scalable digital web apps, cloud architectures, and empowering high-impact technology careers globally.
+              TecVor Technologies is a modern enterprise software solutions & talent hub. Building scalable digital web apps, cloud architectures, and empowering high-impact technology careers globally.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
         {/* Sub-footer */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            <span>© 2026 AKS Web Service Technologies. All rights reserved.</span>
+            <span>© 2026 TecVor Technologies. All rights reserved.</span>
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

@@ -30,13 +30,13 @@ export const InternshipsPage: React.FC<InternshipsPageProps> = ({ onNavigate, on
       <div className="bg-gradient-to-r from-[#1A2031] via-[#0A4EDB] to-[#139EF8] text-white p-8 sm:p-12 rounded-3xl relative overflow-hidden space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 text-[#38BDF8] text-xs font-bold">
           <GraduationCap className="w-4 h-4" />
-          <span>AKS Tech Internship Program 2026</span>
+          <span>TecVor Tech Internship Program 2026</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black">
           Launch Your Career with Hands-On Engineering Experience
         </h1>
         <p className="text-xs sm:text-sm text-[#CDD2DA] max-w-2xl leading-relaxed">
-          Gain real-world experience building enterprise applications alongside senior mentors at AKS Web Service Technologies. Get paid stipends, official certificate verification, and direct PPO opportunities.
+          Gain real-world experience building enterprise applications alongside senior mentors at TecVor Technologies. Get paid stipends, official certificate verification, and direct PPO opportunities.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center gap-4">

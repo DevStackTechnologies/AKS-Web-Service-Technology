@@ -47,7 +47,7 @@ export const BlogsPage: React.FC<BlogsPageProps> = ({ onNavigate }) => {
       summary: 'Artificial Intelligence is no longer a futuristic concept—it has become a practical tool that helps businesses automate processes, improve customer experiences, and build smarter digital products.',
       metaDesc: 'Discover how Artificial Intelligence is transforming website development, automation, user experience, and business growth.',
       content: `
-Artificial Intelligence is fundamentally revolutionizing how digital applications are architected, developed, and scaled. At AKS Web Service Technologies, we integrate cutting-edge LLMs and machine learning algorithms directly into business platforms.
+Artificial Intelligence is fundamentally revolutionizing how digital applications are architected, developed, and scaled. At TecVor Technologies, we integrate cutting-edge LLMs and machine learning algorithms directly into business platforms.
 
 ### Key Pillars of AI-Driven Web Applications:
 1. **Intelligent User Experience**: Personalizing layouts, recommendation engines, and dynamic user interfaces in real time.
@@ -57,7 +57,7 @@ Artificial Intelligence is fundamentally revolutionizing how digital application
 ### Real-World Business Impact:
 Companies adopting AI-powered web applications report a **340% increase in user conversion rates** and a **65% reduction in manual operational overhead**.
       `,
-      ctaText: 'Need an AI-powered web solution? Contact AKS Web Service Technologies to discuss your project.'
+      ctaText: 'Need an AI-powered web solution? Contact TecVor Technologies to discuss your project.'
     },
     {
       id: 'cs-kd-finserve',
@@ -70,7 +70,7 @@ Companies adopting AI-powered web applications report a **340% increase in user 
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
       featured: false,
       summary: 'How AKS engineered an enterprise OAuth2 encrypted financial platform for KD Finserve, managing ₹85 Cr+ AUM for 45,000+ active investors with 100% compliance.',
-      metaDesc: 'Case study detailing how AKS Web Service Technologies built a secure wealth management portal for KD Finserve.',
+      metaDesc: 'Case study detailing how TecVor Technologies built a secure wealth management portal for KD Finserve.',
       content: `
 ### Background & Challenges
 KD Finserve required a bank-grade financial portal to streamline SIP mutual fund investments, automated e-KYC verification, and live portfolio rebalancing.
@@ -178,17 +178,17 @@ Data protection is paramount. Protecting customer APIs requires multi-layered au
       title: 'How to Become a Full-Stack Engineering Architect in 2026',
       category: 'Career & Learning',
       readTime: '10 Min Read',
-      author: 'AKS Academy Team',
+      author: 'TecVor Academy Team',
       authorRole: 'Developer Mentorship',
       date: 'Apr 2026',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
       featured: false,
       summary: 'A comprehensive roadmap covering React 19, Node.js, TypeScript, PostgreSQL, Docker, and AI LLM integrations for ambitious developers.',
-      metaDesc: '2026 Full-Stack Developer Roadmap created by AKS Web Service Technologies engineers.',
+      metaDesc: '2026 Full-Stack Developer Roadmap created by TecVor Technologies engineers.',
       content: `
 Mastering full-stack development requires a structured learning path from core frontend fundamentals to cloud-native microservices.
       `,
-      ctaText: 'Looking to launch your career? Explore openings on AKS Careers Portal.'
+      ctaText: 'Looking to launch your career? Explore openings on TecVor Careers Portal.'
     }
   ];
 
@@ -210,11 +210,11 @@ Mastering full-stack development requires a structured learning path from core f
           </div>
           
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900">
-            AKS Engineering <span className="text-gradient">Blog & Case Studies</span>
+            TecVor Engineering <span className="text-gradient">Blog & Case Studies</span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
-            In-depth technical research, architecture blueprints, AI automation guides, and real-world client case studies published by AKS Web Service Technologies engineers.
+            In-depth technical research, architecture blueprints, AI automation guides, and real-world client case studies published by TecVor Technologies engineers.
           </p>
 
           {/* Search Bar */}

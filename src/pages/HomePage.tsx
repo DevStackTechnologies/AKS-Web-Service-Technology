@@ -466,7 +466,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             transition={{ delay: 0.4, duration: 0.6 }}
             className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md"
           >
-            AKS Web Service Technology crafts ultra-fast web platforms, mobile apps, and autonomous AI systems designed for category leaders and high-growth enterprises.
+            TecVor Technologies crafts ultra-fast web platforms, mobile apps, and autonomous AI systems designed for category leaders and high-growth enterprises.
           </motion.p>
 
           {/* Original CTA Button */}
@@ -719,7 +719,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
 
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                AKS Web Service Technology was established specializing in Web app development, Mobile App Development, E-commerce, Branding, SEO & Digital Marketing, and high-performance cloud hosting services. We also deliver end-to-end CRM Solutions, HRM Solutions, ERP Systems, and customized software products tailored for modern growth.
+                TecVor Technologies was established specializing in Web app development, Mobile App Development, E-commerce, Branding, SEO & Digital Marketing, and high-performance cloud hosting services. We also deliver end-to-end CRM Solutions, HRM Solutions, ERP Systems, and customized software products tailored for modern growth.
               </p>
               
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -778,13 +778,13 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="space-y-2">
                 <div className="inline-block border-b-2 border-teal-400 pb-0.5">
                   <span className="text-teal-400 text-xs font-extrabold uppercase tracking-wider">
-                    AKS Web Service Technology
+                    TecVor Technologies
                   </span>
                 </div>
                 <h2 className="text-2xl sm:text-4xl font-black text-white leading-tight">
                   See why you should <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-200 to-sky-300">
-                    choose AKS Web Service
+                    choose TecVor Technologies
                   </span>
                 </h2>
               </div>
@@ -838,7 +838,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="relative w-full h-full min-h-[360px] sm:min-h-[440px] lg:min-h-[500px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group flex flex-col">
                 <img 
                   src="/images/why-choose-us.png" 
-                  alt="AKS Web Service Technology Team Strategy Meeting" 
+                  alt="TecVor Technologies Team Strategy Meeting" 
                   className="w-full h-full flex-1 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
@@ -872,7 +872,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Pioneering <span className="text-gradient">Digital Architecture</span> Since 2020.
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Founded on the principles of engineering precision and aesthetic perfection, AKS Web Service Technology bridges complex backend infrastructure with mesmerizing frontend user experiences.
+              Founded on the principles of engineering precision and aesthetic perfection, TecVor Technologies bridges complex backend infrastructure with mesmerizing frontend user experiences.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
@@ -1062,7 +1062,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             What Category Leaders <span className="text-gradient">Say About Our Engineering</span>
           </h2>
           <p className="text-slate-600 text-xs max-w-xl mx-auto">
-            Real feedback from founders, enterprise CTOs, and product directors who scaled with AKS Web Service Technology.
+            Real feedback from founders, enterprise CTOs, and product directors who scaled with TecVor Technologies.
           </p>
         </div>
 
@@ -1312,7 +1312,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="space-y-1">
             <span className="text-sky-300 text-xs font-black uppercase tracking-widest">Start Here</span>
             <h3 className="text-2xl sm:text-4xl font-black text-white">
-              Career Opportunities in AKS Web Service Technology
+              Career Opportunities in TecVor Technologies
             </h3>
           </div>
           <p className="text-sky-100 text-xs sm:text-sm max-w-xl mx-auto">

@@ -128,7 +128,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-extrabold uppercase tracking-wider"
         >
           <Rocket className="w-4 h-4 text-sky-600" />
-          <span>About AKS Web Service Technologies</span>
+          <span>About TecVor Technologies</span>
         </motion.div>
 
         <motion.h1 
@@ -147,7 +147,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           transition={{ delay: 0.2 }}
           className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto"
         >
-          At AKS Web Service Technologies, we are passionate about transforming ideas into powerful digital solutions. We specialize in creating modern websites, scalable web applications, mobile apps, enterprise software, and AI-powered solutions that help businesses grow in the digital world. Our focus is on innovation, quality, and long-term partnerships, delivering technology that drives measurable business success.
+          At TecVor Technologies, we are passionate about transforming ideas into powerful digital solutions. We specialize in creating modern websites, scalable web applications, mobile apps, enterprise software, and AI-powered solutions that help businesses grow in the digital world. Our focus is on innovation, quality, and long-term partnerships, delivering technology that drives measurable business success.
         </motion.p>
       </section>
 
@@ -161,7 +161,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           <h2 className="text-2xl sm:text-4xl font-black text-slate-900">Who We Are</h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed space-y-3">
             <span>
-              AKS Web Service Technologies is a technology-driven company committed to delivering innovative digital products and software solutions. We work with startups, small businesses, and enterprises to build secure, scalable, and user-friendly applications that solve real-world challenges.
+              TecVor Technologies is a technology-driven company committed to delivering innovative digital products and software solutions. We work with startups, small businesses, and enterprises to build secure, scalable, and user-friendly applications that solve real-world challenges.
             </span>
             <br /><br />
             <span>
@@ -393,7 +393,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         <div className="pt-6 border-t border-slate-200 space-y-3">
           <h3 className="text-xl font-extrabold text-slate-900 text-center">Our Commitment</h3>
           <p className="text-xs sm:text-sm text-slate-600 text-center max-w-3xl mx-auto leading-relaxed">
-            At AKS Web Service Technologies, we believe technology should simplify business, improve productivity, and create new opportunities. Every solution we deliver is built with performance, security, scalability, and user experience at its core.
+            At TecVor Technologies, we believe technology should simplify business, improve productivity, and create new opportunities. Every solution we deliver is built with performance, security, scalability, and user experience at its core.
           </p>
         </div>
       </section>
@@ -402,7 +402,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section className="bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 rounded-3xl p-8 sm:p-12 text-white text-center space-y-6 shadow-xl">
         <h2 className="text-3xl sm:text-4xl font-black">Ready to Build Something Exceptional?</h2>
         <p className="text-xs sm:text-sm text-sky-100 max-w-2xl mx-auto leading-relaxed">
-          Partner with AKS Web Service Technologies to turn your ideas into innovative digital solutions. Whether you're launching a startup, scaling your business, or modernizing existing systems, our team is here to help you achieve your goals.
+          Partner with TecVor Technologies to turn your ideas into innovative digital solutions. Whether you're launching a startup, scaling your business, or modernizing existing systems, our team is here to help you achieve your goals.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
           <button

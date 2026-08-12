@@ -34,7 +34,7 @@ export const ContactPage: React.FC = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-sky-500/10 via-amber-500/10 to-[#E84125]/10 border border-[#E84125]/30 text-[#E84125] text-xs font-black uppercase tracking-widest shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#E84125]" />
-            <span>Connect with AKS Web Service Technology</span>
+            <span>Connect with TecVor Technologies</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
@@ -70,8 +70,8 @@ export const ContactPage: React.FC = () => {
               <a href="mailto:ownsources001@gmail.com" className="block text-[#0284C7] hover:underline">
                 ownsources001@gmail.com
               </a>
-              <a href="mailto:contact@akswebservice.com" className="block text-slate-600 hover:text-[#0284C7]">
-                contact@akswebservice.com
+              <a href="mailto:contact@tecvor.com" className="block text-slate-600 hover:text-[#0284C7]">
+                contact@tecvor.com
               </a>
             </div>
           </motion.div>

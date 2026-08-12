@@ -236,7 +236,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenCa
           transition={{ delay: 0.2 }}
           className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto"
         >
-          At AKS Web Service Technologies, we provide end-to-end digital solutions that help businesses innovate, grow, and stay ahead in today's competitive market. From custom software development to AI-powered automation, our expert team delivers scalable, secure, and high-performance solutions tailored to your business needs.
+          At TecVor Technologies, we provide end-to-end digital solutions that help businesses innovate, grow, and stay ahead in today's competitive market. From custom software development to AI-powered automation, our expert team delivers scalable, secure, and high-performance solutions tailored to your business needs.
         </motion.p>
 
         {/* Hero CTA Buttons */}
@@ -345,11 +345,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenCa
         })}
       </section>
 
-      {/* 4. WHY CHOOSE AKS WEB SERVICE TECHNOLOGIES */}
+      {/* 4. WHY CHOOSE TECVOR TECHNOLOGIES */}
       <section className="glass-card bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl space-y-8 shadow-sm">
         <div className="text-center space-y-2">
           <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Why Choose Us</span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Why Choose AKS Web Service Technologies?</h2>
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Why Choose TecVor Technologies?</h2>
           <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto">10 pillars of technology excellence, transparent communication, and post-launch support.</p>
         </div>
 
@@ -393,7 +393,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate, onOpenCa
         <div className="space-y-2 max-w-3xl mx-auto relative z-10">
           <h2 className="text-3xl sm:text-4xl font-black">Let's Build Your Next Digital Solution</h2>
           <p className="text-xs sm:text-sm text-sky-100 leading-relaxed pt-1">
-            Whether you're launching a startup, expanding your business, or modernizing your existing systems, AKS Web Service Technologies is ready to bring your vision to life.
+            Whether you're launching a startup, expanding your business, or modernizing your existing systems, TecVor Technologies is ready to bring your vision to life.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-# 🚀 AKS Web Service Technology
+# 🚀 TecVor Technologies
 
 > **Enterprise Full-Stack Web, Cloud & AI Engineering Platform**  
 > *Pioneering High-Performance Digital Architecture, Modern Web Platforms, 3D WebXR, and Next-Gen SaaS Solutions.*
@@ -7,7 +7,7 @@
 
 ## 🌟 Overview
 
-**AKS Web Service Technology** is a modern enterprise web application platform designed and engineered to deliver world-class digital experiences, custom web engineering, AI integrations, and cloud infrastructure.
+**TecVor Technologies** is a modern enterprise web application platform designed and engineered to deliver world-class digital experiences, custom web engineering, AI integrations, and cloud infrastructure.
 
 Built with **React 19, TypeScript, Vite, Tailwind CSS, and Framer Motion**, along with a robust **Node.js, Express, and MongoDB** backend architecture.
 

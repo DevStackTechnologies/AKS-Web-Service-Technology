@@ -18,12 +18,12 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'ai',
-      text: "👋 Hi! I'm AKS AI Assistant. I can help you find open positions, score your resume ATS compatibility, or prepare for technical interviews at AKS Web Service Technologies.",
+      text: "👋 Hi! I'm TecVor AI Assistant. I can help you find open positions, score your resume ATS compatibility, or prepare for technical interviews at TecVor Technologies.",
       options: [
         { label: '🔍 Find Jobs for Me', action: 'find_jobs' },
         { label: '📊 ATS Resume Analyzer', action: 'ats_score' },
         { label: '📝 Generate Cover Letter', action: 'cover_letter' },
-        { label: '🏢 Life at AKS', action: 'life' },
+        { label: '🏢 Life at TecVor', action: 'life' },
       ]
     }
   ]);

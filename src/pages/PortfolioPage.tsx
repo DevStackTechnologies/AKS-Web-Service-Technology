@@ -473,7 +473,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-bold text-sky-600 uppercase tracking-widest">Interactive Redesign Showcase</span>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Legacy Platform vs. AKS Redesign</h2>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Legacy Platform vs. TecVor Redesign</h2>
               <p className="text-slate-500 text-xs mt-1">Select a industry showcase below and drag the slider to compare before vs. after.</p>
             </div>
 
@@ -500,7 +500,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
             <div className="absolute inset-0">
               <img 
                 src={currentPreset.afterImg} 
-                alt="AKS Redesign Platform" 
+                alt="TecVor Redesign Platform" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3.5 py-1 rounded-full text-xs font-black shadow-md border border-white/20 flex items-center gap-1.5">
@@ -798,11 +798,11 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
           </div>
         </section>
 
-        {/* 10. WHY CLIENTS CHOOSE AKS */}
+        {/* 10. WHY CLIENTS CHOOSE TECVOR */}
         <section className="glass-card bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl space-y-6 shadow-sm">
           <div className="text-center space-y-2">
             <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Why Choose Us</span>
-            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Why Global Clients Choose AKS</h2>
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Why Global Clients Choose TecVor</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1003,7 +1003,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
           <div className="space-y-2 max-w-3xl mx-auto relative z-10">
             <h2 className="text-3xl sm:text-4xl font-black">Ready to Build Your Next Digital Product?</h2>
             <p className="text-xs sm:text-sm text-sky-100 leading-relaxed pt-1">
-              Partner with AKS Web Service Technologies to transform your ideas into secure, scalable, and high-performing digital solutions.
+              Partner with TecVor Technologies to transform your ideas into secure, scalable, and high-performing digital solutions.
             </p>
           </div>
 

@@ -363,7 +363,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                         </span>
                       </div>
                       <h3 className="text-base font-black text-white">
-                        AKS Web Service Technology Capabilities & Portfolio Deck
+                        TecVor Technologies Capabilities & Portfolio Deck
                       </h3>
                       <p className="text-xs text-slate-300 leading-relaxed">
                         Includes architecture blueprints, tech stack pricing models, enterprise case studies, and SLA guarantees.

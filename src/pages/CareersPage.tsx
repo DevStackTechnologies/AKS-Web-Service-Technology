@@ -156,7 +156,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
               className="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-white"
             >
               Build Your Future with <br />
-              <span className="bg-gradient-to-r from-sky-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent">AKS Web Service Technologies</span>
+              <span className="bg-gradient-to-r from-sky-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent">TecVor Technologies</span>
             </motion.h1>
 
             <motion.p 

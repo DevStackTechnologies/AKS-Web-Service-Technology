@@ -84,7 +84,7 @@ export const CandidateDashboard: React.FC<CandidateDashboardProps> = ({
             Welcome, {candidateProfile.name}!
           </h2>
           <p className="text-xs text-[#CDD2DA] max-w-xl leading-relaxed">
-            Manage your real-world job applications, analyze your ATS resume score, and download official offer letters with verified AKS Web Service Technologies branding.
+            Manage your real-world job applications, analyze your ATS resume score, and download official offer letters with verified TecVor Technologies branding.
           </p>
         </div>
 
