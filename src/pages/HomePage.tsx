@@ -4,10 +4,10 @@ import { QuickAccessDock } from '../components/tools/QuickAccessDock';
 import { 
   Sparkles, ArrowRight, ShieldCheck, Zap, Globe, Cpu, Code, Server, 
   Database, Layers, Smartphone, Bot, CheckCircle2, Star, Play, 
-  HelpCircle, ChevronDown, Calculator, MessageSquare, TrendingUp, 
-  Award, Users, Clock, Mail, Phone, ExternalLink, RefreshCw,
-  Search, Target, Rocket, Layout, Laptop, ChevronLeft, ChevronRight,
-  User, Send, Folder
+  ChevronDown, Calculator, MessageSquare, TrendingUp, 
+  Award, Users, Clock, Mail, Phone, ExternalLink,
+  Rocket, Laptop, ChevronRight, ChevronLeft,
+  User, Send, Search, Target, Layout, Folder
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -43,7 +43,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'KD Finserve Wealth Portal',
-      review: 'AKS Web Service Technologies engineered our wealth management portal from scratch. Their security standards and fast execution delivered ₹85 Cr+ AUM growth within months!'
+      review: 'TecVor Technologies engineered our wealth management portal from scratch. Their security standards and fast execution delivered ₹85 Cr+ AUM growth within months!'
     },
     {
       name: 'Sarah Jenkins',
@@ -51,7 +51,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'GlowBotanica E-Commerce Store',
-      review: 'The glassmorphic design and AI shade finder built by AKS tripled our conversion rates. Outstanding team and absolute engineering brilliance!'
+      review: 'The glassmorphic design and AI shade finder built by TecVor tripled our conversion rates. Outstanding team and absolute engineering brilliance!'
     },
     {
       name: 'Michael Zhang',
@@ -59,7 +59,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'ApexPay Trading Dashboard',
-      review: 'Handling 100K+ concurrent WebSockets trading transactions with sub-45ms latency was critical for us. AKS delivered flawless performance!'
+      review: 'Handling 100K+ concurrent WebSockets trading transactions with sub-45ms latency was critical for us. TecVor delivered flawless performance!'
     },
     {
       name: 'Vikramaditya Singh',
@@ -75,7 +75,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'AquaPure Eco Bottle D2C Store',
-      review: 'Our D2C water bottle sales exploded after AKS deployed our Next.js storefront. 150,000+ orders processed smoothly with zero downtime!'
+      review: 'Our D2C water bottle sales exploded after TecVor deployed our Next.js storefront. 150,000+ orders processed smoothly with zero downtime!'
     },
     {
       name: 'Dr. Aris Thorne',
@@ -99,7 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Eden Garden Nursery Portal',
-      review: 'The WebXR room scanner developed by AKS allows plant lovers to preview 200+ indoor plant varieties. 190% boost in repeat orders!'
+      review: 'The WebXR room scanner developed by TecVor allows plant lovers to preview 200+ indoor plant varieties. 190% boost in repeat orders!'
     },
     {
       name: 'David Miller',
@@ -107,7 +107,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'CloudPulse AWS Microservices',
-      review: 'AKS migrated our monolithic backend to AWS microservices with zero downtime. API response latency dropped from 350ms to 28ms!'
+      review: 'TecVor migrated our monolithic backend to AWS microservices with zero downtime. API response latency dropped from 350ms to 28ms!'
     },
     {
       name: 'Sophia Martinez',
@@ -123,7 +123,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Logistics GPS Dispatch Portal',
-      review: 'Real-time GPS fleet tracking and automated e-way bill processing system built by AKS streamlined 10,000+ truck dispatches.'
+      review: 'Real-time GPS fleet tracking and automated e-way bill processing system built by TecVor streamlined 10,000+ truck dispatches.'
     },
     {
       name: 'Claire Dupont',
@@ -131,7 +131,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Velour Multi-Currency Boutique',
-      review: 'The multi-currency luxury fashion store developed by AKS delivered our highest holiday sales record in company history!'
+      review: 'The multi-currency luxury fashion store developed by TecVor delivered our highest holiday sales record in company history!'
     },
     {
       name: 'Dr. Marcus Vance',
@@ -147,7 +147,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'UrbanSpaces 360 Property Portal',
-      review: 'Virtual 360-degree home tours and AI property valuation tools built by AKS doubled our broker inquiry conversions within 30 days.'
+      review: 'Virtual 360-degree home tours and AI property valuation tools built by TecVor doubled our broker inquiry conversions within 30 days.'
     },
     {
       name: 'Oliver Bennet',
@@ -155,7 +155,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'BioNutra D2C Subscription Platform',
-      review: 'Sub-second page speeds and automated subscription renewals built by AKS boosted our recurring D2C revenue by 180%.'
+      review: 'Sub-second page speeds and automated subscription renewals built by TecVor boosted our recurring D2C revenue by 180%.'
     },
     {
       name: 'Priya Roy',
@@ -163,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'QuickRide Driver Dispatch App',
-      review: 'Live driver tracking and battery-efficient geolocation modules engineered by AKS reduced dispatch drop-offs by 42%.'
+      review: 'Live driver tracking and battery-efficient geolocation modules engineered by TecVor reduced dispatch drop-offs by 42%.'
     },
     {
       name: 'Lucas Rossi',
@@ -171,7 +171,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'BellaCasa Furniture AR Studio',
-      review: 'Customers can place 3D photorealistic Italian furniture inside their living rooms using our AKS-built WebXR app. Incredible conversion lift!'
+      review: 'Customers can place 3D photorealistic Italian furniture inside their living rooms using our TecVor-built WebXR app. Incredible conversion lift!'
     },
     {
       name: 'Sneha Kulkarni',
@@ -179,7 +179,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'MedPulse Diagnostic Report Portal',
-      review: 'Automated WhatsApp PDF report delivery and barcode patient tracking built by AKS delivered a 100% paperless clinic workflow.'
+      review: 'Automated WhatsApp PDF report delivery and barcode patient tracking built by TecVor delivered a 100% paperless clinic workflow.'
     },
     {
       name: 'Ethan Hunt',
@@ -187,7 +187,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'CyberGuard SOC Compliance Tool',
-      review: 'Automated SOC2 audit logs and IAM role-based permission matrices developed by AKS passed external security audits with flying colors.'
+      review: 'Automated SOC2 audit logs and IAM role-based permission matrices developed by TecVor passed external security audits with flying colors.'
     },
     {
       name: 'Tanvi Agarwal',
@@ -195,7 +195,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'OrganicRoot Hyperlocal Grocery App',
-      review: 'Ultra-fast 30-minute hyperlocal delivery app with live inventory sync built by AKS enabled us to scale across 12 cities profitably.'
+      review: 'Ultra-fast 30-minute hyperlocal delivery app with live inventory sync built by TecVor enabled us to scale across 12 cities profitably.'
     }
   ];
 
@@ -401,7 +401,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div className="space-y-10 pb-8 bg-[#FFF8F5] text-slate-900 overflow-hidden">
 
       {/* LANDING PAGE HERO WITH 100% CRYSTAL CLEAR BACKGROUND */}
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-20 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl">
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl">
         
         {/* 100% Ultra-Sharp 4K Background Image (Hardware Accelerated Pixel Clarity) */}
         <motion.div 
@@ -419,16 +419,16 @@ export const HomePage: React.FC<HomePageProps> = ({
         {/* Minimal Subtle Tint to preserve maximum 4K visual sharpness */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/20 to-slate-950/70 pointer-events-none z-0" />
         
-        {/* Floating Futuristic Ambient Light Orbs */}
+        {/* Floating Futuristic Ambient Light Orbs - Optimized with GPU layers and hidden on small mobile to maximize 120fps scroll smoothness */}
         <motion.div 
           animate={{ y: [0, -25, 0], scale: [1, 1.12, 1], opacity: [0.35, 0.55, 0.35] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-1/4 left-1/3 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-sky-400/20 to-[#0A4EDB]/25 rounded-full blur-[100px] pointer-events-none z-0" 
+          className="hidden sm:block absolute top-1/4 left-1/3 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-sky-400/20 to-[#0A4EDB]/25 rounded-full blur-[100px] pointer-events-none z-0 transform-gpu will-change-transform" 
         />
         <motion.div 
           animate={{ y: [0, 20, 0], scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/25 to-indigo-500/25 rounded-full blur-[90px] pointer-events-none z-0" 
+          className="hidden sm:block absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/25 to-indigo-500/25 rounded-full blur-[90px] pointer-events-none z-0 transform-gpu will-change-transform" 
         />
 
         <motion.div 
@@ -490,6 +490,12 @@ export const HomePage: React.FC<HomePageProps> = ({
           </motion.div>
 
         </motion.div>
+
+        {/* Compact Floating Quick Access Dock - Exclusively within Hero Section Area */}
+        <QuickAccessDock 
+          onNavigate={onNavigate} 
+          onOpenCalendly={onOpenCalendly} 
+        />
       </section>
 
       {/* INFINITE CLIENT LOGOS MARQUEE (BELOW HERO SECTION) */}
@@ -509,9 +515,9 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Left Fog Overlay */}
             <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-white via-white/90 to-transparent z-20 pointer-events-none" />
             
-            {/* Framer Motion Seamless Infinite Scroll Loop */}
+            {/* Framer Motion Seamless Infinite Scroll Loop - Hardware Accelerated */}
             <motion.div
-              className="flex items-center gap-6 w-max"
+              className="flex items-center gap-6 w-max transform-gpu will-change-transform"
               animate={{ x: ['0%', '-50%'] }}
               transition={{
                 x: {
@@ -1077,7 +1083,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <motion.div 
               animate={{ x: ['0%', '-50%'] }}
               transition={{ repeat: Infinity, ease: 'linear', duration: 35 }}
-              className="flex gap-6 w-max"
+              className="flex gap-6 w-max transform-gpu will-change-transform"
             >
               {[...testimonials.slice(0, 10), ...testimonials.slice(0, 10)].map((t, tIdx) => (
                 <div 
@@ -1088,7 +1094,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="relative">
-                        <img src={t.photo} alt={t.name} className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
+                        <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
                         <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
                       </div>
                       <div>
@@ -1132,7 +1138,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <motion.div 
               animate={{ x: ['-50%', '0%'] }}
               transition={{ repeat: Infinity, ease: 'linear', duration: 38 }}
-              className="flex gap-6 w-max"
+              className="flex gap-6 w-max transform-gpu will-change-transform"
             >
               {[...testimonials.slice(10, 20), ...testimonials.slice(10, 20)].map((t, tIdx) => (
                 <div 
@@ -1143,7 +1149,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="relative">
-                        <img src={t.photo} alt={t.name} className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
+                        <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
                         <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
                       </div>
                       <div>
@@ -1312,7 +1318,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="space-y-1">
             <span className="text-sky-300 text-xs font-black uppercase tracking-widest">Start Here</span>
             <h3 className="text-2xl sm:text-4xl font-black text-white">
-              Career Opportunities in TecVor Technologies
+              Career Opportunities at TecVor Technologies
             </h3>
           </div>
           <p className="text-sky-100 text-xs sm:text-sm max-w-xl mx-auto">
@@ -1323,7 +1329,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               onClick={() => onNavigate('careers')}
               className="px-8 py-3 rounded-full font-black text-xs text-[#0A4EDB] bg-white hover:bg-sky-50 shadow-lg transition-all"
             >
-              Explore Openings / Apply
+              Explore Careers & Culture
             </button>
           </div>
         </div>
@@ -1448,12 +1454,6 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </motion.div>
       </section>
-
-      {/* Floating Quick Access Dock - Exclusively for Home Page Hero Area */}
-      <QuickAccessDock 
-        onNavigate={onNavigate} 
-        onOpenCalendly={onOpenCalendly} 
-      />
 
     </div>
   );

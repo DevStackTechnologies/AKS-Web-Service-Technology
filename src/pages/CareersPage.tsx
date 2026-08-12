@@ -5,7 +5,7 @@ import {
   Search, MapPin, Clock, Briefcase, Bookmark, ArrowRight, CheckCircle2, X, 
   Rocket, Users, GraduationCap, Heart, Award, Globe, Zap, ShieldCheck, 
   Sparkles, Code2, Cpu, Laptop, Smartphone, Server, Database, ChevronDown, 
-  Mail, Phone, FileText, Upload, BookOpen, Layers, HelpCircle, MessageSquare
+  Mail, Phone, FileText, Upload, Layers, BookOpen
 } from 'lucide-react';
 
 interface CareersPageProps {
@@ -58,14 +58,14 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
   ];
 
   const teams = [
-    { title: 'Software Engineering', desc: 'Build scalable web applications, microservices, and enterprise engines.', icon: Code2, count: '12 Positions' },
-    { title: 'UI/UX Design', desc: 'Craft luxury glassmorphic interfaces and intuitive user flows.', icon: Layers, count: '4 Positions' },
-    { title: 'AI & Machine Learning', desc: 'Develop autonomous LLM agents and predictive intelligence models.', icon: Cpu, count: '6 Positions' },
-    { title: 'Mobile Development', desc: 'Cross-platform iOS and Android apps with 60fps Flutter performance.', icon: Smartphone, count: '5 Positions' },
-    { title: 'DevOps & Cloud', desc: 'AWS/GCP multi-cloud clusters, Docker, and CI/CD pipelines.', icon: Server, count: '3 Positions' },
-    { title: 'Digital Marketing', desc: 'Growth marketing, brand positioning, and SEO data analytics.', icon: Zap, count: '2 Positions' },
-    { title: 'HR & Talent Acquisition', desc: 'Discover, nurture, and onboard world-class technology talent.', icon: Users, count: '2 Positions' },
-    { title: 'Sales & Business Development', desc: 'Expand global client partnerships across US, UK, and APAC regions.', icon: Globe, count: '4 Positions' }
+    { title: 'Software Engineering', desc: 'Build scalable web applications, microservices, and enterprise engines.', icon: Code2, count: 'Specialist Team' },
+    { title: 'UI/UX Design', desc: 'Craft luxury glassmorphic interfaces and intuitive user flows.', icon: Layers, count: 'Specialist Team' },
+    { title: 'AI & Machine Learning', desc: 'Develop autonomous LLM agents and predictive intelligence models.', icon: Cpu, count: 'Specialist Team' },
+    { title: 'Mobile Development', desc: 'Cross-platform iOS and Android apps with 60fps Flutter performance.', icon: Smartphone, count: 'Specialist Team' },
+    { title: 'DevOps & Cloud', desc: 'AWS/GCP multi-cloud clusters, Docker, and CI/CD pipelines.', icon: Server, count: 'Specialist Team' },
+    { title: 'Digital Marketing', desc: 'Growth marketing, brand positioning, and SEO data analytics.', icon: Zap, count: 'Specialist Team' },
+    { title: 'HR & Talent Acquisition', desc: 'Discover, nurture, and onboard world-class technology talent.', icon: Users, count: 'Specialist Team' },
+    { title: 'Sales & Business Development', desc: 'Expand global client partnerships across US, UK, and APAC regions.', icon: Globe, count: 'Specialist Team' }
   ];
 
   const hiringJourney = [
@@ -77,7 +77,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
     { step: '06', title: 'Manager Discussion', desc: 'Project allocation, team vision, and role orientation.' },
     { step: '07', title: 'Offer Letter', desc: 'Formal offer with competitive compensation package.' },
     { step: '08', title: 'Background Verification', desc: 'Standard credential and documentation verification.' },
-    { step: '09', title: 'Welcome to AKS', desc: 'Seamless onboarding and welcome kit delivery!' }
+    { step: '09', title: 'Welcome to TecVor', desc: 'Seamless onboarding and welcome kit delivery!' }
   ];
 
   const employeeBenefits = [
@@ -95,13 +95,13 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
     {
       name: 'Aniket Verma',
       path: 'Started as Intern ➔ Software Engineer ➔ Tech Lead',
-      story: 'Joined AKS during my final semester. Within 2 years, I led the architecture for KD Finserve financial portal managing ₹85 Cr+ AUM.',
+      story: 'Joined TecVor during my final semester. Within 2 years, I led the architecture for KD Finserve financial portal managing ₹85 Cr+ AUM.',
       photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
     },
     {
       name: 'Riya Sengupta',
       path: 'Junior UI Designer ➔ Senior Product Designer',
-      story: 'The mentorship culture at AKS is unmatched. I designed the luxury GlowBotanica e-commerce platform which won global design accolades.',
+      story: 'The mentorship culture at TecVor is unmatched. I designed the luxury GlowBotanica e-commerce platform which won global design accolades.',
       photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'
     }
   ];
@@ -111,26 +111,26 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
       name: 'Karan Sharma',
       role: 'Senior Full Stack Engineer',
       dept: 'Software Engineering',
-      years: '3 Years at AKS',
+      years: '3 Years at TecVor',
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-      review: 'Working at AKS has been the highlight of my engineering career. The freedom to use cutting-edge tech like Next.js 15 and OpenAI APIs makes every day exciting!'
+      review: 'Working at TecVor has been the highlight of my engineering career. The freedom to use cutting-edge tech like Next.js 15 and OpenAI APIs makes every day exciting!'
     },
     {
       name: 'Megha Nair',
       role: 'Lead UI/UX Architect',
       dept: 'Design Systems',
-      years: '2.5 Years at AKS',
+      years: '2.5 Years at TecVor',
       photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
       review: 'The psychological safety and creative independence here allow designers to craft truly world-class products without micromanagement.'
     }
   ];
 
   const faqs = [
-    { q: 'How do I apply for open positions?', a: 'Explore our Featured Jobs section below, select your desired role, and click "Apply Now". You can also log in to track your application status in real time.' },
-    { q: 'Can freshers and final-year students apply?', a: 'Yes! We have a dedicated Internship & Fresher Trainee Program designed specifically for final-year students and fresh graduates.' },
-    { q: 'Is remote work available for all roles?', a: 'Most of our engineering, design, and AI positions offer remote or hybrid work flexibility based on your preference.' },
-    { q: 'What is the standard interview turnaround time?', a: 'Our interview process typically takes 5–10 business days from initial resume screening to final offer letter issuance.' },
-    { q: 'Can I apply for multiple positions simultaneously?', a: 'Yes, you can apply for up to 3 positions that align with your technical skills and experience.' }
+    { q: 'Are there any active job openings right now?', a: 'Currently, all active positions are filled. However, we continuously review incoming CVs in our Talent Network for upcoming expansion cohorts.' },
+    { q: 'Can freshers and final-year students apply?', a: 'Yes! When our Trainee & Internship cohorts open, fresh graduates and final-year students can apply. You can drop your resume to be notified first.' },
+    { q: 'Is remote work available for future roles?', a: 'Most of our engineering, design, and AI positions offer remote or hybrid work flexibility based on candidate preference.' },
+    { q: 'What is the standard interview turnaround time?', a: 'When active hiring is open, our interview process typically takes 5–10 business days from initial resume screening to final offer letter.' },
+    { q: 'How can I submit my CV for upcoming vacancies?', a: 'You can enter your email in the Talent Community box below or email your resume directly to info@tecvor.com.' }
   ];
 
   return (
@@ -146,7 +146,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
               className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sky-300 text-xs font-extrabold uppercase tracking-wider shadow-sm backdrop-blur-md"
             >
               <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
-              <span>🌍 Remote & Hybrid Opportunities • 🚀 Fast Growth • 💼 Enterprise Scale</span>
+              <span>🌍 Remote & Hybrid Culture • 🚀 Fast Growth • 💼 Enterprise Engineering</span>
             </motion.div>
 
             <motion.h1 
@@ -156,7 +156,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
               className="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-white"
             >
               Build Your Future with <br />
-              <span className="bg-gradient-to-r from-sky-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent">TecVor Technologies</span>
+              <span className="bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] bg-clip-text text-transparent">TecVor Technologies</span>
             </motion.h1>
 
             <motion.p 
@@ -176,19 +176,19 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
               className="flex flex-wrap items-center justify-center gap-3 pt-2"
             >
               <a
-                href="#open-positions"
+                href="#talent-network"
                 className="px-6 py-3.5 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-black text-xs shadow-lg transition-all flex items-center gap-2"
               >
-                <Briefcase className="w-4 h-4" />
-                <span>Explore Open Positions</span>
+                <Users className="w-4 h-4" />
+                <span>Join Talent Community</span>
               </a>
 
               <a
-                href="#talent-network"
+                href="#work-culture"
                 className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-black text-xs backdrop-blur-md shadow-sm transition-all flex items-center gap-2"
               >
-                <Users className="w-4 h-4 text-sky-400" />
-                <span>Join Talent Community</span>
+                <Rocket className="w-4 h-4 text-sky-400" />
+                <span>Explore Work Culture</span>
               </a>
 
               <button
@@ -196,17 +196,17 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
                 className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-black text-xs border border-white/20 backdrop-blur-md transition-all flex items-center gap-2"
               >
                 <GraduationCap className="w-4 h-4 text-sky-300" />
-                <span>View Internship Program</span>
+                <span>Internship Program Info</span>
               </button>
             </motion.div>
 
             {/* Hero Stats */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3 pt-6 border-t border-white/10 text-center">
               {[
-                { num: '250+', label: 'Projects Delivered' },
+                { num: '150+', label: 'Projects Delivered' },
                 { num: '50+', label: 'Team Members' },
                 { num: '15+', label: 'Technologies' },
-                { num: '98%', label: 'Employee Satisfaction' },
+                { num: '99.4%', label: 'Client Satisfaction' },
                 { num: 'Global', label: 'Remote & Hybrid' }
               ].map((s, idx) => (
                 <div key={idx} className="p-3.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
@@ -218,12 +218,12 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
           </div>
         </section>
 
-      {/* 2. WHY WORK WITH AKS (BUILD MORE THAN A CAREER) */}
-      <section className="glass-card bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl space-y-8 shadow-sm">
+      {/* 2. WHY WORK WITH TECVOR (BUILD MORE THAN A CAREER) */}
+      <section id="work-culture" className="glass-card bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl space-y-8 shadow-sm">
         <div className="text-center space-y-2">
           <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Work Culture</span>
           <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Build More Than a Career</h2>
-          <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto">At AKS, we believe our people are our greatest strength. We foster innovation, continuous learning, and career growth.</p>
+          <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto">At TecVor, we believe our people are our greatest strength. We foster innovation, continuous learning, and career growth.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -242,10 +242,10 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
         </div>
       </section>
 
-      {/* 3. LIFE AT AKS GALLERY */}
+      {/* 3. LIFE AT TECVOR GALLERY */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
-          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Life at AKS</span>
+          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Life at TecVor</span>
           <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Inside Our Engineering Hub</h2>
         </div>
 
@@ -257,7 +257,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
             { title: 'Annual Retreats', img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80' }
           ].map((gal, gIdx) => (
             <div key={gIdx} className="relative h-48 rounded-2xl overflow-hidden shadow-sm group">
-              <img src={gal.img} alt={gal.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={gal.img} alt={gal.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-4">
                 <span className="text-xs font-black text-white">{gal.title}</span>
               </div>
@@ -269,8 +269,8 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
       {/* 4. MEET OUR TEAMS */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
-          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Teams at AKS</span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Explore Specialist Departments</h2>
+          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Teams at TecVor</span>
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Specialist Engineering Departments</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -282,7 +282,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
                   <div className="p-2.5 rounded-xl bg-sky-50 text-sky-600">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[10px] font-extrabold text-sky-700 bg-sky-100 px-2 py-0.5 rounded-full">{tm.count}</span>
+                  <span className="text-[10px] font-extrabold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">{tm.count}</span>
                 </div>
                 <h3 className="text-sm font-black text-slate-900">{tm.title}</h3>
                 <p className="text-xs text-slate-600 font-medium leading-relaxed">{tm.desc}</p>
@@ -292,112 +292,72 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
         </div>
       </section>
 
-      {/* 5. FEATURED JOBS & ADVANCED SEARCH (EXISTING PRESERVED & UPGRADED) */}
+      {/* 5. CURRENT OPEN POSITIONS (CURRENTLY NO OPENINGS STATE) */}
       <section id="open-positions" className="space-y-6">
         <div className="text-center space-y-2">
-          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Active Requisitions</span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Featured Open Positions</h2>
+          <span className="text-xs font-extrabold text-amber-600 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+            Hiring Status
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Current Job Openings</h2>
         </div>
 
-        {/* Filter Header */}
-        <div className="glass-card bg-white p-4 rounded-2xl border border-slate-200 flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm">
-          <div className="relative flex-1 w-full">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search positions, keywords, or skills..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 focus:outline-none focus:border-sky-500"
-            />
+        {/* NO OPENINGS AVAILABLE NOTIFICATION CARD */}
+        <div className="glass-card bg-white p-8 sm:p-14 rounded-3xl border border-slate-200 shadow-lg text-center space-y-6 max-w-3xl mx-auto">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-amber-50 border-2 border-amber-200 text-amber-500 flex items-center justify-center mx-auto shadow-sm">
+            <Briefcase className="w-8 h-8 sm:w-10 sm:h-10" />
           </div>
 
-          <div className="flex items-center gap-2 w-full md:w-auto overflow-x-auto">
-            {['All', 'Engineering', 'Design', 'AI & ML', 'Marketing', 'Sales'].map((d) => (
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-black uppercase tracking-wider">
+              <span>All Positions Currently Filled</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Currently No Active Openings Available
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+              Presently, there are no vacant job openings at TecVor Technologies. However, we are constantly expanding and evaluating talent for our future project requirements.
+            </p>
+          </div>
+
+          {/* Quick Talent Network Form */}
+          <div className="pt-2 border-t border-slate-100 max-w-md mx-auto space-y-3">
+            <p className="text-xs font-bold text-slate-700">
+              Drop your email to get notified immediately when new positions open:
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email address..."
+                value={talentEmail}
+                onChange={(e) => setTalentEmail(e.target.value)}
+                className="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:border-sky-500 outline-none"
+              />
               <button
-                key={d}
-                onClick={() => setDepartment(d)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex-shrink-0 ${
-                  department === d
-                    ? 'bg-sky-600 text-white shadow-sm'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                onClick={() => {
+                  if (talentEmail) {
+                    setTalentSubmitted(true);
+                    setTalentEmail('');
+                    setTimeout(() => setTalentSubmitted(false), 3500);
+                  }
+                }}
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#0A4EDB] to-[#139EF8] text-white text-xs font-black shadow-md hover:brightness-110 transition-all flex items-center gap-1.5 flex-shrink-0"
               >
-                {d}
+                <Upload className="w-3.5 h-3.5" />
+                <span>Notify Me</span>
               </button>
-            ))}
+            </div>
+            {talentSubmitted && (
+              <p className="text-xs font-bold text-emerald-600 animate-pulse">
+                ✓ Thank you! You will be notified as soon as new positions open.
+              </p>
+            )}
           </div>
-        </div>
 
-        {/* Jobs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filtered.map((job) => {
-            const isSaved = savedJobIds.includes(job.id);
-            return (
-              <div
-                key={job.id}
-                className="glass-card bg-white p-6 rounded-3xl border border-slate-200 hover:border-sky-500 transition-all shadow-sm space-y-4 flex flex-col justify-between group"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <span className="text-[10px] font-extrabold text-sky-600 uppercase tracking-widest block">{job.department}</span>
-                      <h3 className="text-lg font-black text-slate-900 group-hover:text-sky-600 transition-colors pt-0.5">
-                        {job.title}
-                      </h3>
-                    </div>
-                    <button
-                      onClick={() => toggleSaveJob(job.id)}
-                      className={`p-2 rounded-xl border transition-colors ${
-                        isSaved
-                          ? 'bg-sky-50 border-sky-300 text-sky-600'
-                          : 'bg-slate-50 border-slate-200 text-slate-400 hover:text-slate-700'
-                      }`}
-                      title={isSaved ? 'Saved' : 'Save Job'}
-                    >
-                      <Bookmark className="w-4 h-4 fill-current" />
-                    </button>
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-semibold">
-                    <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-slate-400" /> {job.location}</span>
-                    <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-slate-400" /> {job.type}</span>
-                    <span className="flex items-center gap-1"><Briefcase className="w-3.5 h-3.5 text-slate-400" /> {job.experience}</span>
-                    {job.salary && <span className="font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">{job.salary}</span>}
-                  </div>
-
-                  <p className="text-xs text-slate-600 font-medium leading-relaxed line-clamp-2">
-                    {job.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {(job.skills || []).map((sk, idx) => (
-                      <span key={idx} className="px-2.5 py-0.5 rounded-lg bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-700">
-                        {sk}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <button
-                    onClick={() => setSelectedJob(job)}
-                    className="text-xs font-black text-sky-600 hover:text-blue-700 flex items-center gap-1"
-                  >
-                    <span>View Requisition Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-
-                  <button
-                    onClick={() => setSelectedJob(job)}
-                    className="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-extrabold text-xs shadow-sm transition-all"
-                  >
-                    Apply Now
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
+            <span>Direct Inquiries: <a href="mailto:info@tecvor.com" className="font-bold text-sky-600 hover:underline">info@tecvor.com</a></span>
+            <span>•</span>
+            <span>Hotline: <a href="tel:+917739339852" className="font-bold text-sky-600 hover:underline">+91 7739339852</a></span>
+          </div>
         </div>
       </section>
 
@@ -445,7 +405,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
       <section className="glass-card bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl space-y-6 shadow-sm">
         <div className="text-center space-y-2">
           <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Employee Stories</span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Career Growth at AKS</h2>
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 pt-1">Career Growth at TecVor</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -488,7 +448,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
         </div>
         {talentSubmitted && (
           <p className="text-center text-xs font-extrabold text-emerald-400 animate-pulse">
-            ✓ Thank you for joining AKS Talent Community! We will notify you about future openings.
+            ✓ Thank you for joining TecVor Talent Community! We will notify you about future openings.
           </p>
         )}
       </section>
@@ -523,7 +483,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
       {/* 11. FINAL CTA BANNER */}
       <section className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 rounded-3xl p-8 sm:p-12 text-white text-center space-y-6 shadow-xl relative overflow-hidden">
         <div className="space-y-2 max-w-3xl mx-auto relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-black">Ready to Shape the Future with AKS?</h2>
+          <h2 className="text-3xl sm:text-4xl font-black">Ready to Shape the Future with TecVor?</h2>
           <p className="text-xs sm:text-sm text-sky-100 leading-relaxed pt-1">
             Whether you're an experienced professional, a fresher, or an intern, your next opportunity starts here.
           </p>
@@ -531,20 +491,20 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 relative z-10">
           <a
-            href="#open-positions"
+            href="#talent-network"
             className="px-8 py-3.5 rounded-full bg-white text-sky-700 font-black text-xs hover:bg-sky-50 transition-all shadow-lg flex items-center gap-2"
           >
-            <Rocket className="w-4 h-4 text-sky-600" />
-            <span>Apply Now</span>
-          </a>
-          
-          <a
-            href="#talent-network"
-            className="px-8 py-3.5 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-black text-xs border border-white/30 transition-all flex items-center gap-2"
-          >
-            <Users className="w-4 h-4" />
+            <Users className="w-4 h-4 text-sky-600" />
             <span>Join Talent Community</span>
           </a>
+          
+          <button
+            onClick={() => onNavigate('contact')}
+            className="px-8 py-3.5 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-black text-xs border border-white/30 transition-all flex items-center gap-2"
+          >
+            <Rocket className="w-4 h-4" />
+            <span>Contact HR & Careers Desk</span>
+          </button>
         </div>
       </section>
 
@@ -573,7 +533,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
                 
                 <div className="flex flex-wrap gap-4 text-xs font-semibold text-slate-500 pt-1">
                   <span>📍 {selectedJob.location}</span>
-                  <span>⏱️ {selectedJob.type}</span>
+                  <span>⏱️ {selectedJob.jobType}</span>
                   <span>💼 {selectedJob.experience}</span>
                   {selectedJob.salary && <span className="text-emerald-600 font-extrabold">💰 {selectedJob.salary}</span>}
                 </div>
@@ -587,7 +547,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
               <div className="space-y-2">
                 <h4 className="text-xs font-extrabold text-slate-400 uppercase tracking-wider">Required Technical Skills</h4>
                 <div className="flex flex-wrap gap-1.5">
-                  {(selectedJob.skills || []).map((sk, idx) => (
+                  {(selectedJob.requirements || []).map((sk, idx) => (
                     <span key={idx} className="px-3 py-1 rounded-xl bg-sky-50 border border-sky-200 text-sky-800 text-xs font-extrabold">
                       {sk}
                     </span>

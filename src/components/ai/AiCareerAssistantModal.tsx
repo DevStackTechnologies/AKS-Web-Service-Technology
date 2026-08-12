@@ -41,11 +41,11 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
       const lower = userText.toLowerCase();
 
       if (lower.includes('job') || lower.includes('find') || lower.includes('position')) {
-        aiResponseText = "We have 25+ open positions across Frontend, Backend, AI/ML, and Mobile App Development. Would you like to view our Open Positions page?";
+        aiResponseText = "We regularly open hiring for Frontend, Backend, AI/ML, and Mobile App Development. Would you like to view our Careers page?";
       } else if (lower.includes('ats') || lower.includes('resume') || lower.includes('score')) {
-        aiResponseText = "You can upload your resume in the Candidate Dashboard to get an instant ATS score matching our AKS keyword database!";
+        aiResponseText = "You can upload your resume in the Candidate Dashboard to get an instant ATS score matching our TecVor keyword database!";
       } else if (lower.includes('intern') || lower.includes('stipend')) {
-        aiResponseText = "Our 2026 Internship Program offers 3-month and 6-month tracks with stipends up to ₹18,000/month and direct PPO opportunities!";
+        aiResponseText = "Our Internship Program offers 3-month and 6-month tracks with stipends up to ₹18,000/month and direct PPO opportunities!";
       }
 
       setMessages(prev => [
@@ -54,7 +54,7 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
           sender: 'ai',
           text: aiResponseText,
           options: [
-            { label: 'View Open Positions', action: 'goto_positions' },
+            { label: 'View Careers Page', action: 'goto_positions' },
             { label: 'Open Candidate Dashboard', action: 'goto_candidate' }
           ]
         }
@@ -64,13 +64,13 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
 
   const handleOptionClick = (action: string) => {
     if (action === 'find_jobs' || action === 'goto_positions') {
-      onNavigate('positions');
+      onNavigate('careers');
       onClose();
     } else if (action === 'ats_score' || action === 'goto_candidate' || action === 'cover_letter') {
       onNavigate('candidate-dashboard');
       onClose();
     } else if (action === 'life') {
-      onNavigate('lifeAtAks');
+      onNavigate('careers');
       onClose();
     }
   };
@@ -79,11 +79,11 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          initial={{ opacity: 0, y: 20, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 30, scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 350, damping: 28 }}
-          className="fixed bottom-6 right-6 z-50 w-full max-w-sm sm:max-w-md bg-white/95 backdrop-blur-xl border border-[#CDD2DA] shadow-2xl rounded-2xl overflow-hidden"
+          exit={{ opacity: 0, y: 20, scale: 0.96 }}
+          transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100%-2rem)] max-w-sm sm:max-w-md bg-white/98 backdrop-blur-xl border border-[#CDD2DA] shadow-2xl rounded-2xl sm:rounded-3xl overflow-hidden transform-gpu will-change-transform"
         >
           
           {/* Header */}
@@ -98,10 +98,10 @@ export const AiCareerAssistantModal: React.FC<AiCareerAssistantModalProps> = ({ 
               </motion.div>
               <div>
                 <h3 className="text-sm font-bold flex items-center gap-1.5">
-                  <span>AKS AI Assistant</span>
+                  <span>TecVor AI Assistant</span>
                   <Sparkles className="w-3.5 h-3.5 text-[#38BDF8] animate-pulse" />
                 </h3>
-                <p className="text-[10px] text-white/80">Online | Powered by AKS Intelligence</p>
+                <p className="text-[10px] text-white/80">Online | Powered by TecVor Intelligence</p>
               </div>
             </div>
             <motion.button 

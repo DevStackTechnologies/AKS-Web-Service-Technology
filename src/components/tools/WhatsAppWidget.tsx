@@ -19,11 +19,11 @@ export const WhatsAppWidget: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.94, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-            className="mb-4 w-72 bg-white border border-emerald-200 rounded-3xl p-4 shadow-2xl text-slate-900 overflow-hidden"
+            exit={{ opacity: 0, scale: 0.94, y: 15 }}
+            transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-4 w-72 bg-white border border-emerald-200 rounded-3xl p-4 shadow-2xl text-slate-900 overflow-hidden transform-gpu will-change-transform"
           >
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
@@ -31,7 +31,7 @@ export const WhatsAppWidget: React.FC = () => {
                   WA
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">AKS Support Desk</h4>
+                  <h4 className="text-xs font-bold text-slate-900">TecVor Support Desk</h4>
                   <span className="text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Online Now
                   </span>

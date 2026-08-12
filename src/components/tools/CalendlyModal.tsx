@@ -26,30 +26,31 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in">
-      <div className="relative w-full max-w-xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-900">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl text-slate-900 my-auto max-h-[90vh] overflow-y-auto">
         
         <button
           onClick={() => { setSubmitted(false); onClose(); }}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-all"
+          className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 hover:text-slate-900 flex items-center justify-center transition-all z-10 shadow-sm"
+          title="Close Modal"
         >
           <X className="w-5 h-5" />
         </button>
 
         {!submitted ? (
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center">
-                <Calendar className="w-6 h-6 text-sky-600" />
+          <div className="space-y-5 sm:space-y-6">
+            <div className="flex items-center gap-3 pr-8">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center flex-shrink-0">
+                <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-sky-600" />
               </div>
               <div>
-                <h2 className="text-2xl font-black text-slate-900">Book a 1-on-1 Consultation</h2>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900">Book a 1-on-1 Consultation</h2>
                 <p className="text-slate-500 text-xs">Schedule a 30-min strategy call with our Senior Solutions Architect.</p>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-3">
+            <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="text-[10px] font-bold text-slate-600 uppercase tracking-wider block mb-1">Your Name</label>
                   <input
@@ -58,7 +59,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Enter your name"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-base sm:text-xs focus:border-sky-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -69,7 +70,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-base sm:text-xs focus:border-sky-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -81,7 +82,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
                   value={selectedDate}
                   min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:border-sky-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-base sm:text-xs focus:border-sky-500 focus:outline-none"
                 />
               </div>
 

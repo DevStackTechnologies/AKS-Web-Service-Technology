@@ -281,7 +281,7 @@ export const CandidateDashboard: React.FC<CandidateDashboardProps> = ({
               <Award className="w-8 h-8 text-[#0A4EDB]" />
               <div>
                 <h4 className="text-xs font-bold text-[#1A2031]">Internship Certificate Center</h4>
-                <p className="text-[11px] text-[#8590A6]">Preview or print official AKS completion certificates.</p>
+                <p className="text-[11px] text-[#8590A6]">Preview or print official TecVor completion certificates.</p>
               </div>
             </div>
 

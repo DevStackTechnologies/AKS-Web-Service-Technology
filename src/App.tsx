@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppProvider, useApp, Application } from './context/AppContext';
+import { AppProvider, Application } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
@@ -19,7 +19,6 @@ import { AuthModal } from './pages/AuthModal';
 
 import { CalendlyModal } from './components/tools/CalendlyModal';
 import { WhatsAppWidget } from './components/tools/WhatsAppWidget';
-import { QuickAccessDock } from './components/tools/QuickAccessDock';
 
 const MainLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('home');

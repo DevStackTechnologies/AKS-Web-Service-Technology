@@ -4,8 +4,7 @@ import {
   Sparkles, ArrowRight, TrendingUp, ExternalLink, ShieldCheck, Award, Globe, 
   Users, Rocket, CheckCircle2, ChevronDown, Clock, Zap, Star, Code2, Server, 
   Database, Cpu, Layers, HeartPulse, Building2, GraduationCap, ShoppingBag, 
-  Home, Factory, Truck, Car, Coffee, Scissors, Sprout, Laptop, MessageSquare, 
-  FileText, X, Eye
+  Home, Factory, Truck, Car, Coffee, Scissors, Sprout, Laptop, MessageSquare, X, Eye, FileText
 } from 'lucide-react';
 
 interface PortfolioPageProps {
@@ -242,7 +241,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'KD Finserve Wealth Portal',
-      review: 'AKS Web Service Technologies engineered our wealth management portal from scratch. Their security standards and fast execution delivered ₹85 Cr+ AUM growth within months!'
+      review: 'TecVor Technologies engineered our wealth management portal from scratch. Their security standards and fast execution delivered ₹85 Cr+ AUM growth within months!'
     },
     {
       name: 'Sarah Jenkins',
@@ -250,7 +249,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'GlowBotanica E-Commerce Store',
-      review: 'The glassmorphic design and AI shade finder built by AKS tripled our conversion rates. Outstanding team and absolute engineering brilliance!'
+      review: 'The glassmorphic design and AI shade finder built by TecVor tripled our conversion rates. Outstanding team and absolute engineering brilliance!'
     },
     {
       name: 'Michael Zhang',
@@ -258,7 +257,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'ApexPay Trading Dashboard',
-      review: 'Handling 100K+ concurrent WebSockets trading transactions with sub-45ms latency was critical for us. AKS delivered flawless performance!'
+      review: 'Handling 100K+ concurrent WebSockets trading transactions with sub-45ms latency was critical for us. TecVor delivered flawless performance!'
     },
     {
       name: 'Vikramaditya Singh',
@@ -274,7 +273,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'AquaPure Eco Bottle D2C Store',
-      review: 'Our D2C water bottle sales exploded after AKS deployed our Next.js storefront. 150,000+ orders processed smoothly with zero downtime!'
+      review: 'Our D2C water bottle sales exploded after TecVor deployed our Next.js storefront. 150,000+ orders processed smoothly with zero downtime!'
     },
     {
       name: 'Dr. Aris Thorne',
@@ -298,7 +297,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Eden Garden Nursery Portal',
-      review: 'The WebXR room scanner developed by AKS allows plant lovers to preview 200+ indoor plant varieties. 190% boost in repeat orders!'
+      review: 'The WebXR room scanner developed by TecVor allows plant lovers to preview 200+ indoor plant varieties. 190% boost in repeat orders!'
     },
     {
       name: 'David Miller',
@@ -306,7 +305,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'CloudPulse AWS Microservices',
-      review: 'AKS migrated our monolithic backend to AWS microservices with zero downtime. API response latency dropped from 350ms to 28ms!'
+      review: 'TecVor migrated our monolithic backend to AWS microservices with zero downtime. API response latency dropped from 350ms to 28ms!'
     },
     {
       name: 'Sophia Martinez',
@@ -322,7 +321,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Logistics GPS Dispatch Portal',
-      review: 'Real-time GPS fleet tracking and automated e-way bill processing system built by AKS streamlined 10,000+ truck dispatches.'
+      review: 'Real-time GPS fleet tracking and automated e-way bill processing system built by TecVor streamlined 10,000+ truck dispatches.'
     },
     {
       name: 'Claire Dupont',
@@ -330,7 +329,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'Velour Multi-Currency Boutique',
-      review: 'The multi-currency luxury fashion store developed by AKS delivered our highest holiday sales record in company history!'
+      review: 'The multi-currency luxury fashion store developed by TecVor delivered our highest holiday sales record in company history!'
     },
     {
       name: 'Dr. Marcus Vance',
@@ -346,7 +345,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'UrbanSpaces 360 Property Portal',
-      review: 'Virtual 360-degree home tours and AI property valuation tools built by AKS doubled our broker inquiry conversions within 30 days.'
+      review: 'Virtual 360-degree home tours and AI property valuation tools built by TecVor doubled our broker inquiry conversions within 30 days.'
     },
     {
       name: 'Oliver Bennet',
@@ -354,7 +353,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'BioNutra D2C Subscription Platform',
-      review: 'Sub-second page speeds and automated subscription renewals built by AKS boosted our recurring D2C revenue by 180%.'
+      review: 'Sub-second page speeds and automated subscription renewals built by TecVor boosted our recurring D2C revenue by 180%.'
     },
     {
       name: 'Priya Roy',
@@ -362,7 +361,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'FinTechPay UPI Merchant Gateway',
-      review: 'The instant UPI payment integration and merchant onboarding dashboard built by AKS processed ₹120 Cr+ transactions seamlessly.'
+      review: 'The instant UPI payment integration and merchant onboarding dashboard built by TecVor processed ₹120 Cr+ transactions seamlessly.'
     },
     {
       name: 'Alexander Gross',
@@ -378,7 +377,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'GlowUp POS & Booking Suite',
-      review: 'The online appointment scheduling system and POS integration built by AKS eliminated double-bookings completely!'
+      review: 'The online appointment scheduling system and POS integration built by TecVor eliminated double-bookings completely!'
     },
     {
       name: 'Carlos Silva',
@@ -386,7 +385,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'IoT Soil & Crop Dashboard',
-      review: 'IoT sensor dashboard monitoring soil moisture and crop yield predictions built by AKS empowered 5,000+ farmers in Brazil.'
+      review: 'IoT sensor dashboard monitoring soil moisture and crop yield predictions built by TecVor empowered 5,000+ farmers in Brazil.'
     },
     {
       name: 'Rachel Green',
@@ -394,7 +393,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
       photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
       rating: 5,
       project: 'AI Candidate Screening System',
-      review: 'The AI resume parser and candidate evaluation dashboard built by AKS cut our hiring turnaround time by 75%!'
+      review: 'The AI resume parser and candidate evaluation dashboard built by TecVor cut our hiring turnaround time by 75%!'
     }
   ];
 

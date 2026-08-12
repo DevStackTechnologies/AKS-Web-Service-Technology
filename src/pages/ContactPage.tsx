@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, MessageSquare, Send, CheckCircle2, 
-  Globe, Clock, Sparkles, Building2, User, HelpCircle, ArrowRight
+  Globe, Clock, Sparkles, Building2, User, HelpCircle, Loader2
 } from 'lucide-react';
+import { submitInquiryApi } from '../services/api';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,9 +16,13 @@ export const ContactPage: React.FC = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    await submitInquiryApi(formData);
+    setSubmitting(false);
     setSubmitted(true);
   };
 
@@ -257,10 +262,20 @@ export const ContactPage: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0284C7] via-[#EA580C] to-[#E84125] hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider"
+                  disabled={submitting}
+                  className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0284C7] via-[#EA580C] to-[#E84125] hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider disabled:opacity-50"
                 >
-                  <span>Submit Inquiry to Engineering Team</span>
-                  <Send className="w-4 h-4" />
+                  {submitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending to Database...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Inquiry to Engineering Team</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}

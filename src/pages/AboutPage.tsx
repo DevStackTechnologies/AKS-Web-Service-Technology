@@ -5,7 +5,7 @@ import {
   Sparkles, CheckCircle2, Code, Cpu, Layers, ArrowRight, Laptop, 
   Smartphone, Database, Server, Settings, Zap, Building2, Stethoscope, 
   GraduationCap, ShoppingBag, Home, Landmark, Factory, Truck, Coffee, 
-  Store, Briefcase, ChevronRight, HelpCircle
+  Store, HelpCircle
 } from 'lucide-react';
 
 interface AboutPageProps {
@@ -260,7 +260,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       {/* 7. WHY CHOOSE AKS */}
       <section className="glass-card bg-white border border-slate-200 p-8 sm:p-12 rounded-3xl space-y-10 shadow-sm">
         <div className="text-center space-y-2">
-          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Why Choose AKS</span>
+          <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Why Choose TecVor</span>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 pt-2">Why Businesses Choose Us</h2>
           <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto">10 core pillars of engineering quality, strategic transparency, and long-term partnership.</p>
         </div>

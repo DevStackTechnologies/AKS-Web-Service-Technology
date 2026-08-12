@@ -14,12 +14,21 @@ export const connectDB = async () => {
 
   try {
     const conn = await mongoose.connect(mongoURI, {
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 3000,
     });
     console.log(`✅ MongoDB Atlas Cloud Connected: ${conn.connection.host}`);
     return true;
   } catch (error) {
-    console.error(`❌ MongoDB Atlas Connection Error: ${error.message}`);
-    return false;
+    console.warn(`⚠️ MongoDB Atlas failed (${error.message}). Trying local MongoDB fallback...`);
+    try {
+      const localConn = await mongoose.connect('mongodb://127.0.0.1:27017/aks_career_portal', {
+        serverSelectionTimeoutMS: 3000,
+      });
+      console.log(`✅ Local MongoDB Connected: ${localConn.connection.host}`);
+      return true;
+    } catch (localErr) {
+      console.warn(`⚠️ Local MongoDB not available either. Server running in memory / fallback mode.`);
+      return false;
+    }
   }
 };

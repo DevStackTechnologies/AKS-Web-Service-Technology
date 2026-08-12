@@ -1,6 +1,7 @@
 import express from 'express';
 import { Inquiry } from '../models/Inquiry.js';
 import { protect, authorize } from '../middleware/auth.js';
+import { sendInquiryEmailNotification } from '../services/emailService.js';
 
 const router = express.Router();
 
@@ -9,6 +10,12 @@ router.post('/', async (req, res) => {
   try {
     const inquiry = new Inquiry(req.body);
     await inquiry.save();
+
+    // Dispatch notification email to company email (ownsources001@gmail.com) asynchronously
+    sendInquiryEmailNotification(inquiry).catch(err => {
+      console.warn('Background email dispatch warning:', err.message);
+    });
+
     res.status(201).json({
       success: true,
       message: 'Inquiry received successfully! Our team will contact you within 24 hours.',
