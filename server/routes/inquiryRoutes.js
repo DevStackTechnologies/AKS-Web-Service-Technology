@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     const inquiry = new Inquiry(req.body);
     await inquiry.save();
 
-    // Dispatch notification email to company email (ownsources001@gmail.com) asynchronously
+    // Dispatch notification email to company email (tecvortechnology@gmail.com) asynchronously
     sendInquiryEmailNotification(inquiry).catch(err => {
       console.warn('Background email dispatch warning:', err.message);
     });

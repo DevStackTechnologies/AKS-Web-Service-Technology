@@ -130,7 +130,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
     { q: 'Can freshers and final-year students apply?', a: 'Yes! When our Trainee & Internship cohorts open, fresh graduates and final-year students can apply. You can drop your resume to be notified first.' },
     { q: 'Is remote work available for future roles?', a: 'Most of our engineering, design, and AI positions offer remote or hybrid work flexibility based on candidate preference.' },
     { q: 'What is the standard interview turnaround time?', a: 'When active hiring is open, our interview process typically takes 5–10 business days from initial resume screening to final offer letter.' },
-    { q: 'How can I submit my CV for upcoming vacancies?', a: 'You can enter your email in the Talent Community box below or email your resume directly to info@tecvor.com.' }
+    { q: 'How can I submit my CV for upcoming vacancies?', a: 'You can enter your email in the Talent Community box below or email your resume directly to tecvortechnology@gmail.com.' }
   ];
 
   return (
@@ -354,9 +354,9 @@ export const CareersPage: React.FC<CareersPageProps> = ({ initialJobId, onOpenAu
           </div>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-500">
-            <span>Direct Inquiries: <a href="mailto:info@tecvor.com" className="font-bold text-sky-600 hover:underline">info@tecvor.com</a></span>
+            <span>Direct Inquiries: <a href="mailto:tecvortechnology@gmail.com" className="font-bold text-sky-600 hover:underline">tecvortechnology@gmail.com</a></span>
             <span>•</span>
-            <span>Hotline: <a href="tel:+917739339852" className="font-bold text-sky-600 hover:underline">+91 7739339852</a></span>
+            <span>Hotline: <a href="tel:+918580051079" className="font-bold text-sky-600 hover:underline">+91 8580051079</a></span>
           </div>
         </div>
       </section>

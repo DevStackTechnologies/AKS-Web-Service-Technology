@@ -120,11 +120,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <ul className="space-y-3 text-xs text-slate-400">
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <a href="mailto:ownsources001@gmail.com" className="hover:text-white">ownsources001@gmail.com</a>
+                <a href="mailto:tecvortechnology@gmail.com" className="hover:text-white">tecvortechnology@gmail.com</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <a href="tel:+917739339852" className="hover:text-white font-bold">+91 7739339852</a>
+                <a href="tel:+918580051079" className="hover:text-white font-bold">+91 8580051079</a>
               </li>
               <li className="pt-2">
                 <button 

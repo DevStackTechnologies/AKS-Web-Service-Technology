@@ -72,11 +72,8 @@ export const ContactPage: React.FC = () => {
               <p className="text-xs text-slate-600">Fast response within 4 hours</p>
             </div>
             <div className="pt-2 border-t border-slate-100 space-y-1 text-xs font-bold text-slate-800">
-              <a href="mailto:ownsources001@gmail.com" className="block text-[#0284C7] hover:underline">
-                ownsources001@gmail.com
-              </a>
-              <a href="mailto:contact@tecvor.com" className="block text-slate-600 hover:text-[#0284C7]">
-                contact@tecvor.com
+              <a href="mailto:tecvortechnology@gmail.com" className="block text-[#0284C7] hover:underline">
+                tecvortechnology@gmail.com
               </a>
             </div>
           </motion.div>
@@ -96,11 +93,11 @@ export const ContactPage: React.FC = () => {
               <p className="text-xs text-slate-600">Available Mon-Sat 9AM-7:30PM</p>
             </div>
             <div className="pt-2 border-t border-slate-100 space-y-1 text-xs font-bold text-slate-800">
-              <a href="tel:+917739339852" className="block text-[#EA580C] hover:underline">
-                +91 7739339852
+              <a href="tel:+918580051079" className="block text-[#EA580C] hover:underline">
+                +91 8580051079
               </a>
-              <a href="https://wa.me/917739339852" target="_blank" rel="noopener noreferrer" className="block text-emerald-600 hover:underline">
-                WhatsApp: +91 7739339852
+              <a href="https://wa.me/918580051079" target="_blank" rel="noopener noreferrer" className="block text-emerald-600 hover:underline">
+                WhatsApp: +91 8580051079
               </a>
             </div>
           </motion.div>
@@ -305,12 +302,12 @@ export const ContactPage: React.FC = () => {
                 <div className="space-y-3 pt-2 text-xs">
                   <div className="flex items-center gap-3 text-slate-200">
                     <Mail className="w-4 h-4 text-[#0284C7] flex-shrink-0" />
-                    <span>ownsources001@gmail.com</span>
+                    <span>tecvortechnology@gmail.com</span>
                   </div>
 
                   <div className="flex items-center gap-3 text-slate-200">
                     <Phone className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                    <span>+91 7739339852</span>
+                    <span>+91 8580051079</span>
                   </div>
 
                   <div className="flex items-center gap-3 text-slate-200">
@@ -328,7 +325,7 @@ export const ContactPage: React.FC = () => {
               {/* Action Buttons */}
               <div className="pt-4 border-t border-slate-800 flex flex-wrap gap-3 relative z-10">
                 <a
-                  href="mailto:ownsources001@gmail.com"
+                  href="mailto:tecvortechnology@gmail.com"
                   className="flex-1 px-4 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 text-xs font-black text-center transition-all flex items-center justify-center gap-1.5 shadow-md"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#0284C7]" />
@@ -336,7 +333,7 @@ export const ContactPage: React.FC = () => {
                 </a>
 
                 <a
-                  href="https://wa.me/917739339852"
+                  href="https://wa.me/918580051079"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-md"

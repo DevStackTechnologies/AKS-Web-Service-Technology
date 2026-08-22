@@ -117,9 +117,9 @@ AKS_Web_Service_Technology/
 
 ## 📞 Support & Inquiries
 
-- **Official Email**: [ownsources001@gmail.com](mailto:ownsources001@gmail.com)
-- **Direct Hotline**: [+91 7739339852](tel:+917739339852)
-- **WhatsApp Support**: [Chat on WhatsApp](https://wa.me/917739339852)
+- **Official Email**: [tecvortechnology@gmail.com](mailto:tecvortechnology@gmail.com)
+- **Direct Hotline**: [+91 8580051079](tel:+918580051079)
+- **WhatsApp Support**: [Chat on WhatsApp](https://wa.me/918580051079)
 - **Location**: Global Cloud & Remote Distributed Engineering Teams
 
 ---

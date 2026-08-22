@@ -9,7 +9,7 @@ export const WhatsAppWidget: React.FC = () => {
   const handleSend = () => {
     const defaultText = message || 'Hello TecVor Technologies team! I would like to inquire about your software development services.';
     const encoded = encodeURIComponent(defaultText);
-    window.open(`https://wa.me/917739339852?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918580051079?text=${encoded}`, '_blank');
     setIsOpen(false);
     setMessage('');
   };

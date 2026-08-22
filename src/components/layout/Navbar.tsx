@@ -36,13 +36,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
           </div>
 
           <div className="flex items-center gap-4 sm:gap-6 font-semibold">
-            <a href="mailto:ownsources001@gmail.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
+            <a href="mailto:tecvortechnology@gmail.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Mail className="w-3 h-3 text-[#0A4EDB]" />
-              <span>ownsources001@gmail.com</span>
+              <span>tecvortechnology@gmail.com</span>
             </a>
-            <a href="tel:+917739339852" className="flex items-center gap-1.5 text-sky-300 hover:text-white font-bold transition-colors">
+            <a href="tel:+918580051079" className="flex items-center gap-1.5 text-sky-300 hover:text-white font-bold transition-colors">
               <Phone className="w-3 h-3 text-amber-400" />
-              <span>+91 7739339852</span>
+              <span>+91 8580051079</span>
             </a>
           </div>
         </div>

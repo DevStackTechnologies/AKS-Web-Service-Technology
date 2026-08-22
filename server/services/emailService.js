@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 const createTransporter = () => {
   const host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const port = parseInt(process.env.SMTP_PORT || '587', 10);
-  const user = process.env.SMTP_USER || 'ownsources001@gmail.com';
+  const user = process.env.SMTP_USER || 'tecvortechnology@gmail.com';
   const pass = process.env.SMTP_PASS || '';
 
   if (pass) {
@@ -22,7 +22,7 @@ const createTransporter = () => {
  * Sends inquiry notification email to Company Admin & confirmation copy to Client
  */
 export const sendInquiryEmailNotification = async (inquiry) => {
-  const companyEmail = process.env.COMPANY_EMAIL || 'ownsources001@gmail.com';
+  const companyEmail = process.env.COMPANY_EMAIL || 'tecvortechnology@gmail.com';
   const { name, email, phone, category, subject, message, createdAt } = inquiry;
 
   const dateStr = new Date(createdAt || Date.now()).toLocaleString('en-IN', {
@@ -108,7 +108,7 @@ export const sendInquiryEmailNotification = async (inquiry) => {
         <p>If you need urgent assistance, you can also reach us directly on WhatsApp or Email:</p>
         <ul style="padding-left: 20px; color: #475569;">
           <li><strong>Email Desk:</strong> <a href="mailto:${companyEmail}" style="color: #0284C7;">${companyEmail}</a></li>
-          <li><strong>WhatsApp Hotline:</strong> +91 7739339852</li>
+          <li><strong>WhatsApp Hotline:</strong> +91 8580051079</li>
         </ul>
 
         <p style="margin-top: 28px; color: #64748B;">Warm regards,<br><strong style="color: #0F172A;">TecVor Engineering Team</strong></p>

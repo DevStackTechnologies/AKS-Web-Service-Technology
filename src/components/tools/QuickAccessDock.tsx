@@ -426,12 +426,12 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                     )}
 
                     <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                      <span>ownsources001@gmail.com</span>
+                      <span>tecvortechnology@gmail.com</span>
                       <a 
-                        href="tel:+917739339852" 
+                        href="tel:+918580051079" 
                         className="font-bold text-sky-600 hover:underline"
                       >
-                        +91 7739339852
+                        +91 8580051079
                       </a>
                     </div>
                   </div>
@@ -444,7 +444,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                       
                       {/* WhatsApp Channel */}
                       <a
-                        href="https://wa.me/917739339852"
+                        href="https://wa.me/918580051079"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 hover:border-emerald-400 hover:shadow-sm transition-all flex items-center gap-3 group"
@@ -454,14 +454,14 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                         </div>
                         <div className="min-w-0">
                           <h4 className="text-xs font-black text-emerald-950">WhatsApp Hotline</h4>
-                          <p className="text-[11px] text-emerald-700">+91 7739339852</p>
+                          <p className="text-[11px] text-emerald-700">+91 8580051079</p>
                           <span className="text-[8px] font-bold text-emerald-600">Avg Reply: 2 mins</span>
                         </div>
                       </a>
 
                       {/* Official Email */}
                       <a
-                        href="mailto:ownsources001@gmail.com"
+                        href="mailto:tecvortechnology@gmail.com"
                         className="p-3 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 hover:shadow-sm transition-all flex items-center gap-3 group"
                       >
                         <div className="w-8 h-8 rounded-lg bg-[#0A4EDB] text-white flex items-center justify-center shadow group-hover:scale-105 transition-transform flex-shrink-0">
@@ -469,14 +469,14 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                         </div>
                         <div className="min-w-0">
                           <h4 className="text-xs font-black text-sky-950">Email Support</h4>
-                          <p className="text-[11px] text-sky-700 truncate">ownsources001@gmail.com</p>
+                          <p className="text-[11px] text-sky-700 truncate">tecvortechnology@gmail.com</p>
                           <span className="text-[8px] font-bold text-sky-600">Fast 24-hr SLA</span>
                         </div>
                       </a>
 
                       {/* Phone Support */}
                       <a
-                        href="tel:+917739339852"
+                        href="tel:+918580051079"
                         className="p-3 rounded-xl bg-amber-50 border border-amber-200 hover:border-amber-400 hover:shadow-sm transition-all flex items-center gap-3 group"
                       >
                         <div className="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center shadow group-hover:scale-105 transition-transform flex-shrink-0">
@@ -484,7 +484,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
                         </div>
                         <div className="min-w-0">
                           <h4 className="text-xs font-black text-amber-950">Direct Phone</h4>
-                          <p className="text-[11px] text-amber-700">+91 7739339852</p>
+                          <p className="text-[11px] text-amber-700">+91 8580051079</p>
                           <span className="text-[8px] font-bold text-amber-600">Mon - Sat: 9 AM - 9 PM</span>
                         </div>
                       </a>

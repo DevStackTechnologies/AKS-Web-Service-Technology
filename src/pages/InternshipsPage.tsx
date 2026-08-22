@@ -96,9 +96,9 @@ export const InternshipsPage: React.FC<InternshipsPageProps> = ({ onNavigate, on
         </div>
 
         <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500">
-          <span>Official Inquiries: <a href="mailto:ownsources001@gmail.com" className="font-bold text-sky-600 hover:underline">ownsources001@gmail.com</a></span>
+          <span>Official Inquiries: <a href="mailto:tecvortechnology@gmail.com" className="font-bold text-sky-600 hover:underline">tecvortechnology@gmail.com</a></span>
           <span>•</span>
-          <span>WhatsApp Hotline: <a href="tel:+917739339852" className="font-bold text-sky-600 hover:underline">+91 7739339852</a></span>
+          <span>WhatsApp Hotline: <a href="tel:+918580051079" className="font-bold text-sky-600 hover:underline">+91 8580051079</a></span>
         </div>
       </div>
 
