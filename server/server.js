@@ -38,8 +38,18 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(morgan('dev'));
 
-// Static Uploads Folder
+// Static Uploads & SEO Sitemap Handlers
 app.use('/uploads', express.static(uploadDir));
+
+app.get('/sitemap.xml', (req, res) => {
+  res.header('Content-Type', 'application/xml; charset=utf-8');
+  res.sendFile(path.join(process.cwd(), '..', 'public', 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.header('Content-Type', 'text/plain; charset=utf-8');
+  res.sendFile(path.join(process.cwd(), '..', 'public', 'robots.txt'));
+});
 
 // Connect MongoDB Atlas & Seed Data
 connectDB().then((connected) => {
