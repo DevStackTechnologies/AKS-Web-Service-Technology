@@ -432,17 +432,16 @@ export const HomePage: React.FC<HomePageProps> = ({
         />
 
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.3 }}
           className="max-w-7xl mx-auto relative z-10 text-center space-y-8"
         >
           
           {/* Animated Badge with Glowing Ring */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 1, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md hover:scale-105 transition-transform"
           >
             <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
@@ -451,9 +450,8 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           {/* Primary H1 Headline with Crisp White & Electric Blue Gradient */}
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl"
           >
             TecVor Technologies | <span className="bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-lg">Web Development & Digital Solutions</span> for Global Businesses.
@@ -461,9 +459,8 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           {/* Subheadline with High Readability */}
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
             className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md"
           >
             As a premier Web Development Company, TecVor Technologies delivers custom web applications, software development, autonomous AI systems, and scalable cloud solutions for high-growth enterprises worldwide.
@@ -471,9 +468,8 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           {/* Original CTA Button */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
             className="flex flex-wrap items-center justify-center gap-4 pt-4"
           >
             <motion.button
