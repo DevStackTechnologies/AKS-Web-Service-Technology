@@ -411,7 +411,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         >
           <img 
             src="/images/hero-innovative-solutions.png" 
-            alt="Hero Innovative Solutions Background" 
+            alt="TecVor Technologies - Web Development & Digital Solutions Hero Background" 
             className="w-full h-full object-cover object-center opacity-100 image-4k-crisp"
           />
         </motion.div>
@@ -446,27 +446,27 @@ export const HomePage: React.FC<HomePageProps> = ({
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md hover:scale-105 transition-transform"
           >
             <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
-            <span>Next-Gen Enterprise Web & AI Engineering Agency</span>
+            <span>Leading Web Development Company & Cloud Solutions</span>
           </motion.div>
 
-          {/* Original Headline with Crisp White & Electric Blue Gradient */}
+          {/* Primary H1 Headline with Crisp White & Electric Blue Gradient */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl"
           >
-            We Build <span className="bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-lg">Premium Digital Experiences</span> That Grow Businesses.
+            TecVor Technologies | <span className="bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-lg">Web Development & Digital Solutions</span> for Global Businesses.
           </motion.h1>
 
-          {/* Original Subheadline with High Readability */}
+          {/* Subheadline with High Readability */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md"
           >
-            TecVor Technologies crafts ultra-fast web platforms, mobile apps, and autonomous AI systems designed for category leaders and high-growth enterprises.
+            As a premier Web Development Company, TecVor Technologies delivers custom web applications, software development, autonomous AI systems, and scalable cloud solutions for high-growth enterprises worldwide.
           </motion.p>
 
           {/* Original CTA Button */}
@@ -587,7 +587,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   >
                     <img
                       src={topNotchShowcaseImages[(topNotchImgIdx + 2) % topNotchShowcaseImages.length].src}
-                      alt="Layer 3"
+                      alt="Custom Web Applications & Software Development Showcase Layer 3"
                       className="w-full h-full object-cover blur-[1px]"
                     />
                   </motion.div>
@@ -608,7 +608,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   >
                     <img
                       src={topNotchShowcaseImages[(topNotchImgIdx + 1) % topNotchShowcaseImages.length].src}
-                      alt="Layer 2"
+                      alt="Cloud Solutions & Web Development Showcase Layer 2"
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -719,25 +719,24 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <span className="text-[#0A4EDB] text-sm font-extrabold uppercase tracking-wider">What we provide</span>
                 </div>
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
-                  We Provide Top-notch <br />
-                  <span className="text-gradient">Web Solutions & Digital Growth</span>
+                  Top-Notch <span className="text-gradient">Web Development & Custom Digital Solutions</span>
                 </h2>
               </div>
 
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                TecVor Technologies was established specializing in Web app development, Mobile App Development, E-commerce, Branding, SEO & Digital Marketing, and high-performance cloud hosting services. We also deliver end-to-end CRM Solutions, HRM Solutions, ERP Systems, and customized software products tailored for modern growth.
+                TecVor Technologies is a full-service Web Development Company specializing in custom web applications, mobile app development, e-commerce platforms, branding, SEO, and scalable cloud solutions. We deliver end-to-end CRM solutions, ERP systems, and tailored software development for business growth.
               </p>
               
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                During these years, the company has built up an impressive list of successful clients. We work with our partners to build stronger value-added relationships by helping them increase the profitability and digital reach of their business. Our success is entirely the success of our clients.
+                Over the years, our company has built an impressive portfolio of global clients. We partner closely with businesses to increase profitability, digital reach, and enterprise performance through modern digital solutions.
               </p>
 
               {/* 3 Key bullet points */}
               <div className="space-y-3 pt-2">
                 {[
-                  'We deliver exceptional web solutions every time',
-                  'Your go-to provider for premium web & software services',
-                  'Quality web solutions tailored to your unique business needs'
+                  'Custom web applications engineered for speed & security',
+                  'Your trusted Web Development Company for enterprise growth',
+                  'Scalable cloud solutions tailored to your business goals'
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 text-slate-800 text-xs sm:text-sm font-semibold">
                     <div className="w-5 h-5 rounded-full bg-sky-50 border border-sky-200 text-[#0A4EDB] flex items-center justify-center flex-shrink-0">
@@ -757,7 +756,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <button
-                  onClick={onOpenCalendly}
+                  onClick={() => onNavigate('contact')}
                   className="px-6 py-3 rounded-2xl text-xs font-black text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all"
                 >
                   Contact Now
@@ -788,15 +787,15 @@ export const HomePage: React.FC<HomePageProps> = ({
                   </span>
                 </div>
                 <h2 className="text-2xl sm:text-4xl font-black text-white leading-tight">
-                  See why you should <br />
+                  Why Choose TecVor Technologies for <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-200 to-sky-300">
-                    choose TecVor Technologies
+                    Software Development & Cloud Solutions
                   </span>
                 </h2>
               </div>
 
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                As a website and software development company, we ensure each project is completed with precision, maintaining a smooth and efficient workflow. Our approach ensures steady progress and timely, high-quality results.
+                As a leading Web Development Company and software development partner, we execute every engineering project with precision, ensuring high-performance cloud solutions, reliable code quality, and timely project delivery.
               </p>
 
               {/* 3 Pillars */}
@@ -875,20 +874,20 @@ export const HomePage: React.FC<HomePageProps> = ({
               Company Mission & Vision
             </div>
             <h2 className="text-3xl sm:text-5xl font-black leading-tight text-slate-900">
-              Pioneering <span className="text-gradient">Digital Architecture</span> Since 2020.
+              Pioneering <span className="text-gradient">Custom Web Applications & Cloud Solutions</span> Since 2020.
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Founded on the principles of engineering precision and aesthetic perfection, TecVor Technologies bridges complex backend infrastructure with mesmerizing frontend user experiences.
+              Founded on the principles of engineering precision and aesthetic perfection, TecVor Technologies bridges complex backend software development with intuitive, high-converting digital solutions for clients globally.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
               <motion.div whileHover={{ y: -4 }} className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
                 <span className="text-xs font-bold text-sky-600 uppercase">Mission</span>
-                <p className="text-xs text-slate-600">Empower global businesses with high-converting, scalable software.</p>
+                <p className="text-xs text-slate-600">Empower global businesses with high-converting custom web applications.</p>
               </motion.div>
               <motion.div whileHover={{ y: -4 }} className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
                 <span className="text-xs font-bold text-blue-600 uppercase">Vision</span>
-                <p className="text-xs text-slate-600">To be the #1 rated full-stack digital transformation agency globally.</p>
+                <p className="text-xs text-slate-600">To be the #1 rated Web Development Company for digital solutions globally.</p>
               </motion.div>
             </div>
           </motion.div>
@@ -936,10 +935,10 @@ export const HomePage: React.FC<HomePageProps> = ({
             End-to-End Capabilities
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900">
-            Our Enterprise <span className="text-gradient">Services & Solutions</span>
+            Web Development, <span className="text-gradient">Cloud Solutions & Digital Services</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 text-sm">
-            Custom engineered software services tailored for modern scalability, bulletproof security, and seamless user experiences.
+            Custom engineered web development services and software development tailored for modern scalability, bulletproof security, and seamless user experiences.
           </p>
         </motion.div>
 
@@ -990,7 +989,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             Agile Methodology
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900">
-            Our 6-Step <span className="text-gradient">Engineering Process</span>
+            Our 6-Step <span className="text-gradient">Software Development Process</span>
           </h2>
         </motion.div>
 
@@ -1030,9 +1029,9 @@ export const HomePage: React.FC<HomePageProps> = ({
           className="text-center space-y-3"
         >
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900">
-            Our Technology <span className="text-gradient">Stack & Matrix</span>
+            Our Technology Stack for <span className="text-gradient">Web Development & Cloud Solutions</span>
           </h2>
-          <p className="text-slate-600 text-xs">Battle-tested tools and modern frameworks we master.</p>
+          <p className="text-slate-600 text-xs">Battle-tested tools and modern frameworks we master for custom web applications.</p>
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -1065,7 +1064,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
-            What Category Leaders <span className="text-gradient">Say About Our Engineering</span>
+            Client Reviews for Our <span className="text-gradient">Web Development & Digital Solutions</span>
           </h2>
           <p className="text-slate-600 text-xs max-w-xl mx-auto">
             Real feedback from founders, enterprise CTOs, and product directors who scaled with TecVor Technologies.
@@ -1377,8 +1376,8 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* FAQ ACCORDION */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-black text-slate-900">Frequently Asked <span className="text-gradient">Questions</span></h2>
-          <p className="text-slate-600 text-xs">Everything you need to know about working with us.</p>
+          <h2 className="text-3xl font-black text-slate-900">Frequently Asked Questions About <span className="text-gradient">Web Development & Digital Solutions</span></h2>
+          <p className="text-slate-600 text-xs">Everything you need to know about custom web applications and software development with TecVor Technologies.</p>
         </div>
 
         <div className="space-y-4">
@@ -1428,7 +1427,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
           <h2 className="text-3xl sm:text-5xl font-black text-white relative z-10">
-            Ready to Build Your Next Masterpiece?
+            Ready to Build Custom Web Applications & Digital Solutions?
           </h2>
           <p className="max-w-2xl mx-auto text-sky-100 text-sm relative z-10">
             Schedule your complimentary 30-minute technical architecture consultation today. No obligations.
