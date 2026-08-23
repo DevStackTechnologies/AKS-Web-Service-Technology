@@ -1,10 +1,16 @@
 const getApiBaseUrl = () => {
+  // 1. Check for Vite environment variable
+  if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  // 2. Check browser hostname
   if (typeof window !== 'undefined') {
     const hostname = window.location.hostname;
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:5000/api';
     }
   }
+  // 3. Fallback to relative /api endpoint in production
   return '/api';
 };
 
@@ -12,10 +18,15 @@ const API_BASE_URL = getApiBaseUrl();
 
 export const fetchJobsApi = async () => {
   try {
-    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-      return null;
+    // Avoid calling localhost if running on public production host without configured backend
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      if (hostname !== 'localhost' && hostname !== '127.0.0.1' && API_BASE_URL.includes('localhost')) {
+        return null;
+      }
     }
     const res = await fetch(`${API_BASE_URL}/jobs`);
+    if (!res.ok) return null;
     const data = await res.json();
     if (data.success && Array.isArray(data.data)) return data.data;
     return [];
@@ -33,7 +44,7 @@ export const createJobApi = async (jobData: any) => {
       body: JSON.stringify(jobData)
     });
     return await res.json();
-  } catch (err) {
+  } catch (err: any) {
     console.warn('API error:', err.message);
     return { success: false };
   }
@@ -52,10 +63,15 @@ export const deleteJobApi = async (jobId: string) => {
 
 export const fetchApplicationsApi = async () => {
   try {
-    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-      return null;
+    // Avoid calling localhost if running on public production host without configured backend
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      if (hostname !== 'localhost' && hostname !== '127.0.0.1' && API_BASE_URL.includes('localhost')) {
+        return null;
+      }
     }
     const res = await fetch(`${API_BASE_URL}/applications`);
+    if (!res.ok) return null;
     const data = await res.json();
     if (data.success && Array.isArray(data.data)) return data.data;
     return [];
