@@ -1,13 +1,26 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const getApiBaseUrl = () => {
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+      return 'http://localhost:5000/api';
+    }
+  }
+  return '/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 export const fetchJobsApi = async () => {
   try {
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      return null;
+    }
     const res = await fetch(`${API_BASE_URL}/jobs`);
     const data = await res.json();
     if (data.success && Array.isArray(data.data)) return data.data;
     return [];
-  } catch (err) {
-    console.warn('Backend API connection note:', err.message);
+  } catch (err: any) {
+    console.warn('Backend API connection note:', err?.message || err);
     return null;
   }
 };
@@ -39,12 +52,15 @@ export const deleteJobApi = async (jobId: string) => {
 
 export const fetchApplicationsApi = async () => {
   try {
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      return null;
+    }
     const res = await fetch(`${API_BASE_URL}/applications`);
     const data = await res.json();
     if (data.success && Array.isArray(data.data)) return data.data;
     return [];
-  } catch (err) {
-    console.warn('Backend API connection note:', err.message);
+  } catch (err: any) {
+    console.warn('Backend API connection note:', err?.message || err);
     return null;
   }
 };
