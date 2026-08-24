@@ -18,21 +18,21 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               <AksLogo variant="dark" height={50} />
             </div>
 
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-slate-300 leading-relaxed max-w-sm">
               TecVor Technologies is a modern enterprise software solutions & talent hub. Building scalable digital web apps, cloud architectures, and empowering high-impact technology careers globally.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <a href="#" className="w-9 h-9 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a href="#" aria-label="LinkedIn Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a href="#" aria-label="Twitter Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a href="#" aria-label="GitHub Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
                 <Github className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a href="#" aria-label="Instagram Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -43,34 +43,34 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4">
               Technology Services
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="Web App Development Services" className="hover:text-sky-400 transition-colors">
                   Web App Development
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="Mobile App Development Services" className="hover:text-sky-400 transition-colors">
                   Mobile App Development
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="Cloud Infrastructure Services" className="hover:text-sky-400 transition-colors">
                   Cloud Infrastructure & DevOps
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="AI and Automation Solutions" className="hover:text-sky-400 transition-colors">
                   AI & Automation Solutions
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="UI UX Design Systems" className="hover:text-sky-400 transition-colors">
                   UI/UX Design Systems
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('services')} aria-label="IT Consulting and Support" className="hover:text-sky-400 transition-colors">
                   IT Consulting & Support
                 </button>
               </li>
@@ -82,30 +82,30 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4">
               Careers & Showcase
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
-                <button onClick={() => setActiveTab('positions')} className="hover:text-sky-400 transition-colors flex items-center gap-1">
+                <button onClick={() => setActiveTab('positions')} aria-label="Open Positions" className="hover:text-sky-400 transition-colors flex items-center gap-1">
                   <span>Open Positions</span>
                   <span className="bg-sky-500/20 text-sky-400 text-[10px] px-1.5 py-0.5 rounded font-semibold">Hiring</span>
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('internships')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('internships')} aria-label="Internship Program 2026" className="hover:text-sky-400 transition-colors">
                   Internship Program 2026
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('portfolio')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('portfolio')} aria-label="Enterprise Portfolio" className="hover:text-sky-400 transition-colors">
                   Enterprise Portfolio
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('candidate-dashboard')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('candidate-dashboard')} aria-label="Candidate Portal" className="hover:text-sky-400 transition-colors">
                   Candidate Portal
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('blogs')} className="hover:text-sky-400 transition-colors">
+                <button onClick={() => setActiveTab('blogs')} aria-label="Engineering Blog" className="hover:text-sky-400 transition-colors">
                   Engineering Blog
                 </button>
               </li>
@@ -117,19 +117,20 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4">
               Official Contact
             </h4>
-            <ul className="space-y-3 text-xs text-slate-400">
+            <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <a href="mailto:tecvortechnology@gmail.com" className="hover:text-white">tecvortechnology@gmail.com</a>
+                <a href="mailto:tecvortechnology@gmail.com" aria-label="Send Email to TecVor" className="hover:text-white">tecvortechnology@gmail.com</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <a href="tel:+918580051079" className="hover:text-white font-bold">+91 8580051079</a>
+                <a href="tel:+918580051079" aria-label="Call TecVor Support" className="hover:text-white font-bold">+91 8580051079</a>
               </li>
               <li className="pt-2">
                 <button 
                   onClick={() => setActiveTab('contact')}
-                  className="w-full py-2 px-3 rounded-xl bg-[#0C1738] hover:bg-sky-600 text-white font-semibold flex items-center justify-center gap-1.5 transition-all text-xs border border-[#0E1A3D]"
+                  aria-label="Connect with Engineering Team"
+                  className="w-full py-2.5 px-3 rounded-xl bg-[#0C1738] hover:bg-sky-600 text-white font-semibold flex items-center justify-center gap-1.5 transition-all text-xs border border-[#0E1A3D] min-h-[44px]"
                 >
                   <span>Connect with Engineering</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -141,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
         </div>
 
         {/* Sub-footer */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             <span>© 2026 TecVor Technologies. All rights reserved.</span>
           </div>

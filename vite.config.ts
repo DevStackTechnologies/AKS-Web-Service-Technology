@@ -23,6 +23,29 @@ export default defineConfig({
   preview: {
     port: 5173,
     host: true,
+  },
+  build: {
+    emptyOutDir: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          const normalizedId = id.replace(/\\/g, '/');
+          if (normalizedId.includes('node_modules')) {
+            if (normalizedId.includes('react/') || normalizedId.includes('react-dom/')) {
+              return 'vendor-react';
+            }
+            if (normalizedId.includes('framer-motion/')) {
+              return 'vendor-motion';
+            }
+            if (normalizedId.includes('lucide-react/')) {
+              return 'vendor-icons';
+            }
+            return 'vendor-core';
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   }
 });
 

@@ -41,7 +41,8 @@ export const WhatsAppWidget: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(false)}
-                className="text-slate-400 hover:text-slate-700 p-1"
+                aria-label="Close WhatsApp chat popup"
+                className="text-slate-400 hover:text-slate-700 p-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 <X className="w-4 h-4" />
               </motion.button>
@@ -59,13 +60,15 @@ export const WhatsAppWidget: React.FC = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your message..."
+                aria-label="WhatsApp message text"
                 className="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-emerald-500"
               />
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleSend}
-                className="w-full py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all"
+                aria-label="Start WhatsApp Chat"
+                className="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all min-h-[44px]"
               >
                 <Send className="w-3.5 h-3.5" /> Start WhatsApp Chat
               </motion.button>
@@ -80,7 +83,8 @@ export const WhatsAppWidget: React.FC = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center relative"
+        aria-label="Open WhatsApp Chat Support"
+        className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center relative min-h-[44px] min-w-[44px]"
         title="Chat on WhatsApp"
       >
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-300 rounded-full animate-ping opacity-75 pointer-events-none" />

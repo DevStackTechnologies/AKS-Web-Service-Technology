@@ -168,12 +168,14 @@ export const ContactPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4 text-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                    <label htmlFor="contact-name" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                       <User className="w-3.5 h-3.5 text-[#0284C7]" /> Your Name *
                     </label>
                     <input 
+                      id="contact-name"
                       type="text" 
                       required 
+                      aria-label="Your Name"
                       placeholder="Enter Full Name" 
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -182,12 +184,14 @@ export const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                    <label htmlFor="contact-email" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                       <Mail className="w-3.5 h-3.5 text-[#EA580C]" /> Email Address *
                     </label>
                     <input 
+                      id="contact-email"
                       type="email" 
                       required 
+                      aria-label="Email Address"
                       placeholder="email@example.com" 
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -198,11 +202,13 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                    <label htmlFor="contact-phone" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#E84125]" /> Phone Number
                     </label>
                     <input 
+                      id="contact-phone"
                       type="tel" 
+                      aria-label="Phone Number"
                       placeholder="+91 98765 43210" 
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -211,10 +217,12 @@ export const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                    <label htmlFor="contact-category" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                       <Building2 className="w-3.5 h-3.5 text-[#0284C7]" /> Project Domain
                     </label>
                     <select 
+                      id="contact-category"
+                      aria-label="Project Domain"
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#E84125] focus:ring-2 focus:ring-[#E84125]/20 bg-slate-50/60 font-semibold"
@@ -230,12 +238,14 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                  <label htmlFor="contact-subject" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                     <MessageSquare className="w-3.5 h-3.5 text-[#EA580C]" /> Subject
                   </label>
                   <input 
+                    id="contact-subject"
                     type="text" 
                     required 
+                    aria-label="Subject"
                     placeholder="Brief description of your project or requirement" 
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -244,12 +254,14 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
+                  <label htmlFor="contact-message" className="font-bold uppercase tracking-wider text-[11px] text-slate-700 flex items-center gap-1.5">
                     <HelpCircle className="w-3.5 h-3.5 text-[#E84125]" /> Your Message
                   </label>
                   <textarea 
+                    id="contact-message"
                     rows={4} 
                     required 
+                    aria-label="Your Message"
                     placeholder="Provide details about your project timelines, requirements, or questions..." 
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -260,7 +272,8 @@ export const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0284C7] via-[#EA580C] to-[#E84125] hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider disabled:opacity-50"
+                  aria-label="Submit Inquiry to Engineering Team"
+                  className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0284C7] via-[#EA580C] to-[#E84125] hover:opacity-95 shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider disabled:opacity-50 min-h-[44px]"
                 >
                   {submitting ? (
                     <>

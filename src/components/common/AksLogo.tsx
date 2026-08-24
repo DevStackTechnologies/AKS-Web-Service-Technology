@@ -13,6 +13,10 @@ export const AksLogo: React.FC<AksLogoProps> = ({ variant = 'default', className
         <img
           src="/tecvor-icon.png"
           alt="TecVor Logo"
+          width={height}
+          height={height}
+          loading="eager"
+          decoding="async"
           style={{ height: `${height}px`, width: `${height}px` }}
           className="object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm rounded-full"
         />
@@ -27,6 +31,10 @@ export const AksLogo: React.FC<AksLogoProps> = ({ variant = 'default', className
         <img
           src="/tecvor-icon.png"
           alt="TecVor Emblem"
+          width={height}
+          height={height}
+          loading="eager"
+          decoding="async"
           style={{ height: `${height}px`, width: `${height}px` }}
           className="object-contain hover:scale-105 transition-transform duration-300 drop-shadow-md rounded-full flex-shrink-0"
         />
@@ -57,6 +65,10 @@ export const AksLogo: React.FC<AksLogoProps> = ({ variant = 'default', className
       <img
         src="/tecvor-icon.png"
         alt="TecVor Emblem"
+        width={height}
+        height={height}
+        loading="eager"
+        decoding="async"
         style={{ height: `${height}px`, width: `${height}px` }}
         className="object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm rounded-full flex-shrink-0"
       />

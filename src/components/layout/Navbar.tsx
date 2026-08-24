@@ -57,13 +57,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setActiveTab('home')}
-              className="flex items-center text-left focus:outline-none py-1 group"
+              aria-label="TecVor Technologies Homepage"
+              className="flex items-center text-left focus:outline-none py-1 group min-h-[44px] min-w-[44px]"
             >
               <AksLogo height={50} />
             </motion.button>
 
             {/* Public Navigation Links with LayoutId Indicator */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav aria-label="Desktop Navigation" className="hidden lg:flex items-center space-x-1">
               {navLinks.map((link) => {
                 const isActive = activeTab === link.id;
                 return (
@@ -72,7 +73,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
                     onClick={() => setActiveTab(link.id)}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
-                    className={`relative px-3.5 py-2 rounded-xl text-xs font-bold transition-colors duration-200 flex items-center gap-1 ${
+                    aria-label={`Navigate to ${link.label}`}
+                    className={`relative px-3.5 py-2.5 rounded-xl text-xs font-bold transition-colors duration-200 flex items-center gap-1 min-h-[44px] ${
                       isActive ? 'text-white font-extrabold' : 'text-slate-700 hover:text-sky-600 hover:bg-sky-50/70'
                     }`}
                   >
@@ -98,7 +100,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
                   whileHover={{ scale: 1.05, translateY: -2 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={onOpenAuth}
-                  className="px-5 py-2.5 rounded-full text-xs font-extrabold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 hover:shadow-lg transition-all shadow-md flex items-center gap-1.5"
+                  aria-label="Open Candidate Portal"
+                  className="px-5 py-2.5 rounded-full text-xs font-extrabold text-white bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 hover:shadow-lg transition-all shadow-md flex items-center gap-1.5 min-h-[44px]"
                 >
                   <UserCheck className="w-3.5 h-3.5" />
                   <span>Candidate Portal</span>
@@ -109,7 +112,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setActiveTab('candidate-dashboard')}
-                    className="px-4 py-2 rounded-full text-xs font-black text-white bg-gradient-to-r from-sky-500 to-blue-600 flex items-center gap-1.5 shadow-md"
+                    aria-label="Open Candidate Workspace"
+                    className="px-4 py-2.5 rounded-full text-xs font-black text-white bg-gradient-to-r from-sky-500 to-blue-600 flex items-center gap-1.5 shadow-md min-h-[44px]"
                   >
                     <UserCheck className="w-3.5 h-3.5" />
                     <span>Candidate Workspace</span>
@@ -122,7 +126,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
                       setActiveTab('home');
                     }}
                     title="Logout Session"
-                    className="p-2 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-600 transition-colors"
+                    aria-label="Logout Session"
+                    className="p-2.5 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-600 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
                   >
                     <LogOut className="w-4 h-4" />
                   </button>
@@ -135,7 +140,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl text-slate-700 hover:text-sky-600 hover:bg-sky-50"
+                aria-label="Toggle Navigation Menu"
+                aria-expanded={mobileMenuOpen}
+                className="p-2.5 rounded-xl text-slate-700 hover:text-sky-600 hover:bg-sky-50 min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </motion.button>
@@ -144,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
         </div>
       </div>
 
-      {/* Mobile Drawer (Ultra-Fast 60-120fps Hardware-Accelerated Drawer) */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -154,25 +161,27 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
             transition={{ duration: 0.14, ease: [0.16, 1, 0.3, 1] }}
             className="lg:hidden bg-white/98 backdrop-blur-md border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-2xl overflow-hidden transform-gpu will-change-transform"
           >
-            <div className="grid grid-cols-2 gap-1.5 py-2">
+            <nav aria-label="Mobile Navigation" className="grid grid-cols-2 gap-1.5 py-2">
               {navLinks.map((link) => (
                 <motion.button
                   key={link.id}
                   whileTap={{ scale: 0.96 }}
                   onClick={() => { setActiveTab(link.id); setMobileMenuOpen(false); }}
-                  className={`px-3 py-2.5 rounded-xl text-xs font-bold text-left transition-colors duration-150 ${
+                  aria-label={`Navigate to ${link.label}`}
+                  className={`px-3 py-3 rounded-xl text-xs font-bold text-left transition-colors duration-150 min-h-[44px] flex items-center ${
                     activeTab === link.id ? 'bg-sky-600 text-white font-extrabold shadow-sm' : 'text-slate-700 hover:bg-sky-50'
                   }`}
                 >
                   {link.label}
                 </motion.button>
               ))}
-            </div>
+            </nav>
 
             <div className="pt-3 border-t border-slate-200 flex flex-col gap-2">
               <button
                 onClick={() => { onOpenAuth(); setMobileMenuOpen(false); }}
-                className="w-full py-2.5 rounded-xl text-xs font-black text-white bg-gradient-to-r from-sky-500 to-blue-600 flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform"
+                aria-label="Open Candidate Portal"
+                className="w-full py-3 rounded-xl text-xs font-black text-white bg-gradient-to-r from-sky-500 to-blue-600 flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform min-h-[44px]"
               >
                 <UserCheck className="w-3.5 h-3.5" /> Candidate Portal
               </button>
