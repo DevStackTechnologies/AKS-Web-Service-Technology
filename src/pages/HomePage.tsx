@@ -33,8 +33,45 @@ export const HomePage: React.FC<HomePageProps> = ({
   });
   const [inquirySent, setInquirySent] = useState<boolean>(false);
   const [newsletterEmail, setNewsletterEmail] = useState<string>('');
-  const [newsletterSent, setNewsletterSent] = useState<boolean>(false);
   const [isTestimonialsHovered, setIsTestimonialsHovered] = useState<boolean>(false);
+
+  const heroSlides = [
+    {
+      id: 0,
+      badge: '✨ Enterprise Web Engineering & Cloud AI',
+      title: 'TecVor Technologies | Next-Gen Web & AI Engineering For Global Leaders.',
+      desc: 'We build ultra-fast React & Next.js web applications, custom software platforms, autonomous AI systems, and scalable AWS cloud solutions.',
+      image: '/images/hero-animated-bg.png',
+      accentColor: 'from-sky-400 via-blue-500 to-indigo-400'
+    },
+    {
+      id: 1,
+      badge: '🚀 Custom Web & Mobile App Development',
+      title: 'Transforming Ideas Into Scalable 60fps Native & Web Applications.',
+      desc: 'Empowering startups and enterprises with high-converting digital product experiences, sub-second page speeds, and bulletproof security.',
+      image: '/images/ai-web-development.png',
+      accentColor: 'from-amber-400 via-orange-500 to-rose-500'
+    },
+    {
+      id: 2,
+      badge: '🤖 Autonomous AI Agents & Neural RAG Models',
+      title: 'Deploy Intelligent AI Automation & Vector Workflows For Scale.',
+      desc: 'Automating business operations, customer support, and data analytics pipelines with cutting-edge OpenAI LLM and LangChain technology.',
+      image: '/images/hero-innovative-solutions.png',
+      accentColor: 'from-emerald-400 via-teal-500 to-sky-400'
+    }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isHoveredHero, setIsHoveredHero] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isHoveredHero) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5500);
+    return () => clearInterval(interval);
+  }, [isHoveredHero, heroSlides.length]);
 
   const testimonials = [
     {
@@ -400,29 +437,36 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-10 pb-8 bg-[#FFF8F5] text-slate-900 overflow-hidden">
 
-      {/* LANDING PAGE HERO WITH 100% CRYSTAL CLEAR BACKGROUND */}
-      {/* LANDING PAGE HERO WITH 100% CRYSTAL CLEAR BACKGROUND */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl">
-        
-        {/* 100% Ultra-Sharp 4K Background Image */}
-        <motion.div 
-          animate={{ scale: [1, 1.02, 1], y: [0, -6, 0] }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
-        >
-          <img 
-            src="/images/hero-animated-bg.png" 
-            alt="TecVor Technologies - Enterprise Web Development & Digital Solutions Hero Background" 
-            className="w-full h-full object-cover object-center opacity-90 image-4k-crisp"
-            loading="eager"
-            decoding="async"
-          />
-        </motion.div>
+      {/* DYNAMIC HERO IMAGE & CONTENT SLIDER SECTION */}
+      <section 
+        onMouseEnter={() => setIsHoveredHero(true)}
+        onMouseLeave={() => setIsHoveredHero(false)}
+        className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl"
+      >
+        {/* Animated Background Image Carousel */}
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 0.9, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
+          >
+            <img 
+              src={heroSlides[currentSlide].image} 
+              alt={`TecVor Hero Slide ${currentSlide + 1}`} 
+              className="w-full h-full object-cover object-center image-4k-crisp"
+              loading="eager"
+              decoding="async"
+            />
+          </motion.div>
+        </AnimatePresence>
 
-        {/* Ambient Dark Overlay for High Text Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/90 pointer-events-none z-0" />
+        {/* Ambient Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/50 to-slate-950/95 pointer-events-none z-0" />
         
-        {/* Floating Futuristic Ambient Light Orbs */}
+        {/* Floating Futuristic Light Orbs */}
         <motion.div 
           animate={{ y: [0, -25, 0], scale: [1, 1.12, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
@@ -434,47 +478,37 @@ export const HomePage: React.FC<HomePageProps> = ({
           className="hidden sm:block absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/30 to-amber-500/20 rounded-full blur-[90px] pointer-events-none z-0 transform-gpu will-change-transform" 
         />
 
-        <motion.div 
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="max-w-7xl mx-auto relative z-10 text-center space-y-8"
-        >
-          
-          {/* Animated Badge with Glowing Ring */}
-          <motion.div 
-            initial={{ opacity: 1, scale: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md hover:scale-105 transition-transform"
-          >
-            <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
-            <span>Enterprise Web Engineering & Cloud AI Solutions</span>
-          </motion.div>
+        {/* Hero Content Animated Carousel */}
+        <div className="max-w-7xl mx-auto relative z-10 text-center space-y-8">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              className="space-y-6"
+            >
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md">
+                <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
+                <span>{heroSlides[currentSlide].badge}</span>
+              </div>
 
-          {/* Primary H1 Headline */}
-          <motion.h1 
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl"
-          >
-            TecVor Technologies | <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg">Next-Gen Web & AI Engineering</span> For Global Leaders.
-          </motion.h1>
+              {/* H1 Headline */}
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl">
+                {heroSlides[currentSlide].title}
+              </h1>
 
-          {/* Subheadline with High Readability */}
-          <motion.p 
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md"
-          >
-            We build ultra-fast React & Next.js web applications, custom software platforms, autonomous AI systems, and scalable AWS cloud solutions engineered for global performance.
-          </motion.p>
+              {/* Description */}
+              <p className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md">
+                {heroSlides[currentSlide].desc}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
-          {/* Dual Action CTA Buttons */}
-          <motion.div 
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-wrap items-center justify-center gap-4 pt-4"
-          >
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <motion.button
               whileHover={{ scale: 1.05, translateY: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -498,9 +532,41 @@ export const HomePage: React.FC<HomePageProps> = ({
               <Rocket className="w-4 h-4 text-sky-400" />
               <span>Explore Services</span>
             </motion.button>
-          </motion.div>
+          </div>
 
-        </motion.div>
+          {/* Slider Controls (Left/Right Arrows + Dots Indicators) */}
+          <div className="flex items-center justify-center gap-4 pt-6">
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+              aria-label="Previous Slide"
+              className="p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-600/30 transition-all backdrop-blur-md min-h-[44px] min-w-[44px] flex items-center justify-center"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-2">
+              {heroSlides.map((slide, idx) => (
+                <button
+                  key={slide.id}
+                  onClick={() => setCurrentSlide(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    currentSlide === idx ? 'w-8 bg-sky-400 shadow-md' : 'w-2.5 bg-slate-700 hover:bg-slate-500'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+              aria-label="Next Slide"
+              className="p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-600/30 transition-all backdrop-blur-md min-h-[44px] min-w-[44px] flex items-center justify-center"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+        </div>
 
         {/* Compact Floating Quick Access Dock - Exclusively within Hero Section Area */}
         <QuickAccessDock 
