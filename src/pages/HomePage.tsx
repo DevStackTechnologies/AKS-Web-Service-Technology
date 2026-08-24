@@ -33,6 +33,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   });
   const [inquirySent, setInquirySent] = useState<boolean>(false);
   const [newsletterEmail, setNewsletterEmail] = useState<string>('');
+  const [newsletterSent, setNewsletterSent] = useState<boolean>(false);
   const [isTestimonialsHovered, setIsTestimonialsHovered] = useState<boolean>(false);
 
   const heroSlides = [
