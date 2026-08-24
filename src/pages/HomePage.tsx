@@ -401,34 +401,37 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div className="space-y-10 pb-8 bg-[#FFF8F5] text-slate-900 overflow-hidden">
 
       {/* LANDING PAGE HERO WITH 100% CRYSTAL CLEAR BACKGROUND */}
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl">
+      {/* LANDING PAGE HERO WITH 100% CRYSTAL CLEAR BACKGROUND */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl">
         
-        {/* 100% Ultra-Sharp 4K Background Image (Hardware Accelerated Pixel Clarity) */}
+        {/* 100% Ultra-Sharp 4K Background Image */}
         <motion.div 
           animate={{ scale: [1, 1.02, 1], y: [0, -6, 0] }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
         >
           <img 
-            src="/images/hero-innovative-solutions.png" 
-            alt="TecVor Technologies - Web Development & Digital Solutions Hero Background" 
-            className="w-full h-full object-cover object-center opacity-100 image-4k-crisp"
+            src="/images/hero-animated-bg.png" 
+            alt="TecVor Technologies - Enterprise Web Development & Digital Solutions Hero Background" 
+            className="w-full h-full object-cover object-center opacity-90 image-4k-crisp"
+            loading="eager"
+            decoding="async"
           />
         </motion.div>
 
-        {/* Minimal Subtle Tint to preserve maximum 4K visual sharpness */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/20 to-slate-950/70 pointer-events-none z-0" />
+        {/* Ambient Dark Overlay for High Text Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950/90 pointer-events-none z-0" />
         
-        {/* Floating Futuristic Ambient Light Orbs - Optimized with GPU layers and hidden on small mobile to maximize 120fps scroll smoothness */}
+        {/* Floating Futuristic Ambient Light Orbs */}
         <motion.div 
-          animate={{ y: [0, -25, 0], scale: [1, 1.12, 1], opacity: [0.35, 0.55, 0.35] }}
+          animate={{ y: [0, -25, 0], scale: [1, 1.12, 1], opacity: [0.4, 0.6, 0.4] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="hidden sm:block absolute top-1/4 left-1/3 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-sky-400/20 to-[#0A4EDB]/25 rounded-full blur-[100px] pointer-events-none z-0 transform-gpu will-change-transform" 
+          className="hidden sm:block absolute top-1/4 left-1/3 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-sky-400/25 to-[#0A4EDB]/30 rounded-full blur-[100px] pointer-events-none z-0 transform-gpu will-change-transform" 
         />
         <motion.div 
-          animate={{ y: [0, 20, 0], scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
+          animate={{ y: [0, 20, 0], scale: [1, 1.15, 1], opacity: [0.35, 0.55, 0.35] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="hidden sm:block absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/25 to-indigo-500/25 rounded-full blur-[90px] pointer-events-none z-0 transform-gpu will-change-transform" 
+          className="hidden sm:block absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/30 to-amber-500/20 rounded-full blur-[90px] pointer-events-none z-0 transform-gpu will-change-transform" 
         />
 
         <motion.div 
@@ -445,16 +448,16 @@ export const HomePage: React.FC<HomePageProps> = ({
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md hover:scale-105 transition-transform"
           >
             <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
-            <span>Leading Web Development Company & Cloud Solutions</span>
+            <span>Enterprise Web Engineering & Cloud AI Solutions</span>
           </motion.div>
 
-          {/* Primary H1 Headline with Crisp White & Electric Blue Gradient */}
+          {/* Primary H1 Headline */}
           <motion.h1 
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl"
           >
-            TecVor Technologies | <span className="bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-lg">Web Development & Digital Solutions</span> for Global Businesses.
+            TecVor Technologies | <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg">Next-Gen Web & AI Engineering</span> For Global Leaders.
           </motion.h1>
 
           {/* Subheadline with High Readability */}
@@ -463,10 +466,10 @@ export const HomePage: React.FC<HomePageProps> = ({
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md"
           >
-            As a premier Web Development Company, TecVor Technologies delivers custom web applications, software development, autonomous AI systems, and scalable cloud solutions for high-growth enterprises worldwide.
+            We build ultra-fast React & Next.js web applications, custom software platforms, autonomous AI systems, and scalable AWS cloud solutions engineered for global performance.
           </motion.p>
 
-          {/* Original CTA Button */}
+          {/* Dual Action CTA Buttons */}
           <motion.div 
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
@@ -476,14 +479,46 @@ export const HomePage: React.FC<HomePageProps> = ({
               whileHover={{ scale: 1.05, translateY: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={onOpenCalendly}
-              className="px-9 py-4 rounded-2xl font-black text-sm text-white bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] hover:shadow-2xl transition-all flex items-center gap-2.5 shadow-xl shimmer-btn uppercase tracking-wider"
+              aria-label="Book Tech Strategy Call"
+              className="px-8 py-4 rounded-2xl font-black text-sm text-white bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] hover:shadow-2xl transition-all flex items-center gap-2.5 shadow-xl shimmer-btn uppercase tracking-wider min-h-[44px]"
             >
               <span className="relative z-10 flex items-center gap-2">
                 <span>Book Strategy Call</span>
                 <ArrowRight className="w-4 h-4" />
               </span>
             </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, translateY: -2 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => onNavigate('services')}
+              aria-label="Explore Services & Solutions"
+              className="px-8 py-4 rounded-2xl font-black text-sm text-white bg-slate-900/90 border border-slate-700 hover:border-sky-400 hover:bg-slate-800 transition-all flex items-center gap-2 shadow-lg backdrop-blur-md uppercase tracking-wider min-h-[44px]"
+            >
+              <Rocket className="w-4 h-4 text-sky-400" />
+              <span>Explore Services</span>
+            </motion.button>
           </motion.div>
+
+          {/* Hero Metrics Ribbon */}
+          <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
+              <div className="text-xl sm:text-2xl font-black text-sky-400">200+</div>
+              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Apps Built</div>
+            </div>
+            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
+              <div className="text-xl sm:text-2xl font-black text-emerald-400">99.99%</div>
+              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Uptime SLA</div>
+            </div>
+            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
+              <div className="text-xl sm:text-2xl font-black text-amber-400">₹400 Cr+</div>
+              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Client Value</div>
+            </div>
+            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
+              <div className="text-xl sm:text-2xl font-black text-rose-400">4.9★</div>
+              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Enterprise Rating</div>
+            </div>
+          </div>
 
         </motion.div>
 
