@@ -500,26 +500,6 @@ export const HomePage: React.FC<HomePageProps> = ({
             </motion.button>
           </motion.div>
 
-          {/* Hero Metrics Ribbon */}
-          <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
-              <div className="text-xl sm:text-2xl font-black text-sky-400">200+</div>
-              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Apps Built</div>
-            </div>
-            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
-              <div className="text-xl sm:text-2xl font-black text-emerald-400">99.99%</div>
-              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Uptime SLA</div>
-            </div>
-            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
-              <div className="text-xl sm:text-2xl font-black text-amber-400">₹400 Cr+</div>
-              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Client Value</div>
-            </div>
-            <div className="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
-              <div className="text-xl sm:text-2xl font-black text-rose-400">4.9★</div>
-              <div className="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Enterprise Rating</div>
-            </div>
-          </div>
-
         </motion.div>
 
         {/* Compact Floating Quick Access Dock - Exclusively within Hero Section Area */}
@@ -527,54 +507,6 @@ export const HomePage: React.FC<HomePageProps> = ({
           onNavigate={onNavigate} 
           onOpenCalendly={onOpenCalendly} 
         />
-      </section>
-
-      {/* INFINITE CLIENT LOGOS MARQUEE (BELOW HERO SECTION) */}
-      <section className="py-4 bg-[#FFF8F5]">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto space-y-4 relative px-4"
-        >
-          <p className="text-center text-xs font-black uppercase tracking-widest text-slate-500">
-            Trusted by tech pioneers & Fortune 500 enterprises worldwide
-          </p>
-          
-          {/* Outer Container with Gradient Mask */}
-          <div className="overflow-hidden relative py-6 bg-white border border-slate-200 shadow-sm rounded-3xl">
-            {/* Left Fog Overlay */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-white via-white/90 to-transparent z-20 pointer-events-none" />
-            
-            {/* Framer Motion Seamless Infinite Scroll Loop - Hardware Accelerated */}
-            <motion.div
-              className="flex items-center gap-6 w-max transform-gpu will-change-transform"
-              animate={{ x: ['0%', '-50%'] }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                  duration: 22,
-                  ease: 'linear',
-                },
-              }}
-            >
-              {clientLogos.concat(clientLogos).concat(clientLogos).concat(clientLogos).map((client, idx) => (
-                <motion.span
-                  key={idx}
-                  whileHover={{ scale: 1.12, y: -3 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                  className={`px-6 py-2.5 rounded-2xl border text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-sm flex-shrink-0 cursor-pointer ${client.color} ${client.bg}`}
-                >
-                  {client.name}
-                </motion.span>
-              ))}
-            </motion.div>
-
-            {/* Right Fog Overlay */}
-            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-white via-white/90 to-transparent z-20 pointer-events-none" />
-          </div>
-        </motion.div>
       </section>
 
       {/* WHAT WE PROVIDE - TOP-NOTCH WEB SOLUTIONS SECTION (With 10-Image 3D Stacked Deck Inside Box) */}
