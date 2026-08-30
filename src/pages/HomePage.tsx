@@ -367,17 +367,28 @@ export const HomePage: React.FC<HomePageProps> = ({
               </p>
             </div>
 
-            {/* Action CTA Button */}
-            <div className="pt-1">
+            {/* Action CTA Buttons (Parallel Flex Row) */}
+            <div className="flex flex-wrap sm:flex-nowrap items-center justify-start gap-3 sm:gap-4 pt-1">
               <motion.button
                 whileHover={{ scale: 1.04, translateY: -2 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onNavigate('services')}
                 aria-label="Explore Solutions"
-                className="w-full xs:w-auto px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-white bg-[#0052FF] hover:bg-[#0042D0] hover:shadow-2xl hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-3 shadow-lg shadow-blue-600/20 min-h-[48px] group cursor-pointer"
+                className="w-full xs:w-auto px-7 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-white bg-[#0052FF] hover:bg-[#0042D0] hover:shadow-2xl hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-blue-600/20 min-h-[48px] group cursor-pointer"
               >
                 <span>Explore Solutions</span>
                 <ExternalLink className="w-4 h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.04, translateY: -2 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => onNavigate('contact')}
+                aria-label="Contact Us"
+                className="w-full xs:w-auto px-7 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-slate-800 bg-white border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all flex items-center justify-center gap-2.5 shadow-xs min-h-[48px] cursor-pointer"
+              >
+                <span>Contact Us</span>
+                <ArrowRight className="w-4 h-4 text-[#0052FF]" />
               </motion.button>
             </div>
 
