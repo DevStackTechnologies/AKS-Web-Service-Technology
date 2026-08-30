@@ -327,36 +327,37 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="space-y-10 pb-8 bg-[#FFF8F5]">
-      {/* HERO BANNER SECTION WITH OFFICIAL TECVOR GRAPHIC & LIVE INTERACTIVE CONTENT OVERLAY */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#FAFCFF] text-slate-900 border-b border-slate-100">
+      {/* HERO BANNER SECTION WITH OFFICIAL TECVOR GRAPHIC & RESPONSIVE CONTENT OVERLAY */}
+      <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#FAFCFF] text-slate-900 border-b border-slate-100">
         
         {/* Background Network Globe & Wave Graphic */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-end">
           {/* Subtle background glow & radial gradient */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[700px] h-[350px] sm:h-[600px] lg:h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
           
           {/* High Definition Clean Hero Banner Graphic */}
           <img 
             src="/images/clean_hero_banner.png" 
             alt="TecVor Official Clean Hero Background Graphic"
-            className="w-full h-full object-cover object-right opacity-95"
+            className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 sm:via-white/60 to-transparent" />
         </div>
 
         {/* Main Content Grid (12 Columns) */}
-        <div className="max-w-7xl w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 my-auto">
+        <div className="max-w-7xl w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 lg:pt-14 pb-8 sm:pb-12 my-auto">
           
           {/* LEFT COLUMN (6 Cols): Logo, Headline, Accent Line, Paragraph, CTA Buttons, 4 Feature Badges */}
-          <div className="lg:col-span-6 space-y-7 text-left">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-7 text-left">
             
             {/* Top Brand Logo */}
             <div className="inline-flex items-center">
-              <TecVorLogo height={46} />
+              <TecVorLogo height={42} />
             </div>
 
             {/* Main H1 Headline */}
-            <div className="space-y-3">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-slate-900">
+            <div className="space-y-2 sm:space-y-3">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-slate-900">
                 <span>Innovative </span>
                 <span className="bg-gradient-to-r from-[#0052FF] to-[#0070FF] bg-clip-text text-transparent">
                   Technology.
@@ -369,22 +370,22 @@ export const HomePage: React.FC<HomePageProps> = ({
               </h1>
 
               {/* Accent Underline Line */}
-              <div className="w-14 h-1.5 rounded-full bg-gradient-to-r from-[#0052FF] to-[#8B5CF6] my-3 shadow-xs" />
+              <div className="w-12 sm:w-14 h-1.5 rounded-full bg-gradient-to-r from-[#0052FF] to-[#8B5CF6] my-2 sm:my-3 shadow-xs" />
 
               {/* Subtitle Paragraph */}
-              <p className="max-w-lg text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              <p className="max-w-lg text-slate-600 text-sm sm:text-base lg:text-lg font-medium leading-relaxed">
                 We build secure, scalable and future-ready digital solutions that drive growth and create impact.
               </p>
             </div>
 
             {/* Action CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-start gap-4 pt-1">
+            <div className="flex flex-wrap sm:flex-nowrap items-center justify-start gap-3 sm:gap-4 pt-1">
               <motion.button
                 whileHover={{ scale: 1.04, translateY: -2 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onNavigate('services')}
                 aria-label="Explore Services"
-                className="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-[#0052FF] hover:bg-[#0042D0] hover:shadow-xl hover:shadow-blue-500/25 transition-all flex items-center gap-2.5 shadow-md shadow-blue-600/20 min-h-[44px]"
+                className="w-full xs:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-[#0052FF] hover:bg-[#0042D0] hover:shadow-xl hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-2.5 shadow-md shadow-blue-600/20 min-h-[44px]"
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-4 h-4" />
@@ -395,61 +396,62 @@ export const HomePage: React.FC<HomePageProps> = ({
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onNavigate('contact')}
                 aria-label="Contact Us"
-                className="px-7 py-3.5 rounded-xl font-bold text-sm text-slate-800 bg-white border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all flex items-center gap-2.5 shadow-xs min-h-[44px]"
+                className="w-full xs:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all flex items-center justify-center gap-2.5 shadow-xs min-h-[44px]"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-4 h-4 text-blue-600" />
               </motion.button>
             </div>
+
             {/* Bottom 4 Feature Icon Badges with Vertical Dividers */}
-            <div className="pt-7 sm:pt-9">
-              <div className="flex items-center gap-3 sm:gap-6">
+            <div className="pt-5 sm:pt-8 border-t border-slate-200/60 sm:border-transparent">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4 lg:gap-6 items-center">
                 
                 {/* Feature 1: Web Development */}
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
-                    <Code className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                <div className="flex flex-col items-center text-center space-y-1.5 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Code className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-800 leading-tight">
                     Web<br />Development
                   </span>
                 </div>
 
                 {/* Vertical Divider 1 */}
-                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+                <div className="w-[1px] h-8 sm:h-12 bg-slate-200 justify-self-center" />
 
                 {/* Feature 2: Cloud Solutions */}
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
-                    <Server className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                <div className="flex flex-col items-center text-center space-y-1.5 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Server className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-800 leading-tight">
                     Cloud<br />Solutions
                   </span>
                 </div>
 
                 {/* Vertical Divider 2 */}
-                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+                <div className="w-[1px] h-8 sm:h-12 bg-slate-200 justify-self-center" />
 
                 {/* Feature 3: Secure & Reliable */}
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
-                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                <div className="flex flex-col items-center text-center space-y-1.5 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-800 leading-tight">
                     Secure &<br />Reliable
                   </span>
                 </div>
 
                 {/* Vertical Divider 3 */}
-                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+                <div className="w-[1px] h-8 sm:h-12 bg-slate-200 justify-self-center" />
 
                 {/* Feature 4: 24/7 Support */}
-                <div className="flex flex-col items-center text-center space-y-2">
-                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
-                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                <div className="flex flex-col items-center text-center space-y-1.5 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-800 leading-tight">
                     24/7<br />Support
                   </span>
                 </div>
@@ -460,7 +462,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           {/* RIGHT COLUMN (6 Cols): Reserved space so background image laptop graphic displays perfectly */}
-          <div className="hidden lg:block lg:col-span-6 min-h-[380px] sm:min-h-[460px] lg:min-h-[500px] pointer-events-none" />
+          <div className="hidden lg:block lg:col-span-6 min-h-[300px] sm:min-h-[420px] lg:min-h-[500px] pointer-events-none" />
 
         </div>
 
