@@ -392,9 +392,9 @@ export const HomePage: React.FC<HomePageProps> = ({
               </motion.button>
             </div>
 
-            {/* Bottom 4 Feature Icon Badges in 1 Horizontal Row (Icon Left, Text Right) */}
+            {/* Bottom 4 Feature Icon Badges (Icon Left, Text Right - 2x2 Grid on Mobile, 1x4 Row on Desktop) */}
             <div className="pt-6 sm:pt-8 border-t border-slate-200/80">
-              <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 sm:gap-4 lg:gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
                 
                 {/* Feature 1: Custom Software Development */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
@@ -406,9 +406,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                   </span>
                 </div>
 
-                {/* Vertical Divider 1 */}
-                <div className="hidden sm:block w-[1px] h-8 sm:h-10 bg-slate-200 shrink-0" />
-
                 {/* Feature 2: Cloud Solutions */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
                   <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs shrink-0">
@@ -419,9 +416,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                   </span>
                 </div>
 
-                {/* Vertical Divider 2 */}
-                <div className="hidden sm:block w-[1px] h-8 sm:h-10 bg-slate-200 shrink-0" />
-
                 {/* Feature 3: Cybersecurity & Protection */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
                   <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs shrink-0">
@@ -431,9 +425,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                     Cybersecurity<br />& Protection
                   </span>
                 </div>
-
-                {/* Vertical Divider 3 */}
-                <div className="hidden sm:block w-[1px] h-8 sm:h-10 bg-slate-200 shrink-0" />
 
                 {/* Feature 4: Data Analytics & AI */}
                 <div className="flex items-center gap-2.5 sm:gap-3">
