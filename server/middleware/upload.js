@@ -19,19 +19,32 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = /pdf|doc|docx|png|jpg|jpeg/;
-  const extName = allowedTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimeType = allowedTypes.test(file.mimetype);
+  const allowedExtensions = ['.pdf', '.doc', '.docx', '.png', '.jpg', '.jpeg'];
+  const allowedMimeTypes = [
+    'application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'image/png',
+    'image/jpeg',
+    'image/jpg'
+  ];
 
-  if (extName && mimeType) {
+  const ext = path.extname(file.originalname).toLowerCase();
+  const isValidExt = allowedExtensions.includes(ext);
+  const isValidMime = allowedMimeTypes.includes(file.mimetype);
+
+  if (isValidExt && isValidMime) {
     cb(null, true);
   } else {
-    cb(new Error('Only PDF, DOC, DOCX, PNG, JPG files are allowed!'), false);
+    cb(new Error('Security Block: Only PDF, DOC, DOCX, PNG, and JPG files are permitted.'), false);
   }
 };
 
 export const upload = multer({
   storage,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB Limit
+  limits: { 
+    fileSize: 5 * 1024 * 1024, // 5MB Maximum File Security Cap
+    files: 2 // Max 2 files per request
+  },
   fileFilter
 });

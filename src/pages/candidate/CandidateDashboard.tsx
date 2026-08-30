@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp, Application } from '../../context/AppContext';
-import { AksLogo } from '../../components/common/AksLogo';
+import { TecVorLogo } from '../../components/common/TecVorLogo';
 import { 
   User, Upload, FileText, CheckCircle2, Award, Clock, Sparkles, 
   Download, Briefcase, ChevronRight, AlertCircle, FileCheck, RefreshCw, Bookmark
@@ -42,7 +42,7 @@ export const CandidateDashboard: React.FC<CandidateDashboardProps> = ({
       {/* Official Candidate Portal Header with Brand Logo */}
       <div className="glass-card bg-white p-6 rounded-3xl border border-[#CDD2DA] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg">
         <div className="flex items-center gap-4">
-          <AksLogo height={56} />
+          <TecVorLogo height={56} />
           <div className="h-10 w-[1px] bg-[#CDD2DA] hidden sm:block"></div>
           <div>
             <span className="text-[10px] font-extrabold tracking-widest text-[#0066FF] uppercase block">

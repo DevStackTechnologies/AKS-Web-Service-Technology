@@ -30,7 +30,7 @@ export const ContactPage: React.FC = () => {
     <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 bg-[#FFF8F5] text-slate-900 space-y-12">
       <div className="max-w-7xl mx-auto space-y-12">
 
-        {/* 1. HERO HEADER WITH AKS LOGO BRANDED GRADIENT */}
+        {/* 1. HERO HEADER WITH TECVOR LOGO BRANDED GRADIENT */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -38,11 +38,11 @@ router.post('/chat', (req, res) => {
   const { message } = req.body;
   const lower = (message || '').toLowerCase();
 
-  let response = "AKS AI Assistant: We have active open positions in React, Node.js, and AI Engineering.";
+  let response = "TecVor AI Assistant: We have active open positions in React, Node.js, and AI Engineering.";
   if (lower.includes('job') || lower.includes('position')) {
-    response = "AKS AI Assistant: We currently have 25+ open positions across Engineering, Design, and AI R&D.";
+    response = "TecVor AI Assistant: We currently have 25+ open positions across Engineering, Design, and AI R&D.";
   } else if (lower.includes('intern')) {
-    response = "AKS AI Assistant: Our 2026 Internship Program offers 3-month paid tracks with stipends up to ₹18,000/month!";
+    response = "TecVor AI Assistant: Our 2026 Internship Program offers 3-month paid tracks with stipends up to ₹18,000/month!";
   }
 
   res.json({ success: true, reply: response });

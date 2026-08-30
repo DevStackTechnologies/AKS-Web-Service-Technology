@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        aks: {
+        tecvor: {
           primary: "#0052FF",
           secondary: "#0070FF",
           cyan: "#00C2FF",

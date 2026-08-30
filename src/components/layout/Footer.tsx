@@ -1,5 +1,5 @@
 import React from 'react';
-import { AksLogo } from '../common/AksLogo';
+import { TecVorLogo } from '../common/TecVorLogo';
 import { Mail, Phone, Linkedin, Twitter, Github, Instagram, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="inline-block">
-              <AksLogo variant="dark" height={50} />
+              <TecVorLogo variant="dark" height={50} />
             </div>
 
             <p className="text-xs text-slate-300 leading-relaxed max-w-sm">

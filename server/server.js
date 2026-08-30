@@ -7,6 +7,11 @@ import path from 'path';
 import fs from 'fs';
 import bcrypt from 'bcryptjs';
 
+import rateLimit from 'express-rate-limit';
+import mongoSanitize from 'express-mongo-sanitize';
+import cookieParser from 'cookie-parser';
+import hpp from 'hpp';
+
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import jobRoutes from './routes/jobRoutes.js';
@@ -29,10 +34,47 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Security & Middleware
+// 🛡️ Enterprise Security Middlewares Configuration
+// 1. Rate Limiting Protection (Anti-Brute Force & Anti-DDoS)
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 150, // Limit each IP to 150 requests per 15 minutes
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { success: false, message: 'Security Block: Too many requests from this IP. Please try again in 15 minutes.' }
+});
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10, // Max 10 login/register/OTP attempts per 15 minutes
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { success: false, message: 'Security Block: Too many authentication attempts. Please try again after 15 minutes.' }
+});
+
+// 2. Helmet HTTP Security Headers (HSTS, Anti-XSS, Anti-Framejacking)
 app.use(helmet({
-  crossOriginResourcePolicy: { policy: 'cross-origin' }
+  crossOriginResourcePolicy: { policy: 'cross-origin' },
+  hsts: { maxAge: 31536000, includeSubDomains: true, preload: true },
+  frameguard: { action: 'deny' },
+  noSniff: true
 }));
+
+// 3. Cookie Parser Integration
+app.use(cookieParser());
+
+// 4. NoSQL Operator Injection Sanitization & HTTP Parameter Pollution Defense
+app.use(mongoSanitize({
+  replaceWith: '_'
+}));
+app.use(hpp());
+
+// 5. Apply Security Rate Limiters to API Routes
+app.use('/api/', apiLimiter);
+app.use('/api/auth/login', authLimiter);
+app.use('/api/auth/register', authLimiter);
+app.use('/api/auth/send-otp', authLimiter);
+
 app.use(cors({ origin: '*' }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -66,14 +108,14 @@ async function seedInitialDatabaseData() {
     if (adminCount === 0) {
       const hashedAdminPassword = await bcrypt.hash('admin123', 10);
       await User.create({
-        name: 'AKS Systems Administrator',
-        email: 'admin@aks.com',
+        name: 'TecVor Systems Administrator',
+        email: 'admin@tecvor.com',
         password: hashedAdminPassword,
         role: 'admin',
         title: 'Chief Technology Officer',
         skills: ['Cloud Architecture', 'Security', 'React', 'Node.js']
       });
-      console.log('👤 Default Admin Created: admin@aks.com / admin123');
+      console.log('👤 Default Admin Created: admin@tecvor.com / admin123');
     }
 
     const hrCount = await User.countDocuments({ role: 'hr' });
@@ -81,13 +123,13 @@ async function seedInitialDatabaseData() {
       const hashedHrPassword = await bcrypt.hash('hr123', 10);
       await User.create({
         name: 'Priya Sharma (HR Lead)',
-        email: 'hr@aks.com',
+        email: 'hr@tecvor.com',
         password: hashedHrPassword,
         role: 'hr',
         title: 'Head of Talent Acquisition',
         skills: ['Recruitment', 'ATS Systems', 'People Operations']
       });
-      console.log('👤 Default HR Lead Created: hr@aks.com / hr123');
+      console.log('👤 Default HR Lead Created: hr@tecvor.com / hr123');
     }
 
     // 2. Seed Requisitions
@@ -172,7 +214,7 @@ app.use('/api/inquiries', inquiryRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
-    company: 'AKS Web Service Technologies',
+    company: 'TecVor Technologies',
     database: 'MongoDB Atlas Cloud',
     version: '1.0.0-production',
     timestamp: new Date().toISOString()
@@ -194,5 +236,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 AKS Production REST API running on http://localhost:${PORT}`);
+  console.log(`🚀 TecVor Production REST API running on http://localhost:${PORT}`);
 });

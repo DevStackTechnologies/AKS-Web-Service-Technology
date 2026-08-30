@@ -6,7 +6,7 @@ import { Otp } from '../models/Otp.js';
 import { protect } from '../middleware/auth.js';
 
 const router = express.Router();
-const JWT_SECRET = process.env.JWT_SECRET || 'aks_jwt_secret';
+const JWT_SECRET = process.env.JWT_SECRET || 'tecvor_jwt_secret';
 
 // POST /api/auth/send-otp (Generate & store real 4-digit OTP in MongoDB Atlas)
 router.post('/send-otp', async (req, res) => {

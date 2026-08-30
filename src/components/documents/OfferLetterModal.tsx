@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AksLogo } from '../common/AksLogo';
+import { TecVorLogo } from '../common/TecVorLogo';
 import { Printer, X, ShieldCheck } from 'lucide-react';
 
 interface OfferLetterModalProps {
@@ -70,7 +70,7 @@ export const OfferLetterModal: React.FC<OfferLetterModalProps> = ({
               
               {/* Document Header */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b-2 border-[#0A4EDB] pb-4 sm:pb-6">
-                <AksLogo height={42} />
+                <TecVorLogo height={42} />
                 <div className="text-left sm:text-right">
                   <span className="text-[9px] sm:text-[10px] font-bold tracking-widest text-[#0A4EDB] uppercase block">Ref: TECVOR/HR/2026/OFFER-8942</span>
                   <span className="text-[10px] text-[#8590A6]">Date: July 29, 2026</span>

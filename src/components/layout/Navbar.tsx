@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AksLogo } from '../common/AksLogo';
+import { TecVorLogo } from '../common/TecVorLogo';
 import { useApp } from '../../context/AppContext';
 import { Menu, X, Sparkles, UserCheck, LogOut, Phone, Mail } from 'lucide-react';
 
@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
               aria-label="TecVor Technologies Homepage"
               className="flex items-center text-left focus:outline-none py-1 group min-h-[44px] min-w-[44px]"
             >
-              <AksLogo height={50} />
+              <TecVorLogo height={50} />
             </motion.button>
 
             {/* Public Navigation Links with LayoutId Indicator */}
@@ -122,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenA
                   <button
                     onClick={() => {
                       setRole('guest');
-                      localStorage.removeItem('aks_token');
+                      localStorage.removeItem('tecvor_token');
                       setActiveTab('home');
                     }}
                     title="Logout Session"

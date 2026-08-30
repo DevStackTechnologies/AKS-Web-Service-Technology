@@ -1,5 +1,5 @@
 import React from 'react';
-import { AksLogo } from '../common/AksLogo';
+import { TecVorLogo } from '../common/TecVorLogo';
 import { Printer, X, Award, ShieldCheck } from 'lucide-react';
 
 interface InternshipCertificateModalProps {
@@ -56,7 +56,7 @@ export const InternshipCertificateModal: React.FC<InternshipCertificateModalProp
             
             {/* Header Logo */}
             <div className="flex justify-center">
-              <AksLogo height={42} />
+              <TecVorLogo height={42} />
             </div>
 
             <div className="space-y-1">

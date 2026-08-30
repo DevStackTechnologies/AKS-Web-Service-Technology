@@ -7,7 +7,7 @@ export const connectDB = async () => {
     console.log('----------------------------------------------------');
     console.log('⚠️ MONGODB ATLAS CLOUD URI NOT SET IN server/.env');
     console.log('👉 Please paste your MongoDB Atlas Connection String in server/.env:');
-    console.log('   MONGODB_URI=mongodb+srv://<username>:<password>@aks-cluster.mongodb.net/aks_career_portal');
+    console.log('   MONGODB_URI=mongodb+srv://<username>:<password>@tecvor-cluster.mongodb.net/tecvor_career_portal');
     console.log('----------------------------------------------------');
     return false;
   }
@@ -21,7 +21,7 @@ export const connectDB = async () => {
   } catch (error) {
     console.warn(`⚠️ MongoDB Atlas failed (${error.message}). Trying local MongoDB fallback...`);
     try {
-      const localConn = await mongoose.connect('mongodb://127.0.0.1:27017/aks_career_portal', {
+      const localConn = await mongoose.connect('mongodb://127.0.0.1:27017/tecvor_career_portal', {
         serverSelectionTimeoutMS: 3000,
       });
       console.log(`✅ Local MongoDB Connected: ${localConn.connection.host}`);

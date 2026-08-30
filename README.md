@@ -126,4 +126,4 @@ AKS_Web_Service_Technology/
 
 ## 📄 License
 
-© 2026 **AKS Web Service Technology**. All rights reserved.
+© 2026 **TecVor Technologies**. All rights reserved.

@@ -94,7 +94,7 @@ const MainLayout: React.FC = () => {
               onOpenCertificateModal={() => setCertificateModalOpen(true)}
             />
           )}
-          {activeTab === 'lifeAtAks' && (
+          {activeTab === 'lifeAtTecvor' && (
             <HomePage
               onNavigate={handleNavigate}
               onOpenAi={() => setAiModalOpen(true)}

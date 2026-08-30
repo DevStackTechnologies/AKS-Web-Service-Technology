@@ -257,7 +257,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 7. WHY CHOOSE AKS */}
+      {/* 7. WHY CHOOSE TECVOR */}
       <section className="glass-card bg-white border border-slate-200 p-8 sm:p-12 rounded-3xl space-y-10 shadow-sm">
         <div className="text-center space-y-2">
           <span className="text-xs font-extrabold text-sky-600 uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Why Choose TecVor</span>

@@ -101,7 +101,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden sm:flex absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 flex-col gap-2 p-2 bg-slate-950/90 backdrop-blur-xl rounded-3xl border border-sky-400/40 shadow-[0_8px_32px_rgba(10,78,219,0.45)] transform-gpu will-change-transform select-none"
+        className="hidden sm:flex absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30 flex-col gap-2 p-2 bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200 shadow-[0_8px_30px_rgba(10,78,219,0.12)] transform-gpu will-change-transform select-none"
       >
         {/* Button 1: Demos */}
         <motion.button
@@ -165,7 +165,7 @@ export const QuickAccessDock: React.FC<QuickAccessDockProps> = ({ onNavigate, on
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        className="flex sm:hidden absolute bottom-3 left-1/2 -translate-x-1/2 z-30 items-center justify-center gap-1.5 p-1.5 bg-slate-950/92 backdrop-blur-xl rounded-2xl border border-sky-400/40 shadow-[0_8px_24px_rgba(10,78,219,0.45)] w-[calc(100%-2rem)] max-w-sm select-none"
+        className="flex sm:hidden absolute bottom-3 left-1/2 -translate-x-1/2 z-30 items-center justify-center gap-1.5 p-1.5 bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-200 shadow-[0_8px_24px_rgba(10,78,219,0.12)] w-[calc(100%-2rem)] max-w-sm select-none"
       >
         <button
           onClick={() => setActiveModal('demos')}

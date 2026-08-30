@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QuickAccessDock } from '../components/tools/QuickAccessDock';
+import { TecVorLogo } from '../components/common/TecVorLogo';
 import { 
   Sparkles, ArrowRight, ShieldCheck, Zap, Globe, Cpu, Code, Server, 
   Database, Layers, Smartphone, Bot, CheckCircle2, Star, Play, 
@@ -35,44 +36,6 @@ export const HomePage: React.FC<HomePageProps> = ({
   const [newsletterEmail, setNewsletterEmail] = useState<string>('');
   const [newsletterSent, setNewsletterSent] = useState<boolean>(false);
   const [isTestimonialsHovered, setIsTestimonialsHovered] = useState<boolean>(false);
-
-  const heroSlides = [
-    {
-      id: 0,
-      badge: '✨ Enterprise Web Engineering & Cloud AI',
-      title: 'TecVor Technologies | Next-Gen Web & AI Engineering For Global Leaders.',
-      desc: 'We build ultra-fast React & Next.js web applications, custom software platforms, autonomous AI systems, and scalable AWS cloud solutions.',
-      image: '/images/hero-animated-bg.png',
-      accentColor: 'from-sky-400 via-blue-500 to-indigo-400'
-    },
-    {
-      id: 1,
-      badge: '🚀 Custom Web & Mobile App Development',
-      title: 'Transforming Ideas Into Scalable 60fps Native & Web Applications.',
-      desc: 'Empowering startups and enterprises with high-converting digital product experiences, sub-second page speeds, and bulletproof security.',
-      image: '/images/ai-web-development.png',
-      accentColor: 'from-amber-400 via-orange-500 to-rose-500'
-    },
-    {
-      id: 2,
-      badge: '🤖 Autonomous AI Agents & Neural RAG Models',
-      title: 'Deploy Intelligent AI Automation & Vector Workflows For Scale.',
-      desc: 'Automating business operations, customer support, and data analytics pipelines with cutting-edge OpenAI LLM and LangChain technology.',
-      image: '/images/hero-innovative-solutions.png',
-      accentColor: 'from-emerald-400 via-teal-500 to-sky-400'
-    }
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [isHoveredHero, setIsHoveredHero] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (isHoveredHero) return;
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5500);
-    return () => clearInterval(interval);
-  }, [isHoveredHero, heroSlides.length]);
 
   const testimonials = [
     {
@@ -319,79 +282,6 @@ export const HomePage: React.FC<HomePageProps> = ({
     return () => clearInterval(interval);
   }, [isHoveredDeck, topNotchShowcaseImages.length]);
 
-  const deckCards = [
-    {
-      id: 0,
-      badge: '01. PROCESS & METRICS',
-      title: 'DISCOVER, DIRECTION & DESIGN',
-      desc: 'Next-Gen Agile Engineering & Full-Stack Cloud Architecture',
-      theme: 'dark',
-      bgGradient: 'from-slate-950 via-slate-900 to-slate-950',
-      textColor: 'text-white',
-      borderColor: 'border-slate-700/80 shadow-2xl',
-      image: '/images/card-metrics-dark.png',
-      accent: 'text-sky-400',
-      badgeBg: 'bg-sky-500/20 text-sky-300 border-sky-400/30',
-      stats: [
-        { label: 'METRICS', val: '2.1M' },
-        { label: 'QUERIES', val: '55K' },
-        { label: 'LATENCY', val: '12ms' }
-      ],
-      tags: ['Next.js 15', 'TypeScript', 'Node.js', 'PostgreSQL']
-    },
-    {
-      id: 1,
-      badge: '02. BRAND & SCALE',
-      title: 'ENTERPRISE PRODUCTION LAUNCH',
-      desc: 'High-Impact Brand Identity & Global Conversion Engineering',
-      theme: 'red',
-      bgGradient: 'from-rose-600 via-red-600 to-rose-700',
-      textColor: 'text-white',
-      borderColor: 'border-rose-400/80 shadow-2xl shadow-rose-900/30',
-      image: '/images/card-brand-red.png',
-      accent: 'text-amber-300',
-      badgeBg: 'bg-white/20 text-white border-white/30',
-      stats: [
-        { label: 'GROWTH', val: '+240%' },
-        { label: 'LOAD TIME', val: '0.4s' },
-        { label: 'CONVERSION', val: '4.8x' }
-      ],
-      tags: ['E-Commerce', 'Stripe', 'Microservices', 'GraphQL']
-    },
-    {
-      id: 2,
-      badge: '03. OPPORTUNITY & GAP',
-      title: 'STRATEGIC DIGITAL POSITIONING',
-      desc: 'Autonomous AI Workflows, Analytics & Scalable SaaS Systems',
-      theme: 'light',
-      bgGradient: 'from-white via-slate-50 to-slate-100',
-      textColor: 'text-slate-900',
-      borderColor: 'border-slate-200 shadow-2xl',
-      image: '/images/card-opportunity-light.png',
-      accent: 'text-teal-600',
-      badgeBg: 'bg-teal-50 text-teal-700 border-teal-200',
-      stats: [
-        { label: 'ENGAGEMENT', val: '2.06M' },
-        { label: 'ACTIVE SESSIONS', val: '160K' },
-        { label: 'GLOBAL REACH', val: '100%' }
-      ],
-      tags: ['OpenAI LLM', 'Vector DB', 'AWS Cloud', 'Docker']
-    }
-  ];
-
-  const clientLogos = [
-    { name: 'Google', color: 'text-[#4285F4]', bg: 'bg-[#4285F4]/10 border-[#4285F4]/30' },
-    { name: 'Microsoft', color: 'text-[#00A4EF]', bg: 'bg-[#00A4EF]/10 border-[#00A4EF]/30' },
-    { name: 'AWS', color: 'text-[#FF9900]', bg: 'bg-[#FF9900]/10 border-[#FF9900]/30' },
-    { name: 'WordPress', color: 'text-[#21759B]', bg: 'bg-[#21759B]/10 border-[#21759B]/30' },
-    { name: 'Spotify', color: 'text-[#1DB954]', bg: 'bg-[#1DB954]/10 border-[#1DB954]/30' },
-    { name: 'Shopify', color: 'text-[#96BF48]', bg: 'bg-[#96BF48]/10 border-[#96BF48]/30' },
-    { name: 'Stripe', color: 'text-[#635BFF]', bg: 'bg-[#635BFF]/10 border-[#635BFF]/30' },
-    { name: 'Vercel', color: 'text-slate-900', bg: 'bg-slate-900/10 border-slate-900/30' },
-    { name: 'Meta', color: 'text-[#0668E1]', bg: 'bg-[#0668E1]/10 border-[#0668E1]/30' },
-    { name: 'Netflix', color: 'text-[#E50914]', bg: 'bg-[#E50914]/10 border-[#E50914]/30' },
-  ];
-
   const services = [
     { id: 'web', title: 'Website Development', icon: Globe, desc: 'Ultra-fast Next.js & React web applications optimized for conversions.', count: '120+ Built' },
     { id: 'mobile', title: 'Mobile App Development', icon: Smartphone, desc: 'Native & Flutter iOS/Android apps with offline sync and 60fps performance.', count: '85+ Apps' },
@@ -436,144 +326,144 @@ export const HomePage: React.FC<HomePageProps> = ({
   ];
 
   return (
-    <div className="space-y-10 pb-8 bg-[#FFF8F5] text-slate-900 overflow-hidden">
-
-      {/* DYNAMIC HERO IMAGE & CONTENT SLIDER SECTION */}
-      <section 
-        onMouseEnter={() => setIsHoveredHero(true)}
-        onMouseLeave={() => setIsHoveredHero(false)}
-        className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:py-28 bg-slate-950 text-white border-b border-slate-800 shadow-2xl"
-      >
-        {/* Animated Background Image Carousel */}
-        <AnimatePresence mode="wait">
-          <motion.div 
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 0.9, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
-            className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
-          >
-            <img 
-              src={heroSlides[currentSlide].image} 
-              alt={`TecVor Hero Slide ${currentSlide + 1}`} 
-              className="w-full h-full object-cover object-center image-4k-crisp"
-              loading="eager"
-              decoding="async"
-            />
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Ambient Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/50 to-slate-950/95 pointer-events-none z-0" />
+    <div className="space-y-10 pb-8 bg-[#FFF8F5]">
+      {/* HERO BANNER SECTION WITH OFFICIAL TECVOR GRAPHIC & LIVE INTERACTIVE CONTENT OVERLAY */}
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#FAFCFF] text-slate-900 border-b border-slate-100">
         
-        {/* Floating Futuristic Light Orbs */}
-        <motion.div 
-          animate={{ y: [0, -25, 0], scale: [1, 1.12, 1], opacity: [0.4, 0.6, 0.4] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="hidden sm:block absolute top-1/4 left-1/3 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-sky-400/25 to-[#0A4EDB]/30 rounded-full blur-[100px] pointer-events-none z-0 transform-gpu will-change-transform" 
-        />
-        <motion.div 
-          animate={{ y: [0, 20, 0], scale: [1, 1.15, 1], opacity: [0.35, 0.55, 0.35] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="hidden sm:block absolute bottom-10 right-1/4 w-[450px] h-[450px] bg-gradient-to-bl from-[#139EF8]/30 to-amber-500/20 rounded-full blur-[90px] pointer-events-none z-0 transform-gpu will-change-transform" 
-        />
+        {/* Background Network Globe & Wave Graphic */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-end">
+          {/* Subtle background glow & radial gradient */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
+          
+          {/* High Definition Clean Hero Banner Graphic */}
+          <img 
+            src="/images/clean_hero_banner.png" 
+            alt="TecVor Official Clean Hero Background Graphic"
+            className="w-full h-full object-cover object-right opacity-95"
+          />
+        </div>
 
-        {/* Hero Content Animated Carousel */}
-        <div className="max-w-7xl mx-auto relative z-10 text-center space-y-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="space-y-6"
-            >
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 border border-sky-400/50 text-sky-300 text-xs font-black uppercase tracking-widest shadow-2xl backdrop-blur-md">
-                <Sparkles className="w-4 h-4 text-[#38BDF8] animate-pulse" />
-                <span>{heroSlides[currentSlide].badge}</span>
-              </div>
-
-              {/* H1 Headline */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto text-white drop-shadow-2xl">
-                {heroSlides[currentSlide].title}
-              </h1>
-
-              {/* Description */}
-              <p className="max-w-3xl mx-auto text-slate-200 text-base sm:text-lg lg:text-xl font-medium leading-relaxed drop-shadow-md">
-                {heroSlides[currentSlide].desc}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <motion.button
-              whileHover={{ scale: 1.05, translateY: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={onOpenCalendly}
-              aria-label="Book Tech Strategy Call"
-              className="px-8 py-4 rounded-2xl font-black text-sm text-white bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] hover:shadow-2xl transition-all flex items-center gap-2.5 shadow-xl shimmer-btn uppercase tracking-wider min-h-[44px]"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <span>Book Strategy Call</span>
-                <ArrowRight className="w-4 h-4" />
-              </span>
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05, translateY: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => onNavigate('services')}
-              aria-label="Explore Services & Solutions"
-              className="px-8 py-4 rounded-2xl font-black text-sm text-white bg-slate-900/90 border border-slate-700 hover:border-sky-400 hover:bg-slate-800 transition-all flex items-center gap-2 shadow-lg backdrop-blur-md uppercase tracking-wider min-h-[44px]"
-            >
-              <Rocket className="w-4 h-4 text-sky-400" />
-              <span>Explore Services</span>
-            </motion.button>
-          </div>
-
-          {/* Slider Controls (Left/Right Arrows + Dots Indicators) */}
-          <div className="flex items-center justify-center gap-4 pt-6">
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-              aria-label="Previous Slide"
-              className="p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-600/30 transition-all backdrop-blur-md min-h-[44px] min-w-[44px] flex items-center justify-center"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-
-            <div className="flex items-center gap-2">
-              {heroSlides.map((slide, idx) => (
-                <button
-                  key={slide.id}
-                  onClick={() => setCurrentSlide(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    currentSlide === idx ? 'w-8 bg-sky-400 shadow-md' : 'w-2.5 bg-slate-700 hover:bg-slate-500'
-                  }`}
-                />
-              ))}
+        {/* Main Content Grid (12 Columns) */}
+        <div className="max-w-7xl w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 my-auto">
+          
+          {/* LEFT COLUMN (6 Cols): Logo, Headline, Accent Line, Paragraph, CTA Buttons, 4 Feature Badges */}
+          <div className="lg:col-span-6 space-y-7 text-left">
+            
+            {/* Top Brand Logo */}
+            <div className="inline-flex items-center">
+              <TecVorLogo height={46} />
             </div>
 
-            <button
-              onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-              aria-label="Next Slide"
-              className="p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-600/30 transition-all backdrop-blur-md min-h-[44px] min-w-[44px] flex items-center justify-center"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            {/* Main H1 Headline */}
+            <div className="space-y-3">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-slate-900">
+                <span>Innovative </span>
+                <span className="bg-gradient-to-r from-[#0052FF] to-[#0070FF] bg-clip-text text-transparent">
+                  Technology.
+                </span>
+                <br />
+                <span>Intelligent </span>
+                <span className="bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#C026D3] bg-clip-text text-transparent">
+                  Solutions.
+                </span>
+              </h1>
+
+              {/* Accent Underline Line */}
+              <div className="w-14 h-1.5 rounded-full bg-gradient-to-r from-[#0052FF] to-[#8B5CF6] my-3 shadow-xs" />
+
+              {/* Subtitle Paragraph */}
+              <p className="max-w-lg text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+                We build secure, scalable and future-ready digital solutions that drive growth and create impact.
+              </p>
+            </div>
+
+            {/* Action CTA Buttons */}
+            <div className="flex flex-wrap items-center justify-start gap-4 pt-1">
+              <motion.button
+                whileHover={{ scale: 1.04, translateY: -2 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => onNavigate('services')}
+                aria-label="Explore Services"
+                className="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-[#0052FF] hover:bg-[#0042D0] hover:shadow-xl hover:shadow-blue-500/25 transition-all flex items-center gap-2.5 shadow-md shadow-blue-600/20 min-h-[44px]"
+              >
+                <span>Explore Services</span>
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.04, translateY: -2 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => onNavigate('contact')}
+                aria-label="Contact Us"
+                className="px-7 py-3.5 rounded-xl font-bold text-sm text-slate-800 bg-white border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all flex items-center gap-2.5 shadow-xs min-h-[44px]"
+              >
+                <span>Contact Us</span>
+                <ArrowRight className="w-4 h-4 text-blue-600" />
+              </motion.button>
+            </div>
+            {/* Bottom 4 Feature Icon Badges with Vertical Dividers */}
+            <div className="pt-7 sm:pt-9">
+              <div className="flex items-center gap-3 sm:gap-6">
+                
+                {/* Feature 1: Web Development */}
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Code className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Web<br />Development
+                  </span>
+                </div>
+
+                {/* Vertical Divider 1 */}
+                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+
+                {/* Feature 2: Cloud Solutions */}
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Server className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Cloud<br />Solutions
+                  </span>
+                </div>
+
+                {/* Vertical Divider 2 */}
+                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+
+                {/* Feature 3: Secure & Reliable */}
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Secure &<br />Reliable
+                  </span>
+                </div>
+
+                {/* Vertical Divider 3 */}
+                <div className="w-[1px] h-10 sm:h-12 bg-slate-200" />
+
+                {/* Feature 4: 24/7 Support */}
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl border-2 border-[#0052FF] flex items-center justify-center text-[#0052FF] bg-white shadow-xs">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    24/7<br />Support
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
           </div>
+
+          {/* RIGHT COLUMN (6 Cols): Reserved space so background image laptop graphic displays perfectly */}
+          <div className="hidden lg:block lg:col-span-6 min-h-[380px] sm:min-h-[460px] lg:min-h-[500px] pointer-events-none" />
 
         </div>
 
-        {/* Compact Floating Quick Access Dock - Exclusively within Hero Section Area */}
-        <QuickAccessDock 
-          onNavigate={onNavigate} 
-          onOpenCalendly={onOpenCalendly} 
-        />
       </section>
 
       {/* WHAT WE PROVIDE - TOP-NOTCH WEB SOLUTIONS SECTION (With 10-Image 3D Stacked Deck Inside Box) */}
@@ -1232,112 +1122,112 @@ export const HomePage: React.FC<HomePageProps> = ({
             </p>
           </div>
 
-            {inquirySent ? (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-6 rounded-2xl bg-sky-50 border border-sky-200 text-center space-y-2"
-              >
-                <CheckCircle2 className="w-10 h-10 text-[#0A4EDB] mx-auto" />
-                <h4 className="text-lg font-black text-slate-900">Thank You! Your Message is Received.</h4>
-                <p className="text-xs text-slate-600">Our engineering lead will connect with you in less than 24 hours.</p>
-                <button
-                  onClick={() => {
-                    setInquirySent(false);
-                    setInquiryForm({ name: '', email: '', phone: '', subject: '', message: '' });
-                  }}
-                  className="mt-3 px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#0A4EDB] to-[#139EF8] text-white hover:brightness-110 shadow-md"
-                >
-                  Send Another Message
-                </button>
-              </motion.div>
-            ) : (
-              <form 
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setInquirySent(true);
+          {inquirySent ? (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="p-6 rounded-2xl bg-sky-50 border border-sky-200 text-center space-y-2"
+            >
+              <CheckCircle2 className="w-10 h-10 text-[#0A4EDB] mx-auto" />
+              <h4 className="text-lg font-black text-slate-900">Thank You! Your Message is Received.</h4>
+              <p className="text-xs text-slate-600">Our engineering lead will connect with you in less than 24 hours.</p>
+              <button
+                onClick={() => {
+                  setInquirySent(false);
+                  setInquiryForm({ name: '', email: '', phone: '', subject: '', message: '' });
                 }}
-                className="space-y-4"
+                className="mt-3 px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#0A4EDB] to-[#139EF8] text-white hover:brightness-110 shadow-md"
               >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <User className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Name *
-                    </label>
-                    <input 
-                      type="text"
-                      required
-                      placeholder="Enter Your Name"
-                      value={inquiryForm.name}
-                      onChange={(e) => setInquiryForm({ ...inquiryForm, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Email *
-                    </label>
-                    <input 
-                      type="email"
-                      required
-                      placeholder="Enter Your Email"
-                      value={inquiryForm.email}
-                      onChange={(e) => setInquiryForm({ ...inquiryForm, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <Phone className="w-3.5 h-3.5 text-[#0A4EDB]" /> Phone Number
-                    </label>
-                    <input 
-                      type="tel"
-                      placeholder="Enter Your Number"
-                      value={inquiryForm.phone}
-                      onChange={(e) => setInquiryForm({ ...inquiryForm, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <Folder className="w-3.5 h-3.5 text-[#0A4EDB]" /> Subject
-                    </label>
-                    <input 
-                      type="text"
-                      placeholder="Enter Your Subject"
-                      value={inquiryForm.subject}
-                      onChange={(e) => setInquiryForm({ ...inquiryForm, subject: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
-                    />
-                  </div>
+                Send Another Message
+              </button>
+            </motion.div>
+          ) : (
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                setInquirySent(true);
+              }}
+              className="space-y-4"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Name *
+                  </label>
+                  <input 
+                    type="text"
+                    required
+                    placeholder="Enter Your Name"
+                    value={inquiryForm.name}
+                    onChange={(e) => setInquiryForm({ ...inquiryForm, name: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
+                  />
                 </div>
 
                 <div className="space-y-1">
                   <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                    <MessageSquare className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Message (Optional)
+                    <Mail className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Email *
                   </label>
-                  <textarea 
-                    rows={4}
-                    placeholder="Enter Your Message"
-                    value={inquiryForm.message}
-                    onChange={(e) => setInquiryForm({ ...inquiryForm, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50 resize-none"
+                  <input 
+                    type="email"
+                    required
+                    placeholder="Enter Your Email"
+                    value={inquiryForm.email}
+                    onChange={(e) => setInquiryForm({ ...inquiryForm, email: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
                   />
                 </div>
 
-                {/* Candidate Portal Electric Blue Button */}
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] hover:opacity-95 shadow-lg transition-all uppercase tracking-wider flex items-center justify-center gap-2"
-                >
-                  <span>Submit Message</span>
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
-            )}
+                <div className="space-y-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <Phone className="w-3.5 h-3.5 text-[#0A4EDB]" /> Phone Number
+                  </label>
+                  <input 
+                    type="tel"
+                    placeholder="Enter Your Number"
+                    value={inquiryForm.phone}
+                    onChange={(e) => setInquiryForm({ ...inquiryForm, phone: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <Folder className="w-3.5 h-3.5 text-[#0A4EDB]" /> Subject
+                  </label>
+                  <input 
+                    type="text"
+                    placeholder="Enter Your Subject"
+                    value={inquiryForm.subject}
+                    onChange={(e) => setInquiryForm({ ...inquiryForm, subject: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                  <MessageSquare className="w-3.5 h-3.5 text-[#0A4EDB]" /> Your Message (Optional)
+                </label>
+                <textarea 
+                  rows={4}
+                  placeholder="Enter Your Message"
+                  value={inquiryForm.message}
+                  onChange={(e) => setInquiryForm({ ...inquiryForm, message: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0A4EDB] focus:ring-2 focus:ring-sky-400/20 text-xs bg-slate-50/50 resize-none"
+                />
+              </div>
+
+              {/* Candidate Portal Electric Blue Button */}
+              <button
+                type="submit"
+                className="w-full py-4 rounded-xl font-black text-xs text-white bg-gradient-to-r from-[#0A4EDB] via-[#139EF8] to-[#38BDF8] hover:opacity-95 shadow-lg transition-all uppercase tracking-wider flex items-center justify-center gap-2"
+              >
+                <span>Submit Message</span>
+                <Send className="w-4 h-4" />
+              </button>
+            </form>
+          )}
         </div>
       </section>
 
@@ -1493,4 +1383,3 @@ const CalendarIcon: React.FC<{ className?: string }> = ({ className }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
   </svg>
 );
-

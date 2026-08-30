@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AksLogo } from '../components/common/AksLogo';
+import { TecVorLogo } from '../components/common/TecVorLogo';
 import { useApp } from '../context/AppContext';
 import { loginApi, registerApi, parseResumeApi, sendOtpApi, verifyOtpApi } from '../services/api';
 import { 
@@ -153,7 +153,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onNavigat
       if (mode === 'login') {
         const res = await loginApi({ email, password, role: 'candidate' });
         if (res.success && res.user) {
-          if (res.token) localStorage.setItem('aks_token', res.token);
+          if (res.token) localStorage.setItem('tecvor_token', res.token);
           setRole('candidate');
           updateProfile({ name: res.user.name, email: res.user.email, phone: res.user.phone });
           onNavigate('candidate-dashboard');
@@ -176,7 +176,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onNavigat
         });
 
         if (res.success && res.user) {
-          if (res.token) localStorage.setItem('aks_token', res.token);
+          if (res.token) localStorage.setItem('tecvor_token', res.token);
           setRole('candidate');
           updateProfile({
             name: res.user.name,
@@ -232,7 +232,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onNavigat
         {/* Modal Header */}
         <div className="p-5 sm:p-6 pb-3 text-center bg-slate-50 border-b border-slate-200 flex-shrink-0">
           <div className="flex justify-center mb-2">
-            <AksLogo height={38} />
+            <TecVorLogo height={38} />
           </div>
           
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-1.5">
