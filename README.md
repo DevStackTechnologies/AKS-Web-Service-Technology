@@ -75,7 +75,7 @@ npm install
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [https://tecvor-technologies.akashsingh91554.workers.dev/] in your browser.
 
 ### 4. Build for Production
 ```bash
