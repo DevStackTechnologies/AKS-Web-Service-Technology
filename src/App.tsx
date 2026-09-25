@@ -14,6 +14,11 @@ const BlogsPage = lazy(() => import('./pages/BlogsPage').then(m => ({ default: m
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 const CandidateDashboard = lazy(() => import('./pages/candidate/CandidateDashboard').then(m => ({ default: m.CandidateDashboard })));
 
+// Lazy loading legal & compliance pages
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
+const TermsPage = lazy(() => import('./pages/TermsPage').then(m => ({ default: m.TermsPage })));
+const SecurityPage = lazy(() => import('./pages/SecurityPage').then(m => ({ default: m.SecurityPage })));
+
 // Lazy loading interactive and heavy widgets / modals
 const WhatsAppWidget = lazy(() => import('./components/tools/WhatsAppWidget').then(m => ({ default: m.WhatsAppWidget })));
 const AiCareerAssistantModal = lazy(() => import('./components/ai/AiCareerAssistantModal').then(m => ({ default: m.AiCareerAssistantModal })));
@@ -112,6 +117,11 @@ const MainLayout: React.FC = () => {
               onNavigate={handleNavigate}
             />
           )}
+
+          {/* Legal, Terms & Security Pages */}
+          {activeTab === 'privacy-policy' && <PrivacyPolicyPage onNavigate={handleNavigate} />}
+          {(activeTab === 'terms' || activeTab === 'terms-of-service') && <TermsPage onNavigate={handleNavigate} />}
+          {activeTab === 'security' && <SecurityPage onNavigate={handleNavigate} />}
         </Suspense>
       </main>
 

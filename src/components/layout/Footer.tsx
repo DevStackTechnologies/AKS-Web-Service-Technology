@@ -146,11 +146,33 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           <div>
             <span>© 2026 TecVor Technologies. All rights reserved.</span>
           </div>
-          <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Security</a>
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <button 
+              onClick={() => setActiveTab('privacy-policy')} 
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => setActiveTab('terms')} 
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Terms of Service
+            </button>
+            <button 
+              onClick={() => setActiveTab('security')} 
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Security
+            </button>
+            <a 
+              href="/sitemap.xml" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Sitemap
+            </a>
           </div>
         </div>
 
