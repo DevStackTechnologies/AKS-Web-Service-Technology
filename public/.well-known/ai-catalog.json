@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/ai-catalog.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "TecVor Technologies",
+    "url": "https://tecvor-technologies.akashsingh91554.workers.dev"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:tecvor.com:service:web-development",
+      "displayName": "Enterprise Web Development & Cloud Engineering",
+      "type": "text/html",
+      "url": "https://tecvor-technologies.akashsingh91554.workers.dev/#services",
+      "description": "Custom Next.js, React, and cloud architecture development services for businesses.",
+      "representativeQueries": [
+        "hire React developers at TecVor",
+        "custom web application development",
+        "enterprise SaaS architecture"
+      ]
+    },
+    {
+      "identifier": "urn:air:tecvor.com:service:ai-solutions",
+      "displayName": "Custom AI Agents & LLM Workflows",
+      "type": "text/html",
+      "url": "https://tecvor-technologies.akashsingh91554.workers.dev/#services",
+      "description": "Integration of custom AI agents, document RAG pipelines, and automated intelligence into digital products.",
+      "representativeQueries": [
+        "AI web development services",
+        "custom LLM integration",
+        "intelligent workflow automation"
+      ]
+    },
+    {
+      "identifier": "urn:air:tecvor.com:service:inquiry",
+      "displayName": "Project Inquiry & Consultation Booking",
+      "type": "text/html",
+      "url": "https://tecvor-technologies.akashsingh91554.workers.dev/#contact",
+      "description": "Book a strategic technical discovery consultation or submit project requirements for a custom proposal.",
+      "representativeQueries": [
+        "contact TecVor Technologies",
+        "request a project quote",
+        "book technical consultation"
+      ]
+    }
+  ]
+}

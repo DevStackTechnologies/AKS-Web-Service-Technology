@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tecvor-technologies.akashsingh91554.workers.dev/sitemap.xml
+Agentmap: https://tecvor-technologies.akashsingh91554.workers.dev/ai-catalog.json

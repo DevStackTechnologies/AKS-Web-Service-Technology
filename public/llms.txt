@@ -1,0 +1,20 @@
+# TecVor Technologies
+
+> Enterprise Full-Stack Web, Cloud & AI Engineering Platform. Pioneering high-performance digital architecture, modern web platforms, 3D WebXR, and Next-Gen SaaS solutions.
+
+## Overview
+TecVor Technologies delivers custom web engineering, enterprise cloud solutions, AI model integrations, and high-performance digital products for businesses worldwide.
+
+- [Home](https://tecvor-technologies.akashsingh91554.workers.dev/): Official TecVor Technologies homepage with interactive project showcases, live portfolio previews, and solutions directory.
+- [About Us](https://tecvor-technologies.akashsingh91554.workers.dev/#about): Company background, mission, leadership, and digital transformation capabilities.
+- [Services](https://tecvor-technologies.akashsingh91554.workers.dev/#services): Full suite of web engineering, mobile apps, UI/UX design systems, AI & LLM workflows, and cloud DevOps infrastructure.
+- [Portfolio](https://tecvor-technologies.akashsingh91554.workers.dev/#portfolio): Enterprise case studies including FinTech portals, 3D WebXR configurators, and e-commerce platforms.
+- [Careers](https://tecvor-technologies.akashsingh91554.workers.dev/#careers): Talent acquisition portal, engineering opportunities, and candidate dashboard.
+- [Blog](https://tecvor-technologies.akashsingh91554.workers.dev/#blogs): Technology insights, AI in web development guides, and software engineering architecture articles.
+- [Contact](https://tecvor-technologies.akashsingh91554.workers.dev/#contact): Direct contact desk, WhatsApp support, project quote inquiry, and strategy call booking.
+
+## Technical Capabilities
+- [Frontend Engineering](https://tecvor-technologies.akashsingh91554.workers.dev/#services): React 18, Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and WebGL/Three.js.
+- [Backend Architecture](https://tecvor-technologies.akashsingh91554.workers.dev/#services): Node.js, Express.js, MongoDB Atlas, PostgreSQL, GraphQL, and REST microservices.
+- [Cloud & DevOps](https://tecvor-technologies.akashsingh91554.workers.dev/#services): AWS, Google Cloud Platform, Docker containerization, and zero-downtime CI/CD pipelines.
+- [AI & Automation](https://tecvor-technologies.akashsingh91554.workers.dev/#services): Custom OpenAI LLM agents, Retrieval-Augmented Generation (RAG), and intelligent workflow automation.
