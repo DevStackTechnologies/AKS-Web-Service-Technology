@@ -40,7 +40,7 @@ export const BlogsPage: React.FC<BlogsPageProps> = ({ onNavigate }) => {
       author: 'Akash Kumar (CTO)',
       authorRole: 'Chief Technology Officer',
       date: 'Aug 2026',
-      image: '/images/ai-web-development.png',
+      image: '/images/ai-web-development.webp',
       featured: true,
       summary: 'Artificial Intelligence is no longer a futuristic concept—it has become a practical tool that helps businesses automate processes, improve customer experiences, and build smarter digital products.',
       metaDesc: 'Discover how Artificial Intelligence is transforming website development, automation, user experience, and business growth.',

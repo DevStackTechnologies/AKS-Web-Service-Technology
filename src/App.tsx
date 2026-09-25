@@ -3,7 +3,6 @@ import { AppProvider, Application } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
-import { WhatsAppWidget } from './components/tools/WhatsAppWidget';
 
 // Lazy loading secondary pages for code splitting & initial bundle optimization
 const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
@@ -15,7 +14,8 @@ const BlogsPage = lazy(() => import('./pages/BlogsPage').then(m => ({ default: m
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 const CandidateDashboard = lazy(() => import('./pages/candidate/CandidateDashboard').then(m => ({ default: m.CandidateDashboard })));
 
-// Lazy loading interactive and heavy modals
+// Lazy loading interactive and heavy widgets / modals
+const WhatsAppWidget = lazy(() => import('./components/tools/WhatsAppWidget').then(m => ({ default: m.WhatsAppWidget })));
 const AiCareerAssistantModal = lazy(() => import('./components/ai/AiCareerAssistantModal').then(m => ({ default: m.AiCareerAssistantModal })));
 const OfferLetterModal = lazy(() => import('./components/documents/OfferLetterModal').then(m => ({ default: m.OfferLetterModal })));
 const InternshipCertificateModal = lazy(() => import('./components/documents/InternshipCertificateModal').then(m => ({ default: m.InternshipCertificateModal })));
@@ -118,10 +118,10 @@ const MainLayout: React.FC = () => {
       {/* Footer */}
       <Footer setActiveTab={handleNavigate} />
 
-      {/* Floating Global Contact Utilities */}
-      <WhatsAppWidget />
-      
       <Suspense fallback={null}>
+        {/* Floating Global Contact Utilities */}
+        <WhatsAppWidget />
+        
         {calendlyOpen && (
           <CalendlyModal 
             isOpen={calendlyOpen}

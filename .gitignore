@@ -19,6 +19,7 @@ dist-ssr
 PROJECT_MEMORY.md
 *memory*.md
 *.timestamp-*.mjs
+public/plugins/
 
 # Editor directories and files
 .vscode/*

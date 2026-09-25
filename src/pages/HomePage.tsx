@@ -205,70 +205,70 @@ export const HomePage: React.FC<HomePageProps> = ({
       id: 0,
       title: 'Top-Notch Web Solutions & Full-Stack Apps',
       tag: '01 / 10 • Web Engineering',
-      src: '/images/top-notch-solutions.png',
+      src: '/images/top-notch-solutions.webp',
       badge: 'React & Next.js 15'
     },
     {
       id: 1,
       title: 'Real-Time SaaS Metrics & Dark Analytics',
       tag: '02 / 10 • SaaS Dashboards',
-      src: '/images/card-metrics-dark.png',
+      src: '/images/card-metrics-dark.webp',
       badge: '2.1M Live Metrics'
     },
     {
       id: 2,
       title: 'High-Impact Brand Identity & Growth Deck',
       tag: '03 / 10 • Brand & Scale',
-      src: '/images/card-brand-red.png',
+      src: '/images/card-brand-red.webp',
       badge: '+240% Growth'
     },
     {
       id: 3,
       title: 'Strategic Market Opportunity & AI Blueprint',
       tag: '04 / 10 • Digital Architecture',
-      src: '/images/card-opportunity-light.png',
+      src: '/images/card-opportunity-light.webp',
       badge: '2.06M Engagement'
     },
     {
       id: 4,
       title: 'Native & Flutter Mobile App Development',
       tag: '05 / 10 • iOS & Android',
-      src: '/images/showcase-mobile.png',
+      src: '/images/showcase-mobile.webp',
       badge: '60fps Native Apps'
     },
     {
       id: 5,
       title: 'Scalable E-Commerce & Stripe Storefronts',
       tag: '06 / 10 • E-Commerce Platforms',
-      src: '/images/showcase-ecommerce.png',
+      src: '/images/showcase-ecommerce.webp',
       badge: 'Shopify Plus & Stripe'
     },
     {
       id: 6,
       title: 'Custom AI Agents & OpenAI LLM Pipelines',
       tag: '07 / 10 • AI & Neural Workflows',
-      src: '/images/showcase-ai.png',
+      src: '/images/showcase-ai.webp',
       badge: 'Autonomous AI RAG'
     },
     {
       id: 7,
       title: 'Luxury UI/UX Design Systems & Micro-Interactions',
       tag: '08 / 10 • UI/UX Luxury Design',
-      src: '/images/showcase-uiux.png',
+      src: '/images/showcase-uiux.webp',
       badge: 'Glassmorphism Design'
     },
     {
       id: 8,
       title: 'AWS Cloud Clusters & DevOps Infrastructure',
       tag: '09 / 10 • DevOps & Cloud',
-      src: '/images/showcase-devops.png',
+      src: '/images/showcase-devops.webp',
       badge: '99.99% Uptime SLA'
     },
     {
       id: 9,
       title: 'Agile Strategy & Technical Engineering Meeting',
       tag: '10 / 10 • Dedicated IT Team',
-      src: '/images/why-choose-us.png',
+      src: '/images/why-choose-us.webp',
       badge: '3+ Years Experience'
     }
   ];
@@ -335,12 +335,19 @@ export const HomePage: React.FC<HomePageProps> = ({
           {/* Subtle background glow & radial gradient */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[700px] h-[350px] sm:h-[600px] lg:h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
           
-          {/* High Definition Clean Hero Banner Graphic */}
-          <img 
-            src="/images/clean_hero_banner.png" 
-            alt="TecVor Building Technology that Powers Progress"
-            className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
-          />
+          {/* High Definition Clean Hero Banner Graphic (WebP Optimized for LCP) */}
+          <picture className="w-full h-full">
+            <source srcSet="/images/clean_hero_banner.webp" type="image/webp" />
+            <img 
+              src="/images/clean_hero_banner.png" 
+              alt="TecVor Building Technology that Powers Progress"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 sm:via-white/50 to-transparent" />
         </div>
 
@@ -490,6 +497,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <img
                       src={topNotchShowcaseImages[(topNotchImgIdx + 2) % topNotchShowcaseImages.length].src}
                       alt="Custom Web Applications & Software Development Showcase Layer 3"
+                      width={700}
+                      height={450}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover blur-[1px]"
                     />
                   </motion.div>
@@ -511,6 +522,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <img
                       src={topNotchShowcaseImages[(topNotchImgIdx + 1) % topNotchShowcaseImages.length].src}
                       alt="Cloud Solutions & Web Development Showcase Layer 2"
+                      width={700}
+                      height={450}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -529,6 +544,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                       <img 
                         src={topNotchShowcaseImages[topNotchImgIdx].src} 
                         alt={topNotchShowcaseImages[topNotchImgIdx].title} 
+                        width={700}
+                        height={450}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                       
@@ -744,8 +763,12 @@ export const HomePage: React.FC<HomePageProps> = ({
             >
               <div className="relative w-full h-full min-h-[360px] sm:min-h-[440px] lg:min-h-[500px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group flex flex-col">
                 <img 
-                  src="/images/why-choose-us.png" 
+                  src="/images/why-choose-us.webp" 
                   alt="TecVor Technologies Team Strategy Meeting" 
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full flex-1 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
