@@ -336,18 +336,15 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[700px] h-[350px] sm:h-[600px] lg:h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
           
           {/* High Definition Clean Hero Banner Graphic (WebP Optimized for LCP) */}
-          <picture className="w-full h-full">
-            <source srcSet="/images/clean_hero_banner.webp" type="image/webp" />
-            <img 
-              src="/images/clean_hero_banner.png" 
-              alt="TecVor Building Technology that Powers Progress"
-              width={1920}
-              height={1080}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
-            />
-          </picture>
+          <img 
+            src="/images/clean_hero_banner.webp" 
+            alt="TecVor Building Technology that Powers Progress"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 sm:via-white/50 to-transparent" />
         </div>
 
