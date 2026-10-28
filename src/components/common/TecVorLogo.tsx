@@ -47,7 +47,7 @@ export const TecVorLogo: React.FC<TecVorLogoProps> = ({ variant = 'default', cla
     );
   }
 
-  // Default light variant
+  // Default light variant (Navbar: above-the-fold - critical path)
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <picture>
@@ -58,7 +58,8 @@ export const TecVorLogo: React.FC<TecVorLogoProps> = ({ variant = 'default', cla
           width={logoWidth}
           height={height}
           loading="eager"
-          decoding="async"
+          fetchPriority="high"
+          decoding="sync"
           style={{ height: `${height}px`, width: 'auto', aspectRatio: '963 / 327' }}
           className="object-contain hover:scale-105 transition-transform duration-300 drop-shadow-md max-w-full"
         />

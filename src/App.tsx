@@ -2,6 +2,7 @@ import React, { useState, Suspense, lazy } from 'react';
 import { AppProvider, Application } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+
 import { HomePage } from './pages/HomePage';
 
 // Lazy loading secondary pages for code splitting & initial bundle optimization

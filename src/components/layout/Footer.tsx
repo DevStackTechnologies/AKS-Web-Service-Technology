@@ -23,17 +23,41 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <a href="#" aria-label="LinkedIn Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a 
+                href="https://www.linkedin.com/in/tecvor-technology-bb2bb9432" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="TecVor Technologies LinkedIn Profile" 
+                className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-[#0A66C2] hover:text-white transition-all transform hover:scale-105"
+              >
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="Twitter Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a 
+                href="https://www.instagram.com/tecvor_technology?xtok=ZDRsa2E5d2VjaDNh" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="TecVor Technologies Instagram Profile" 
+                className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white transition-all transform hover:scale-105"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://twitter.com/tecvortech" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="TecVor Technologies Twitter Profile" 
+                className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-500 hover:text-white transition-all transform hover:scale-105"
+              >
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" aria-label="GitHub Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
+              <a 
+                href="https://github.com/tecvor-technologies" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="TecVor Technologies GitHub Organization" 
+                className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-slate-700 hover:text-white transition-all transform hover:scale-105"
+              >
                 <Github className="w-4 h-4" />
-              </a>
-              <a href="#" aria-label="Instagram Profile" className="w-10 h-10 rounded-full bg-[#0C1738] flex items-center justify-center text-sky-400 hover:bg-sky-600 hover:text-white transition-colors">
-                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>

@@ -33,6 +33,60 @@ export const BlogsPage: React.FC<BlogsPageProps> = ({ onNavigate }) => {
   // Articles Knowledge Center Data
   const articles = [
     {
+      id: 'aeo-ranking-guide-2026',
+      title: 'The Complete Guide to Answer Engine Optimization (AEO): How to Rank in ChatGPT, Perplexity & Google AI Overviews',
+      category: 'AI & Machine Learning',
+      readTime: '8 Min Read',
+      author: 'Akash Kumar (CTO)',
+      authorRole: 'Chief Technology Officer',
+      date: 'Oct 2026',
+      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+      featured: true,
+      summary: 'Search is shifting from ten blue links to direct synthesized AI answers. Discover the exact frameworks, llms.txt protocols, schema markups, and entity optimization strategies required to get your brand recommended by modern AI engines.',
+      metaDesc: 'Comprehensive guide to Answer Engine Optimization (AEO), entity authority, llms.txt standards, and ranking in ChatGPT, Perplexity, and Gemini.',
+      content: `
+### What is Answer Engine Optimization (AEO)?
+Traditional Search Engine Optimization (SEO) aims to rank web pages on search result pages (SERPs). **Answer Engine Optimization (AEO)**, on the other hand, optimizes your content and digital footprint so large language models (LLMs)—including ChatGPT, Perplexity AI, Google Gemini, Claude, and SearchGPT—directly cite and recommend your brand when answering user questions.
+
+### The 4 Pillars of Modern AEO:
+1. **Direct, Fact-First Answers**: LLMs extract answers from content that begins with crisp, 1-to-2 sentence factual definitions before delving into details.
+2. **Standardized Machine Discovery (llms.txt & ARD)**: Exposing clear markdown files like \`/llms.txt\` and \`/ai-catalog.json\` allows AI web crawlers (such as GPTBot, ClaudeBot, and PerplexityBot) to index your services with zero parsing ambiguity.
+3. **Rich Semantic Schema (JSON-LD)**: Deploying nested Organization, FAQPage, and ProfessionalService schemas provides deterministic entity verification.
+4. **Third-Party Entity Consistency (E-E-A-T)**: Consistent business citations across Clutch, LinkedIn, GitHub, Crunchbase, and technical publications cement your brand's digital authority.
+
+### How TecVor Technologies Implements AEO:
+At TecVor Technologies, every web application we build is engineered with full semantic schema, lightning-fast Core Web Vitals, and machine-readable data structures to ensure maximum discoverability across both human searchers and autonomous AI agents.
+      `,
+      ctaText: 'Want your brand cited by AI search engines? Schedule an AEO strategy consultation with TecVor.'
+    },
+    {
+      id: 'enterprise-rag-ai-agents',
+      title: 'Architecting Enterprise AI Agents & RAG Pipelines: Vector Databases, LangChain & Real-Time Sync',
+      category: 'AI & Machine Learning',
+      readTime: '9 Min Read',
+      author: 'AI Engineering Team',
+      authorRole: 'Machine Learning Architect',
+      date: 'Sep 2026',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+      featured: false,
+      summary: 'How modern enterprises connect custom LLM agents to proprietary knowledge bases using Retrieval-Augmented Generation (RAG), Pinecone vector embeddings, and autonomous execution loops.',
+      metaDesc: 'Technical guide on architecting custom enterprise AI agents, RAG workflows, LangChain integrations, and vector search.',
+      content: `
+### Why Generic AI Fails for Enterprise
+Off-the-shelf generative models suffer from hallucination and lack visibility into proprietary business context. Enterprise AI requires ground-truth accuracy, strict permission boundaries, and real-time synchronization.
+
+### Technical Architecture of a Production RAG System:
+1. **Chunking & Tokenization**: Splitting structured and unstructured documents into semantically coherent 512-token chunks with overlapping context.
+2. **Vector Embeddings**: Generating 1536-dimensional embeddings with OpenAI \`text-embedding-3-large\` or open-source BAAI models.
+3. **Vector Database Retrieval**: Utilizing Pinecone, Milvus, or pgvector for sub-50ms Approximate Nearest Neighbor (ANN) search with hybrid keyword filtering.
+4. **Context Injection & Guardrails**: Feeding retrieved facts into customized LLM prompts with strict anti-jailbreak and validation filters.
+
+### Business Outcomes:
+Companies deploying TecVor's enterprise RAG pipelines experience up to **85% faster ticket resolution times** and **zero sensitive data leakage**.
+      `,
+      ctaText: 'Ready to build custom AI agents for your business? Contact TecVor Technologies AI lab.'
+    },
+    {
       id: 'ai-future-web',
       title: 'The Future of AI in Modern Web Development',
       category: 'AI & Machine Learning',

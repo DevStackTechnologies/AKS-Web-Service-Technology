@@ -1,15 +1,34 @@
-# Security Headers & Best Practices
+# ==========================================
+# TecVor Technologies - Cloudflare Workers
+# HTTP Headers Configuration for PageSpeed
+# ==========================================
+
+# ============================================================
+# Global Security Headers (applied to all routes)
+# ============================================================
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  # Strict-Transport-Security forces HTTPS (improves TTFB via early HTTPS upgrade)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # Content-Security-Policy: fine-tuned to allow fonts, images, and APIs used
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://*.cloudflare.com; connect-src 'self' https://api.emailjs.com; frame-src 'none';
+  Cross-Origin-Resource-Policy: same-origin
 
-# Cache Hashed Static Assets (Vite chunks - 1 Year Immutable)
+# ============================================================
+# Long-Term Cache: Hashed Vite Build Assets (JS/CSS/Images)
+# Vite hashes filenames → safe to cache for 1 year immutably
+# ============================================================
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
 
-# Cache Compressed WebP & Image Assets (30 Days + Stale-While-Revalidate)
+# ============================================================
+# Image Assets: 30-day cache with stale-while-revalidate
+# ============================================================
 /images/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
@@ -22,20 +41,28 @@
 /*.jpg
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
+/*.jpeg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
 /*.svg
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-/tecvor-icon.png
+/*.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-# HTML Shell - Fast Revalidation (Ensures immediate updates on deploy)
+# ============================================================
+# HTML Shell: Must-revalidate to ensure instant deploys
+# (no stale HTML - always fetch fresh)
+# ============================================================
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-# XML Sitemap and Robots
+# ============================================================
+# SEO: Sitemap + Robots
+# ============================================================
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Access-Control-Allow-Origin: *
@@ -46,7 +73,9 @@
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=86400
 
-# AI Agent Discoverability (llms.txt & ai-catalog.json)
+# ============================================================
+# AI Agent Discoverability Files
+# ============================================================
 /llms.txt
   Content-Type: text/markdown; charset=utf-8
   Access-Control-Allow-Origin: *
@@ -66,4 +95,3 @@
   Content-Type: application/json; charset=utf-8
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=86400
-

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, MessageSquare, Send, CheckCircle2, 
-  Globe, Clock, Sparkles, Building2, User, HelpCircle, Loader2
+  Globe, Clock, Sparkles, Building2, User, HelpCircle, Loader2,
+  Linkedin, Instagram
 } from 'lucide-react';
 import { submitInquiryApi } from '../services/api';
 
@@ -336,23 +337,50 @@ export const ContactPage: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-4 border-t border-slate-800 flex flex-wrap gap-3 relative z-10">
-                <a
-                  href="mailto:tecvortechnology@gmail.com"
-                  className="flex-1 px-4 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 text-xs font-black text-center transition-all flex items-center justify-center gap-1.5 shadow-md"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#0284C7]" />
-                  <span>Email Engineering Desk</span>
-                </a>
+              <div className="pt-4 border-t border-slate-800 space-y-3 relative z-10">
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="mailto:tecvortechnology@gmail.com"
+                    className="flex-1 px-4 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 text-xs font-black text-center transition-all flex items-center justify-center gap-1.5 shadow-md"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-[#0284C7]" />
+                    <span>Email Engineering Desk</span>
+                  </a>
 
-                <a
-                  href="https://wa.me/918580051079"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-md"
-                >
-                  <span>WhatsApp Chat</span>
-                </a>
+                  <a
+                    href="https://wa.me/918580051079"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-md"
+                  >
+                    <span>WhatsApp Chat</span>
+                  </a>
+                </div>
+
+                {/* Social Connect: LinkedIn & Instagram */}
+                <div className="flex items-center gap-3 pt-1">
+                  <a
+                    href="https://www.linkedin.com/in/tecvor-technology-bb2bb9432"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Connect on TecVor LinkedIn"
+                    className="flex-1 px-3 py-2.5 rounded-xl bg-slate-850 bg-slate-800/80 hover:bg-[#0A66C2] text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center justify-center gap-2 border border-slate-700/80 shadow-sm"
+                  >
+                    <Linkedin className="w-4 h-4 text-[#0A66C2] group-hover:text-white" />
+                    <span>LinkedIn</span>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/tecvor_technology?xtok=ZDRsa2E5d2VjaDNh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow TecVor Instagram"
+                    className="flex-1 px-3 py-2.5 rounded-xl bg-slate-850 bg-slate-800/80 hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center justify-center gap-2 border border-slate-700/80 shadow-sm"
+                  >
+                    <Instagram className="w-4 h-4 text-pink-400 group-hover:text-white" />
+                    <span>Instagram</span>
+                  </a>
+                </div>
               </div>
             </div>
 

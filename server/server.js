@@ -18,6 +18,7 @@ import jobRoutes from './routes/jobRoutes.js';
 import applicationRoutes from './routes/applicationRoutes.js';
 import aiRoutes from './routes/aiRoutes.js';
 import inquiryRoutes from './routes/inquiryRoutes.js';
+import reviewRoutes from './routes/reviewRoutes.js';
 
 import { Job } from './models/Job.js';
 import { User } from './models/User.js';
@@ -209,6 +210,7 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/applications', applicationRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/inquiries', inquiryRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // Health Check Endpoint
 app.get('/api/health', (req, res) => {

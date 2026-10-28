@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QuickAccessDock } from '../components/tools/QuickAccessDock';
 import { TecVorLogo } from '../components/common/TecVorLogo';
+import { WriteReviewModal, ClientReview } from '../components/common/WriteReviewModal';
 import { 
   Sparkles, ArrowRight, ShieldCheck, Zap, Globe, Cpu, Code, Server, 
   Database, Layers, Smartphone, Bot, CheckCircle2, Star, Play, 
@@ -37,7 +38,10 @@ export const HomePage: React.FC<HomePageProps> = ({
   const [newsletterSent, setNewsletterSent] = useState<boolean>(false);
   const [isTestimonialsHovered, setIsTestimonialsHovered] = useState<boolean>(false);
 
-  const testimonials = [
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState<boolean>(false);
+
+  // Baseline verified client reviews
+  const initialVerifiedReviews: ClientReview[] = [
     {
       name: 'Rajesh Kumar',
       role: 'CEO, KD Finserve',
@@ -69,136 +73,42 @@ export const HomePage: React.FC<HomePageProps> = ({
       rating: 5,
       project: '3D Motorcycle Configurator App',
       review: 'The 3D bike builder and booking app transformed our workshop completely. Over 500 custom motorcycle builds were booked in just 60 days!'
-    },
-    {
-      name: 'Emily Watson',
-      role: 'Head of Digital, AquaPure Singapore',
-      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'AquaPure Eco Bottle D2C Store',
-      review: 'Our D2C water bottle sales exploded after TecVor deployed our Next.js storefront. 150,000+ orders processed smoothly with zero downtime!'
-    },
-    {
-      name: 'Dr. Aris Thorne',
-      role: 'Chief Medical Officer, PulseCare USA',
-      photo: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'PulseCare AI Telehealth Suite',
-      review: 'The HIPAA-compliant WebRTC telehealth app achieved 500,000+ downloads with a 4.9-star rating. Patient satisfaction has never been higher!'
-    },
-    {
-      name: 'Klaus Weber',
-      role: 'Logistics Director, OmniStream Germany',
-      photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'Autonomous AI Supply Chain Agent',
-      review: 'Their LangChain autonomous AI logistics coordinator saves our European freight network ₹1.2 Cr annually in supply chain overhead.'
-    },
-    {
-      name: 'Ananya Deshmukh',
-      role: 'MD, Eden Greenery Australia',
-      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'Eden Garden Nursery Portal',
-      review: 'The WebXR room scanner developed by TecVor allows plant lovers to preview 200+ indoor plant varieties. 190% boost in repeat orders!'
-    },
-    {
-      name: 'David Miller',
-      role: 'Co-Founder, CloudPulse SaaS',
-      photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'CloudPulse AWS Microservices',
-      review: 'TecVor migrated our monolithic backend to AWS microservices with zero downtime. API response latency dropped from 350ms to 28ms!'
-    },
-    {
-      name: 'Sophia Martinez',
-      role: 'Marketing Director, LuxeCraft Beauty',
-      photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'LuxeCraft E-Commerce Redesign',
-      review: 'Sensational UI/UX design! The micro-animations and lightning-fast checkout increased our monthly e-commerce revenues by 240%.'
-    },
-    {
-      name: 'Arjun Patel',
-      role: 'Operations Lead, LogisticsFlow India',
-      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'Logistics GPS Dispatch Portal',
-      review: 'Real-time GPS fleet tracking and automated e-way bill processing system built by TecVor streamlined 10,000+ truck dispatches.'
-    },
-    {
-      name: 'Claire Dupont',
-      role: 'E-Commerce Head, Velour Paris',
-      photo: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'Velour Multi-Currency Boutique',
-      review: 'The multi-currency luxury fashion store developed by TecVor delivered our highest holiday sales record in company history!'
-    },
-    {
-      name: 'Dr. Marcus Vance',
-      role: 'Founder, EduLearn Global',
-      photo: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'EduLearn EdTech Video Engine',
-      review: 'Our interactive online learning platform handles 80,000 concurrent students streaming HD video courses smoothly with zero lag.'
-    },
-    {
-      name: 'Neha Sharma',
-      role: 'Founder, UrbanSpaces Real Estate',
-      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'UrbanSpaces 360 Property Portal',
-      review: 'Virtual 360-degree home tours and AI property valuation tools built by TecVor doubled our broker inquiry conversions within 30 days.'
-    },
-    {
-      name: 'Oliver Bennet',
-      role: 'Head of Tech, BioNutra UK',
-      photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'BioNutra D2C Subscription Platform',
-      review: 'Sub-second page speeds and automated subscription renewals built by TecVor boosted our recurring D2C revenue by 180%.'
-    },
-    {
-      name: 'Priya Roy',
-      role: 'Product Manager, QuickRide India',
-      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'QuickRide Driver Dispatch App',
-      review: 'Live driver tracking and battery-efficient geolocation modules engineered by TecVor reduced dispatch drop-offs by 42%.'
-    },
-    {
-      name: 'Lucas Rossi',
-      role: 'CEO, BellaCasa Italy',
-      photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'BellaCasa Furniture AR Studio',
-      review: 'Customers can place 3D photorealistic Italian furniture inside their living rooms using our TecVor-built WebXR app. Incredible conversion lift!'
-    },
-    {
-      name: 'Sneha Kulkarni',
-      role: 'Director, MedPulse Diagnostics',
-      photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'MedPulse Diagnostic Report Portal',
-      review: 'Automated WhatsApp PDF report delivery and barcode patient tracking built by TecVor delivered a 100% paperless clinic workflow.'
-    },
-    {
-      name: 'Ethan Hunt',
-      role: 'VP Tech, CyberGuard SaaS',
-      photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'CyberGuard SOC Compliance Tool',
-      review: 'Automated SOC2 audit logs and IAM role-based permission matrices developed by TecVor passed external security audits with flying colors.'
-    },
-    {
-      name: 'Tanvi Agarwal',
-      role: 'Founder, OrganicRoot Superfoods',
-      photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-      rating: 5,
-      project: 'OrganicRoot Hyperlocal Grocery App',
-      review: 'Ultra-fast 30-minute hyperlocal delivery app with live inventory sync built by TecVor enabled us to scale across 12 cities profitably.'
     }
   ];
+
+  const [reviews, setReviews] = useState<ClientReview[]>(initialVerifiedReviews);
+
+  // Load reviews on mount: 1. From localStorage cache, 2. From MongoDB API
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('tecvor_client_reviews');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const names = new Set(parsed.map((p) => p.name + p.project));
+          const merged = [...parsed, ...initialVerifiedReviews.filter(r => !names.has(r.name + r.project))];
+          setReviews(merged);
+        }
+      }
+    } catch (_) {}
+
+    // Fetch live from MongoDB backend
+    fetch('/api/reviews')
+      .then(res => res.json())
+      .then(json => {
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setReviews(json.data);
+          try {
+            localStorage.setItem('tecvor_client_reviews', JSON.stringify(json.data));
+          } catch (_) {}
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const handleReviewSubmitted = (newReview: ClientReview) => {
+    setReviews(prev => [newReview, ...prev]);
+  };
 
   const topNotchShowcaseImages = [
     {
@@ -274,13 +184,31 @@ export const HomePage: React.FC<HomePageProps> = ({
   ];
 
   // Auto-cycle deck images every 3.5s when not hovered
+  // Delayed start: don't begin cycling until after 2s to reduce TBT on initial load
   useEffect(() => {
     if (isHoveredDeck) return;
-    const interval = setInterval(() => {
-      setTopNotchImgIdx((prev) => (prev + 1) % topNotchShowcaseImages.length);
-    }, 3500);
-    return () => clearInterval(interval);
+    // Defer first cycle start to avoid competing with LCP paint
+    const startDelay = setTimeout(() => {
+      const interval = setInterval(() => {
+        setTopNotchImgIdx((prev) => (prev + 1) % topNotchShowcaseImages.length);
+      }, 3500);
+      return () => clearInterval(interval);
+    }, 2000);
+    return () => clearTimeout(startDelay);
   }, [isHoveredDeck, topNotchShowcaseImages.length]);
+
+  // Stable callback handlers to prevent re-renders (INP improvement)
+  const handleNextImage = useCallback(() => {
+    setTopNotchImgIdx((prev) => (prev + 1) % topNotchShowcaseImages.length);
+  }, [topNotchShowcaseImages.length]);
+
+  const handlePrevImage = useCallback(() => {
+    setTopNotchImgIdx((prev) => (prev === 0 ? topNotchShowcaseImages.length - 1 : prev - 1));
+  }, [topNotchShowcaseImages.length]);
+
+  const handleFaqToggle = useCallback((idx: number) => {
+    setActiveFaq((prev) => (prev === idx ? null : idx));
+  }, []);
 
   const services = [
     { id: 'web', title: 'Website Development', icon: Globe, desc: 'Ultra-fast Next.js & React web applications optimized for conversions.', count: '120+ Built' },
@@ -336,14 +264,17 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] lg:w-[700px] h-[350px] sm:h-[600px] lg:h-[700px] bg-gradient-to-br from-sky-100/60 via-blue-50/40 to-transparent rounded-full blur-3xl" />
           
           {/* High Definition Clean Hero Banner Graphic (WebP Optimized for LCP) */}
+          {/* CRITICAL: loading=eager + fetchpriority=high + decoding=sync = fastest LCP */}
           <img 
             src="/images/clean_hero_banner.webp" 
-            alt="TecVor Building Technology that Powers Progress"
+            alt="TecVor Technologies - Building Technology that Powers Progress"
             width={1920}
             height={1080}
             fetchPriority="high"
-            decoding="async"
+            loading="eager"
+            decoding="sync"
             className="w-full h-full object-cover object-[80%_center] sm:object-right opacity-90 sm:opacity-95"
+            style={{ aspectRatio: '16/9' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 sm:via-white/50 to-transparent" />
         </div>
@@ -579,22 +510,18 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                 {/* Left / Right Arrow Controls */}
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setTopNotchImgIdx((prev) => (prev === 0 ? topNotchShowcaseImages.length - 1 : prev - 1));
-                  }}
+                  onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}
                   className="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/30 backdrop-blur-md shadow-lg transition-all"
                   title="Previous Image"
+                  aria-label="Previous showcase image"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setTopNotchImgIdx((prev) => (prev + 1) % topNotchShowcaseImages.length);
-                  }}
+                  onClick={(e) => { e.stopPropagation(); handleNextImage(); }}
                   className="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/30 backdrop-blur-md shadow-lg transition-all"
                   title="Next Image"
+                  aria-label="Next showcase image"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
@@ -977,12 +904,12 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* CLIENT TESTIMONIALS (Continuous Smooth Infinite Marquee matching Portfolio Page) */}
+      {/* CLIENT TESTIMONIALS (Dynamic Verified Reviews & Real Client Feedback) */}
       <section className="max-w-7xl mx-auto space-y-8 px-4 pause-hover">
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-3">
           <div className="inline-block border-b-2 border-sky-500 pb-0.5">
             <span className="text-sky-600 text-xs font-black uppercase tracking-widest">
-              Verified Client Reviews
+              Verified Client Reviews ({reviews.length} Published)
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
@@ -991,121 +918,164 @@ export const HomePage: React.FC<HomePageProps> = ({
           <p className="text-slate-600 text-xs max-w-xl mx-auto">
             Real feedback from founders, enterprise CTOs, and product directors who scaled with TecVor Technologies.
           </p>
+
+          {/* ✍️ Write a Review Interactive CTA Button */}
+          <div className="pt-2 flex justify-center items-center">
+            <button
+              onClick={() => setIsReviewModalOpen(true)}
+              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#E84125] to-[#0052FF] text-white text-xs font-black shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 group cursor-pointer"
+            >
+              <MessageSquare className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+              <span>✍️ Write a Client Review</span>
+            </button>
+          </div>
         </div>
 
         {/* Dual-Row Marquee Container */}
         <div className="space-y-6 pt-4">
-          
-          {/* Row 1: Left Scroll Marquee */}
-          <div className="relative w-full overflow-hidden py-2">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
+          {(() => {
+            const half = Math.ceil(reviews.length / 2);
+            const row1 = reviews.slice(0, half);
+            const row2 = reviews.slice(half);
 
-            <motion.div 
-              animate={{ x: ['0%', '-50%'] }}
-              transition={{ repeat: Infinity, ease: 'linear', duration: 35 }}
-              className="flex gap-6 w-max transform-gpu will-change-transform"
-            >
-              {[...testimonials.slice(0, 10), ...testimonials.slice(0, 10)].map((t, tIdx) => (
-                <div 
-                  key={tIdx} 
-                  className="w-80 sm:w-96 p-5 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between flex-shrink-0 hover:border-sky-500 transition-all hover:shadow-lg relative group cursor-pointer"
-                >
-                  {/* Comment Bubble Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="relative">
-                        <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
-                        <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
+            const getMarqueeItems = (arr) => {
+              if (!arr || arr.length === 0) return [];
+              let res = [...arr];
+              while (res.length < 6) {
+                res = [...res, ...arr];
+              }
+              return [...res, ...res]; // seamless double for -50% loop
+            };
+
+            const items1 = getMarqueeItems(row1.length > 0 ? row1 : reviews);
+            const items2 = getMarqueeItems(row2.length > 0 ? row2 : reviews);
+
+            return (
+              <>
+                {/* Row 1: Left Scroll Marquee */}
+                <div className="relative w-full overflow-hidden py-2">
+                  <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
+                  <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
+
+                  <motion.div 
+                    animate={{ x: ['0%', '-50%'] }}
+                    transition={{ repeat: Infinity, ease: 'linear', duration: 35 }}
+                    className="flex gap-6 w-max transform-gpu will-change-transform"
+                  >
+                    {items1.map((t, tIdx) => (
+                      <div 
+                        key={tIdx} 
+                        className="w-80 sm:w-96 p-5 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between flex-shrink-0 hover:border-sky-500 transition-all hover:shadow-lg relative group cursor-pointer"
+                      >
+                        {/* Comment Bubble Header */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="relative">
+                              <img 
+                                src={t.photo || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(t.name)}`} 
+                                alt={t.name} 
+                                loading="lazy" 
+                                decoding="async" 
+                                className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm bg-slate-100" 
+                              />
+                              <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
+                            </div>
+                            <div>
+                              <h4 className="text-xs font-black text-slate-900 flex items-center gap-1">
+                                <span>{t.name}</span>
+                                <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 fill-sky-100" />
+                              </h4>
+                              <span className="text-[10px] text-slate-500 font-semibold block">{t.role}</span>
+                            </div>
+                          </div>
+
+                          <div className="text-right">
+                            <div className="flex text-amber-400 text-xs">
+                              {'⭐'.repeat(Math.min(Math.max(t.rating, 1), 5))}
+                            </div>
+                            <span className="text-[9px] font-bold text-slate-400 block pt-0.5">Verified Comment</span>
+                          </div>
+                        </div>
+
+                        {/* Comment Bubble Body */}
+                        <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700 font-medium leading-relaxed relative">
+                          <span className="text-sky-400 font-black text-base leading-none block pb-1">“</span>
+                          {t.review}
+                        </div>
+
+                        {/* Comment Footer */}
+                        <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-[10px]">
+                          <span className="font-extrabold text-sky-600 uppercase tracking-wider">Project: {t.project}</span>
+                          <span className="text-slate-400 font-semibold">Verified Review ✓</span>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-900 flex items-center gap-1">
-                          <span>{t.name}</span>
-                          <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 fill-sky-100" />
-                        </h4>
-                        <span className="text-[10px] text-slate-500 font-semibold block">{t.role}</span>
-                      </div>
-                    </div>
-
-                    <div className="text-right">
-                      <div className="flex text-amber-400 text-xs">
-                        {'⭐'.repeat(t.rating)}
-                      </div>
-                      <span className="text-[9px] font-bold text-slate-400 block pt-0.5">Verified Comment</span>
-                    </div>
-                  </div>
-
-                  {/* Comment Bubble Body */}
-                  <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700 font-medium leading-relaxed relative">
-                    <span className="text-sky-400 font-black text-base leading-none block pb-1">“</span>
-                    {t.review}
-                  </div>
-
-                  {/* Comment Footer */}
-                  <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-[10px]">
-                    <span className="font-extrabold text-sky-600 uppercase tracking-wider">Project: {t.project}</span>
-                    <span className="text-slate-400 font-semibold">Verified Review ✓</span>
-                  </div>
+                    ))}
+                  </motion.div>
                 </div>
-              ))}
-            </motion.div>
-          </div>
 
-          {/* Row 2: Right Scroll Marquee */}
-          <div className="relative w-full overflow-hidden py-2">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
+                {/* Row 2: Right Scroll Marquee */}
+                <div className="relative w-full overflow-hidden py-2">
+                  <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
+                  <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#FFF8F5] to-transparent z-10 pointer-events-none" />
 
-            <motion.div 
-              animate={{ x: ['-50%', '0%'] }}
-              transition={{ repeat: Infinity, ease: 'linear', duration: 38 }}
-              className="flex gap-6 w-max transform-gpu will-change-transform"
-            >
-              {[...testimonials.slice(10, 20), ...testimonials.slice(10, 20)].map((t, tIdx) => (
-                <div 
-                  key={tIdx} 
-                  className="w-80 sm:w-96 p-5 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between flex-shrink-0 hover:border-sky-500 transition-all hover:shadow-lg relative group cursor-pointer"
-                >
-                  {/* Comment Bubble Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="relative">
-                        <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm" />
-                        <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
+                  <motion.div 
+                    animate={{ x: ['-50%', '0%'] }}
+                    transition={{ repeat: Infinity, ease: 'linear', duration: 38 }}
+                    className="flex gap-6 w-max transform-gpu will-change-transform"
+                  >
+                    {items2.map((t, tIdx) => (
+                      <div 
+                        key={tIdx} 
+                        className="w-80 sm:w-96 p-5 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between flex-shrink-0 hover:border-sky-500 transition-all hover:shadow-lg relative group cursor-pointer"
+                      >
+                        {/* Comment Bubble Header */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="relative">
+                              <img 
+                                src={t.photo || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(t.name)}`} 
+                                alt={t.name} 
+                                loading="lazy" 
+                                decoding="async" 
+                                className="w-11 h-11 rounded-full object-cover border-2 border-sky-100 shadow-sm bg-slate-100" 
+                              />
+                              <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0" title="Verified Client" />
+                            </div>
+                            <div>
+                              <h4 className="text-xs font-black text-slate-900 flex items-center gap-1">
+                                <span>{t.name}</span>
+                                <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 fill-sky-100" />
+                              </h4>
+                              <span className="text-[10px] text-slate-500 font-semibold block">{t.role}</span>
+                            </div>
+                          </div>
+
+                          <div className="text-right">
+                            <div className="flex text-amber-400 text-xs">
+                              {'⭐'.repeat(Math.min(Math.max(t.rating, 1), 5))}
+                            </div>
+                            <span className="text-[9px] font-bold text-slate-400 block pt-0.5">Verified Comment</span>
+                          </div>
+                        </div>
+
+                        {/* Comment Bubble Body */}
+                        <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700 font-medium leading-relaxed relative">
+                          <span className="text-sky-400 font-black text-base leading-none block pb-1">“</span>
+                          {t.review}
+                        </div>
+
+                        {/* Comment Footer */}
+                        <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-[10px]">
+                          <span className="font-extrabold text-sky-600 uppercase tracking-wider">Project: {t.project}</span>
+                          <span className="text-slate-400 font-semibold">Verified Review ✓</span>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-xs font-black text-slate-900 flex items-center gap-1">
-                          <span>{t.name}</span>
-                          <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 fill-sky-100" />
-                        </h4>
-                        <span className="text-[10px] text-slate-500 font-semibold block">{t.role}</span>
-                      </div>
-                    </div>
-
-                    <div className="text-right">
-                      <div className="flex text-amber-400 text-xs">
-                        {'⭐'.repeat(t.rating)}
-                      </div>
-                      <span className="text-[9px] font-bold text-slate-400 block pt-0.5">Verified Comment</span>
-                    </div>
-                  </div>
-
-                  {/* Comment Bubble Body */}
-                  <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-700 font-medium leading-relaxed relative">
-                    <span className="text-sky-400 font-black text-base leading-none block pb-1">“</span>
-                    {t.review}
-                  </div>
-
-                  {/* Comment Footer */}
-                  <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-[10px]">
-                    <span className="font-extrabold text-sky-600 uppercase tracking-wider">Project: {t.project}</span>
-                    <span className="text-slate-400 font-semibold">Verified Review ✓</span>
-                  </div>
+                    ))}
+                  </motion.div>
                 </div>
-              ))}
-            </motion.div>
-          </div>
-
+              </>
+            );
+          })()}
         </div>
       </section>
 
@@ -1312,7 +1282,8 @@ export const HomePage: React.FC<HomePageProps> = ({
               className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-sky-300 transition-all"
             >
               <button
-                onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+                onClick={() => handleFaqToggle(idx)}
+                aria-expanded={activeFaq === idx}
                 className="w-full flex items-center justify-between text-left text-sm font-bold text-slate-900"
               >
                 <span>{faq.q}</span>
@@ -1376,6 +1347,12 @@ export const HomePage: React.FC<HomePageProps> = ({
         </motion.div>
       </section>
 
+      {/* Interactive Client Review Submission Modal */}
+      <WriteReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        onReviewSubmitted={handleReviewSubmitted}
+      />
     </div>
   );
 };

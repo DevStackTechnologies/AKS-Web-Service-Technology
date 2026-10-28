@@ -1,5 +1,61 @@
+# ============================================================
+# TecVor Technologies - Robots.txt for SEO & AEO (AI Engines)
+# https://tecvor-technologies.akashsingh91554.workers.dev/
+# ============================================================
+
 User-agent: *
 Allow: /
 
+# Explicit permission for major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Explicit permission for AI Answer Engines (AEO) & Retrieval Bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Disallow non-public internal paths
+Disallow: /api/
+Disallow: /server/
+Disallow: /admin/
+
+# Sitemaps & Machine-Readable AI Catalogs
 Sitemap: https://tecvor-technologies.akashsingh91554.workers.dev/sitemap.xml
 Agentmap: https://tecvor-technologies.akashsingh91554.workers.dev/ai-catalog.json
+LLMs-Txt: https://tecvor-technologies.akashsingh91554.workers.dev/llms.txt
