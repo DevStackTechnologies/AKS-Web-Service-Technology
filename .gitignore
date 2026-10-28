@@ -14,6 +14,7 @@ dist-ssr
 .env
 .env.*
 *.env
+!.env.example
 
 # Internal Agent & IDE metadata
 .agent/
