@@ -46,8 +46,8 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     // 1. Get API Key from Cloudflare Environment Variables
     const apiKey = context.env.RESEND_API_KEY;
 
-    // Fallback notification recipient
-    const recipientEmail = context.env.NOTIFICATION_EMAIL || 'tecvortechnology@gmail.com';
+    // Fallback notification recipient (Free sandbox tier routes to verified account email)
+    const recipientEmail = context.env.NOTIFICATION_EMAIL || 'akashsingh91554@gmail.com';
 
     // Sender: Uses Resend test sender by default (works with free Cloudflare domain)
     // When custom domain is verified in Resend, user can change this in Cloudflare variables
